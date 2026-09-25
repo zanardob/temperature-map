@@ -8,7 +8,7 @@
     "scrape": "node scraper/run.js",
     "build": "node scraper/build.js",
     "validate": "node scraper/validate.js",
-    "test": "node --test scraper/test/"
+    "test": "node --test scraper/test/*.test.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0"
