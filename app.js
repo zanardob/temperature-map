@@ -47,6 +47,12 @@ const DEGREE_C = '\u00b0C';
 const DATA_SOURCE_ID = 'cities';
 const CIRCLE_LAYER_ID = 'city-badges';
 const LABEL_LAYER_ID = 'city-badge-labels';
+const COUNT_LAYER_ID = 'city-badge-counts';
+
+// Overlapping badges merge into clusters up to this zoom level; beyond it every
+// city is drawn individually.
+const CLUSTER_MAX_ZOOM = 7;
+const CLUSTER_RADIUS = 40;
 
 /* --------------------------------------------------------------------------
  * Pure helpers
@@ -68,11 +74,6 @@ function monthValue(city, monthIndex, metricRow) {
   const series = city && city.months ? city.months[metricRow] : null;
   const value = Array.isArray(series) ? series[monthIndex] : null;
   return typeof value === 'number' && Number.isFinite(value) ? value : null;
-}
-
-function hexToRgb(hex) {
-  const value = parseInt(hex.slice(1), 16);
-  return { r: (value >> 16) & 255, g: (value >> 8) & 255, b: value & 255 };
 }
 
 // Port of Module:Weather box/colors `range_pos`: 0 at `start`, 1 at `stop`.
@@ -109,29 +110,14 @@ function colorForTemperature(celsius) {
   return `#${colorByte(red)}${colorByte(green)}${colorByte(blue)}`;
 }
 
-// sRGB relative luminance (WCAG).
-function relativeLuminance(hex) {
-  const { r, g, b } = hexToRgb(hex);
-  const linearize = channel => {
-    const s = channel / 255;
-    return s <= 0.03928 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
-  };
-  return 0.2126 * linearize(r) + 0.7152 * linearize(g) + 0.0722 * linearize(b);
-}
-
-function contrastRatio(luminanceA, luminanceB) {
-  const lighter = Math.max(luminanceA, luminanceB);
-  const darker = Math.min(luminanceA, luminanceB);
-  return (lighter + 0.05) / (darker + 0.05);
-}
-
-// The badge number is light or dark depending on which contrasts better with the fill.
-function textColorForFill(fillHex) {
-  const fill = relativeLuminance(fillHex);
-  return contrastRatio(fill, relativeLuminance(LIGHT_TEXT_COLOR)) >=
-    contrastRatio(fill, relativeLuminance(DARK_TEXT_COLOR))
-    ? LIGHT_TEXT_COLOR
-    : DARK_TEXT_COLOR;
+// MapLibre expression version of the same ramp, sampled every 2.5 °C, for
+// cluster colours (clusters are computed inside MapLibre, not in JS).
+function temperatureColorExpression(valueExpression) {
+  const stops = [];
+  for (let celsius = -45; celsius <= 45; celsius += 2.5) {
+    stops.push(celsius, colorForTemperature(celsius));
+  }
+  return ['interpolate', ['linear'], valueExpression, ...stops];
 }
 
 function legendTickPosition(celsius) {
@@ -210,25 +196,24 @@ function cityPopupHtml(city, monthIndex) {
   ].join('');
 }
 
-// One point per city carrying the colour and label for the selected month/metric,
-// so the circle and text layers stay simple `get` expressions.
+// One point per city carrying its label and the values clusters aggregate.
 function buildFeatureCollection(cities, monthIndex, metricRow) {
   return {
     type: 'FeatureCollection',
     features: cities.map((city, index) => {
       const celsius = monthValue(city, monthIndex, metricRow);
-      const fill = celsius === null ? NO_DATA_COLOR : colorForTemperature(celsius);
-      const textColor = textColorForFill(fill);
       return {
         type: 'Feature',
         id: index,
         geometry: { type: 'Point', coordinates: [Number(city.lon), Number(city.lat)] },
         properties: {
           index,
-          fill,
           label: celsius === null ? EM_DASH : formatBadgeNumber(celsius),
-          textColor,
-          haloColor: textColor === LIGHT_TEXT_COLOR ? DARK_TEXT_COLOR : '#ffffff',
+          // Clusters aggregate these two (see the source's clusterProperties),
+          // so the cluster layers can derive an average with one expression and
+          // the same expressions also work for individual, unclustered points.
+          sumCelsius: celsius === null ? 0 : celsius,
+          dataCount: celsius === null ? 0 : 1,
         },
       };
     }),
@@ -346,28 +331,73 @@ function initApp() {
     map.addSource(DATA_SOURCE_ID, {
       type: 'geojson',
       data: buildFeatureCollection(cities, currentMonth, currentMetric.row),
+      // Overlapping badges merge into one circle showing the average of the
+      // selected metric and the member count; clicking a cluster zooms to the
+      // level where it splits.
+      cluster: true,
+      clusterRadius: CLUSTER_RADIUS,
+      clusterMaxZoom: CLUSTER_MAX_ZOOM,
+      clusterProperties: {
+        sumCelsius: ['+', ['get', 'sumCelsius']],
+        dataCount: ['+', ['get', 'dataCount']],
+      },
     });
+
+    // Average of the cluster's cities for the selected month/metric; singles
+    // carry the same properties, so one set of expressions covers both.
+    // Guarded division so an all-blank cluster can never produce NaN.
+    const averageCelsius = ['case',
+      ['==', ['get', 'dataCount'], 0], 0,
+      ['/', ['get', 'sumCelsius'], ['get', 'dataCount']],
+    ];
+    const roundedAverage = ['floor', ['+', averageCelsius, 0.5]]; // = Math.round, without -0
 
     map.addLayer({
       id: CIRCLE_LAYER_ID,
       type: 'circle',
       source: DATA_SOURCE_ID,
       paint: {
-        'circle-color': ['get', 'fill'],
-        // Roughly 13 px at zoom 3.4 growing to 19 px at zoom 6.
-        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 13, 6, 19],
+        'circle-color': ['case',
+          ['==', ['get', 'dataCount'], 0], NO_DATA_COLOR,
+          temperatureColorExpression(averageCelsius),
+        ],
+        // Roughly 13 px at zoom 3.4 growing to 19 px at zoom 6; clusters are
+        // slightly larger to stand out and fit the count chip.
+        'circle-radius': ['case',
+          ['has', 'point_count'],
+          ['interpolate', ['linear'], ['zoom'], 3.4, 15, 6, 21],
+          ['interpolate', ['linear'], ['zoom'], 3.4, 13, 6, 19],
+        ],
         'circle-stroke-color': '#ffffff',
         'circle-stroke-width': 1.5,
         'circle-opacity': 0.95,
       },
     });
 
+    // Wikipedia's own text-contrast rule: white ink below -23.3 °C and from
+    // 37.8 °C up, otherwise dark. Applies to singles and clusters alike.
+    const badgeTextColor = ['case',
+      ['<', averageCelsius, -23.3], LIGHT_TEXT_COLOR,
+      ['>=', averageCelsius, 37.8], LIGHT_TEXT_COLOR,
+      DARK_TEXT_COLOR,
+    ];
+    const badgeHaloColor = ['case',
+      ['<', averageCelsius, -23.3], DARK_TEXT_COLOR,
+      ['>=', averageCelsius, 37.8], DARK_TEXT_COLOR,
+      '#ffffff',
+    ];
+
     map.addLayer({
       id: LABEL_LAYER_ID,
       type: 'symbol',
       source: DATA_SOURCE_ID,
       layout: {
-        'text-field': ['get', 'label'],
+        'text-field': ['case',
+          ['has', 'point_count'],
+          ['case', ['==', ['get', 'dataCount'], 0], EM_DASH,
+            ['concat', ['to-string', roundedAverage], DEGREE_C]],
+          ['get', 'label'],
+        ],
         'text-font': ['Noto Sans Regular'],
         'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 9, 6, 12.5],
         'text-anchor': 'center',
@@ -377,17 +407,49 @@ function initApp() {
         'text-ignore-placement': false,
       },
       paint: {
-        'text-color': ['get', 'textColor'],
-        'text-halo-color': ['get', 'haloColor'],
+        'text-color': badgeTextColor,
+        'text-halo-color': badgeHaloColor,
         'text-halo-width': 1.2,
       },
     });
 
-    for (const layerId of [CIRCLE_LAYER_ID, LABEL_LAYER_ID]) {
-      map.on('click', layerId, event => {
-        const feature = event.features && event.features[0];
-        if (feature) openCityPopup(Number(feature.properties.index));
-      });
+    // Member count, tucked against the top-right of a cluster circle.
+    map.addLayer({
+      id: COUNT_LAYER_ID,
+      type: 'symbol',
+      source: DATA_SOURCE_ID,
+      filter: ['has', 'point_count'],
+      layout: {
+        'text-field': ['to-string', ['get', 'point_count']],
+        'text-font': ['Noto Sans Regular'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 9, 6, 11],
+        'text-offset': ['literal', [1.4, -1.4]],
+        'text-anchor': 'center',
+        'text-allow-overlap': false,
+        'text-ignore-placement': false,
+      },
+      paint: {
+        'text-color': DARK_TEXT_COLOR,
+        'text-halo-color': '#ffffff',
+        'text-halo-width': 2,
+      },
+    });
+
+    function handleBadgeClick(event) {
+      const feature = event.features && event.features[0];
+      if (!feature) return;
+      if (feature.properties && feature.properties.point_count) {
+        // Cluster: zoom to the level where it breaks into its cities.
+        map.getSource(DATA_SOURCE_ID)
+          .getClusterExpansionZoom(feature.properties.cluster_id)
+          .then(zoom => map.easeTo({ center: feature.geometry.coordinates, zoom }));
+        return;
+      }
+      openCityPopup(Number(feature.properties.index));
+    }
+
+    for (const layerId of [CIRCLE_LAYER_ID, LABEL_LAYER_ID, COUNT_LAYER_ID]) {
+      map.on('click', layerId, handleBadgeClick);
       map.on('mouseenter', layerId, () => { map.getCanvas().style.cursor = 'pointer'; });
       map.on('mouseleave', layerId, () => { map.getCanvas().style.cursor = ''; });
     }
