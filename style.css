@@ -1,0 +1,317 @@
+/* Europe Monthly Temperatures — layout and panel styling. */
+
+:root {
+  --panel-bg: rgba(255, 255, 255, 0.94);
+  --panel-border: rgba(20, 33, 61, 0.14);
+  --text: #14213d;
+  --text-muted: #5b6478;
+  --shadow: 0 2px 10px rgba(20, 33, 61, 0.15);
+  --accent: #2166ac;
+  --bottombar-height: 88px; /* replaced at runtime from the bar's real height */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: #eef1f4;
+}
+
+#map {
+  position: fixed;
+  inset: 0;
+}
+
+/* --- top-left panel ------------------------------------------------------ */
+
+.panel {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  width: 264px;
+  padding: 12px 14px 14px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.panel h1 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.segmented {
+  display: flex;
+  gap: 4px;
+  padding: 3px;
+  background: #e8ecf1;
+  border-radius: 8px;
+}
+
+.segmented button {
+  flex: 1 1 0;
+  appearance: none;
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 2px;
+  background: transparent;
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.segmented button:hover {
+  color: var(--text);
+}
+
+.segmented button[aria-pressed='true'] {
+  background: #fff;
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(20, 33, 61, 0.18);
+}
+
+.segmented button:focus-visible,
+.play-btn:focus-visible,
+input[type='range']:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+/* --- legend -------------------------------------------------------------- */
+
+.legend {
+  margin-top: 14px;
+}
+
+.legend-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.legend-gradient {
+  height: 12px;
+  margin-top: 6px;
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+}
+
+.legend-ticks {
+  position: relative;
+  height: 1.1em;
+  margin-top: 3px;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.legend-tick {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* --- bottom bar ---------------------------------------------------------- */
+
+.bottombar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: var(--panel-bg);
+  border-top: 1px solid var(--panel-border);
+  box-shadow: 0 -2px 10px rgba(20, 33, 61, 0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.play-btn {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--panel-border);
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.play-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--text);
+}
+
+.play-btn .icon-pause {
+  display: none;
+}
+
+.play-btn[aria-pressed='true'] .icon-play {
+  display: none;
+}
+
+.play-btn[aria-pressed='true'] .icon-pause {
+  display: block;
+}
+
+.month-name {
+  flex: 0 0 auto;
+  min-width: 9ch;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.slider-wrap {
+  flex: 1 1 auto;
+  min-width: 160px;
+}
+
+input[type='range'] {
+  width: 100%;
+  margin: 0;
+  accent-color: var(--accent); /* keeps the native slider look */
+}
+
+.month-ticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 6px 0;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+/* MapLibre's attribution stays bottom-right but clear of the bottom bar. */
+.maplibregl-ctrl-bottom-right {
+  bottom: calc(var(--bottombar-height) + 8px);
+}
+
+/* --- popup --------------------------------------------------------------- */
+
+/* Above the floating panel and bottom bar, which MapLibre's popup would sit under. */
+.maplibregl-popup {
+  z-index: 3;
+}
+
+.maplibregl-popup-content {
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.popup {
+  min-width: 210px;
+  font-size: 0.84rem;
+}
+
+.popup-city {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.popup-country {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.popup-month {
+  margin-top: 8px;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.popup-rows {
+  margin: 6px 0 0;
+}
+
+.popup-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 2px 0;
+}
+
+.popup-row dt {
+  color: var(--text-muted);
+}
+
+.popup-row dd {
+  margin: 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.popup-rows-extras {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--panel-border);
+  font-size: 0.78rem;
+}
+
+.popup-rows-extras .popup-row dd {
+  font-weight: 500;
+}
+
+/* --- narrow screens ------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  .panel {
+    width: calc(100% - 24px);
+    max-width: 320px;
+    padding: 10px 12px 12px;
+  }
+
+  .panel h1 {
+    font-size: 0.92rem;
+  }
+
+  .bottombar {
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .month-name {
+    order: 1;
+    min-width: 0;
+    font-size: 1.05rem;
+  }
+
+  .play-btn {
+    order: 0;
+  }
+
+  .slider-wrap {
+    order: 2;
+    flex: 1 0 100%;
+    min-width: 0;
+  }
+}
