@@ -2,7 +2,7 @@
 
 Interactive map of monthly temperatures (high / average / low, °C) for 135 European cities, scraped from English Wikipedia climate tables.
 
-- **Frontend:** plain HTML/CSS/JS + [MapLibre GL JS](https://maplibre.org/) with [OpenFreeMap](https://openfreemap.org/) Positron vector tiles — no API keys, no Google.
+- **Frontend:** plain HTML/CSS/JS + [MapLibre GL JS](https://maplibre.org/) with [OpenFreeMap](https://openfreemap.org/) Liberty vector tiles — no API keys, no Google.
 - **Data:** Node.js scraper over Wikipedia `Weather box` tables. Output is committed as `data/cities.js`, so the page works straight from a clone.
 
 ## Quick start
@@ -18,7 +18,7 @@ open index.html   # works from file://
 
 ## The map
 
-- One badge per city: fill colour from a fixed absolute scale (−25 °C blue → 0 white → +40 red), the rounded value printed inside.
+- One badge per city: fill colour from Wikipedia's own weather-box temperature ramp (ported from `Module:Weather box/colors`), with the rounded value and unit ("23°C") printed inside.
 - Month slider (Jan–Dec) plus a play button; **High / Average / Low** metric toggle (averages shown by default).
 - Numbers are dropped adaptively when they would collide; zoom in to reveal them. Hover highlights, click opens a popup with the month's high, average, low, typical extremes and records.
 - Colour and value are always Celsius.

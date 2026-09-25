@@ -224,12 +224,31 @@ input[type='range'] {
   box-shadow: var(--shadow);
 }
 
+/* Bigger, easier-to-hit close button. */
+.maplibregl-popup-close-button {
+  top: 2px;
+  right: 2px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--text-muted);
+}
+
+.maplibregl-popup-close-button:hover {
+  background: #e8ecf1;
+  color: var(--text);
+}
+
 .popup {
   min-width: 210px;
   font-size: 0.84rem;
 }
 
 .popup-city {
+  padding-right: 24px; /* clears the enlarged close button */
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.2;

@@ -10,8 +10,9 @@
  * draw. See getCityList().
  */
 
-// OpenFreeMap `positron` — the one map style used, no API key required.
-const MAP_STYLE_URL = 'https://tiles.openfreemap.org/styles/positron';
+// OpenFreeMap `liberty` — a colourful OSM style, no API key required.
+// Alternatives: bright (more vivid), positron (muted grey).
+const MAP_STYLE_URL = 'https://tiles.openfreemap.org/styles/liberty';
 
 const MONTH_NAMES = [
   'January', 'February', 'March', 'April', 'May', 'June',
@@ -27,15 +28,9 @@ const METRICS = [
 ];
 const DEFAULT_METRIC_ID = 'average';
 
-// Absolute colour scale, shared by every month and metric (RdBu): -25 °C and
-// below is blue, 0 °C neutral, +40 °C and above red. Values outside the range
-// clamp to the end colours.
-const SCALE_MIN = -25;
-const SCALE_MID = 0;
-const SCALE_MAX = 40;
-const COLOR_MIN = '#2166ac';
-const COLOR_MID = '#f7f7f7';
-const COLOR_MAX = '#b2182b';
+// Badge colours come straight from Wikipedia's {{Weather box}} temperature ramp
+// (Module:Weather box/colors#_temperature_color): deep blue at -42.75 °C, white
+// at +4.5 °C, red at +41.5 °C. See colorForTemperature().
 const NO_DATA_COLOR = '#c9ced6';
 const LIGHT_TEXT_COLOR = '#ffffff';
 const DARK_TEXT_COLOR = '#14213d';
@@ -80,25 +75,38 @@ function hexToRgb(hex) {
   return { r: (value >> 16) & 255, g: (value >> 8) & 255, b: value & 255 };
 }
 
-function mixRgb(from, to, amount) {
-  const t = Math.min(1, Math.max(0, amount));
-  return {
-    r: from.r + (to.r - from.r) * t,
-    g: from.g + (to.g - from.g) * t,
-    b: from.b + (to.b - from.b) * t,
-  };
+// Port of Module:Weather box/colors `range_pos`: 0 at `start`, 1 at `stop`.
+function rangePosition(value, start, stop) {
+  if (start < stop) {
+    if (value < start) return 0;
+    if (value > stop) return 1;
+    return (value - start) / (stop - start);
+  }
+  if (value < stop) return 1;
+  if (value > start) return 0;
+  return (start - value) / (start - stop);
 }
 
-function rgbToHex(rgb) {
-  const channel = value => Math.round(value).toString(16).padStart(2, '0');
-  return `#${channel(rgb.r)}${channel(rgb.g)}${channel(rgb.b)}`;
+// The Lua module formats each 0..255 channel with %02X, which truncates.
+function colorByte(value) {
+  const clamped = Math.min(255, Math.max(0, Math.floor(value)));
+  return clamped.toString(16).padStart(2, '0');
 }
 
-// Linear interpolation between the three scale anchors.
+// Exact port of Wikipedia's `_temperature_color` (Module:Weather box/colors):
+// R and G ramp from 0 at -42.75 °C to 255 at +4.5 °C; above 4.5 °C R stays 255
+// while G falls to 0 at +41.5 °C and B reaches 0 at +23 °C.
 function colorForTemperature(celsius) {
-  return celsius <= SCALE_MID
-    ? rgbToHex(mixRgb(hexToRgb(COLOR_MIN), hexToRgb(COLOR_MID), (celsius - SCALE_MIN) / (SCALE_MID - SCALE_MIN)))
-    : rgbToHex(mixRgb(hexToRgb(COLOR_MID), hexToRgb(COLOR_MAX), (celsius - SCALE_MID) / (SCALE_MAX - SCALE_MID)));
+  const red = celsius < 4.5
+    ? 255 * rangePosition(celsius, -42.75, 4.5)
+    : 255 * rangePosition(celsius, 60, 41.5);
+  const green = celsius <= 4.5
+    ? 255 * rangePosition(celsius, -42.75, 4.5)
+    : 255 * rangePosition(celsius, 41.5, 4.5);
+  const blue = celsius < -42.78
+    ? 255 * rangePosition(celsius, -90, -42.78)
+    : 255 * rangePosition(celsius, 23, 4.5);
+  return `#${colorByte(red)}${colorByte(green)}${colorByte(blue)}`;
 }
 
 // sRGB relative luminance (WCAG).
@@ -132,16 +140,22 @@ function legendTickPosition(celsius) {
   return ((celsius - first) / (last - first)) * 100;
 }
 
-// Built from the same anchors as colorForTemperature, so the legend gradient
-// matches the badges exactly.
+// Sampled every 5 °C from colorForTemperature, so the gradient matches the
+// badges (and therefore Wikipedia) as closely as CSS allows.
 function legendGradientCss() {
-  const stops = LEGEND_TICKS.map(tick => `${colorForTemperature(tick)} ${legendTickPosition(tick).toFixed(2)}%`);
+  const first = LEGEND_TICKS[0];
+  const last = LEGEND_TICKS[LEGEND_TICKS.length - 1];
+  const stops = [];
+  for (let tick = first; tick <= last; tick += 5) {
+    stops.push(`${colorForTemperature(tick)} ${legendTickPosition(tick).toFixed(2)}%`);
+  }
   return `linear-gradient(90deg, ${stops.join(', ')})`;
 }
 
-// Badge number: rounded integer, ASCII hyphen-minus for negatives.
+// Badge label: rounded integer with the unit, ASCII hyphen-minus for negatives
+// (the enlarged badges fit "23°C" / "-12°C").
 function formatBadgeNumber(celsius) {
-  return String(Math.round(celsius));
+  return `${Math.round(celsius)}${DEGREE_C}`;
 }
 
 // Legend tick: integer with a real minus sign and a degree sign.
@@ -340,10 +354,10 @@ function initApp() {
       source: DATA_SOURCE_ID,
       paint: {
         'circle-color': ['get', 'fill'],
-        // Roughly 8 px at zoom 3.4 growing to 12 px at zoom 6.
-        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 8, 6, 12],
+        // Roughly 13 px at zoom 3.4 growing to 19 px at zoom 6.
+        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 13, 6, 19],
         'circle-stroke-color': '#ffffff',
-        'circle-stroke-width': 1.2,
+        'circle-stroke-width': 1.5,
         'circle-opacity': 0.95,
       },
     });
@@ -355,7 +369,7 @@ function initApp() {
       layout: {
         'text-field': ['get', 'label'],
         'text-font': ['Noto Sans Regular'],
-        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 10, 6, 12],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 9, 6, 12.5],
         'text-anchor': 'center',
         // MapLibre's default collision handling: numbers that would overlap are
         // dropped adaptively while the circles underneath stay visible.
