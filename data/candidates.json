@@ -1,0 +1,584 @@
+{
+  "generatedAt": "2026-09-25T10:39:31.441Z",
+  "candidates": [
+    {
+      "name": "Istanbul",
+      "country": "Turkey",
+      "article": "Istanbul",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Moscow",
+      "country": "Russia",
+      "article": "Moscow",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "London",
+      "country": "United Kingdom",
+      "article": "London",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Saint Petersburg",
+      "country": "Russia",
+      "article": "Saint Petersburg",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Berlin",
+      "country": "Germany",
+      "article": "Berlin",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Madrid",
+      "country": "Spain",
+      "article": "Madrid",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Kyiv",
+      "country": "Ukraine",
+      "article": "Kyiv",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Rome",
+      "country": "Italy",
+      "article": "Rome",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Baku",
+      "country": "Azerbaijan",
+      "article": "Baku",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Paris",
+      "country": "France",
+      "article": "Paris",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Vienna",
+      "country": "Austria",
+      "article": "Vienna",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Minsk",
+      "country": "Belarus",
+      "article": "Minsk",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Hamburg",
+      "country": "Germany",
+      "article": "Hamburg",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Warsaw",
+      "country": "Poland",
+      "article": "Warsaw",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Barcelona",
+      "country": "Spain",
+      "article": "Barcelona",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Bucharest",
+      "country": "Romania",
+      "article": "Bucharest",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Belgrade",
+      "country": "Serbia",
+      "article": "Belgrade",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Budapest",
+      "country": "Hungary",
+      "article": "Budapest",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Munich",
+      "country": "Germany",
+      "article": "Munich",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Kharkiv",
+      "country": "Ukraine",
+      "article": "Kharkiv",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Prague",
+      "country": "Czech Republic",
+      "article": "Prague",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Tbilisi",
+      "country": "Georgia",
+      "article": "Tbilisi",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Milan",
+      "country": "Italy",
+      "article": "Milan",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Kazan",
+      "country": "Russia",
+      "article": "Kazan",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Sofia",
+      "country": "Bulgaria",
+      "article": "Sofia",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Nizhny Novgorod",
+      "country": "Russia",
+      "article": "Nizhny Novgorod",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Ufa",
+      "country": "Russia",
+      "article": "Ufa",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Birmingham",
+      "country": "United Kingdom",
+      "article": "Birmingham",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Krasnodar",
+      "country": "Russia",
+      "article": "Krasnodar",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Samara",
+      "country": "Russia",
+      "article": "Samara",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Yerevan",
+      "country": "Armenia",
+      "article": "Yerevan",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Rostov-on-Don",
+      "country": "Russia",
+      "article": "Rostov-on-Don",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Voronezh",
+      "country": "Russia",
+      "article": "Voronezh",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Perm",
+      "country": "Russia",
+      "article": "Perm, Russia",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Cologne",
+      "country": "Germany",
+      "article": "Cologne",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Volgograd",
+      "country": "Russia",
+      "article": "Volgograd",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Odesa",
+      "country": "Ukraine",
+      "article": "Odesa",
+      "sources": [
+        "population-list"
+      ]
+    },
+    {
+      "name": "Stockholm",
+      "country": "Sweden",
+      "article": "Stockholm",
+      "sources": [
+        "population-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Tirana",
+      "country": "Albania",
+      "article": "Tirana",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Andorra la Vella",
+      "country": "Andorra",
+      "article": "Andorra la Vella",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Brussels",
+      "country": "Belgium",
+      "article": "Brussels",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Sarajevo",
+      "country": "Bosnia and Herzegovina",
+      "article": "Sarajevo",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Zagreb",
+      "country": "Croatia",
+      "article": "Zagreb",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Nicosia",
+      "country": "Cyprus",
+      "article": "Nicosia",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Copenhagen",
+      "country": "Denmark",
+      "article": "Copenhagen",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Tallinn",
+      "country": "Estonia",
+      "article": "Tallinn",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Helsinki",
+      "country": "Finland",
+      "article": "Helsinki",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Athens",
+      "country": "Greece",
+      "article": "Athens",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Reykjavík",
+      "country": "Iceland",
+      "article": "Reykjavík",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Dublin",
+      "country": "Ireland",
+      "article": "Dublin",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Astana",
+      "country": "Kazakhstan",
+      "article": "Astana",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Pristina",
+      "country": "Kosovo",
+      "article": "Pristina",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Riga",
+      "country": "Latvia",
+      "article": "Riga",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Vaduz",
+      "country": "Liechtenstein",
+      "article": "Vaduz",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Vilnius",
+      "country": "Lithuania",
+      "article": "Vilnius",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Luxembourg",
+      "country": "Luxembourg",
+      "article": "Luxembourg (city)",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Valletta",
+      "country": "Malta",
+      "article": "Valletta",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Chișinău",
+      "country": "Moldova",
+      "article": "Chișinău",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Monaco",
+      "country": "Monaco",
+      "article": "Monaco",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Podgorica",
+      "country": "Montenegro",
+      "article": "Podgorica",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Amsterdam",
+      "country": "Netherlands",
+      "article": "Amsterdam",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Skopje",
+      "country": "North Macedonia",
+      "article": "Skopje",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Oslo",
+      "country": "Norway",
+      "article": "Oslo",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Lisbon",
+      "country": "Portugal",
+      "article": "Lisbon",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "City of San Marino",
+      "country": "San Marino",
+      "article": "City of San Marino",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Bratislava",
+      "country": "Slovakia",
+      "article": "Bratislava",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Ljubljana",
+      "country": "Slovenia",
+      "article": "Ljubljana",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Bern",
+      "country": "Switzerland",
+      "article": "Bern",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Ankara",
+      "country": "Turkey",
+      "article": "Ankara",
+      "sources": [
+        "capitals"
+      ]
+    },
+    {
+      "name": "Vatican City",
+      "country": "Vatican City",
+      "article": "Vatican City",
+      "sources": [
+        "capitals"
+      ]
+    }
+  ]
+}
