@@ -1,0 +1,16 @@
+{
+  "name": "europe-temperature-map",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive map of monthly temperatures for European cities, built from English Wikipedia climate tables.",
+  "type": "module",
+  "scripts": {
+    "scrape": "node scraper/run.js",
+    "build": "node scraper/build.js",
+    "validate": "node scraper/validate.js",
+    "test": "node --test scraper/test/"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}
