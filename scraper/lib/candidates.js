@@ -1,6 +1,6 @@
-// Merges the two candidate sources (population ranking table + curated capitals)
-// and deduplicates by Wikipedia article title.
-export function mergeCandidates(populationRows, capitalRows) {
+// Merges the candidate sources (population ranking, EU city ranking, curated
+// capitals) and deduplicates by Wikipedia article title.
+export function mergeCandidates(sources) {
   const byArticle = new Map();
 
   const add = (row, source) => {
@@ -17,8 +17,9 @@ export function mergeCandidates(populationRows, capitalRows) {
     });
   };
 
-  for (const row of populationRows) add(row, 'population-list');
-  for (const row of capitalRows) add(row, 'capitals');
+  for (const { rows, source } of sources) {
+    for (const row of rows) add(row, source);
+  }
 
   return [...byArticle.values()];
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T10:39:31.441Z",
+  "generatedAt": "2026-09-25T11:24:56.503Z",
   "candidates": [
     {
       "name": "Istanbul",
@@ -41,6 +41,7 @@
       "article": "Berlin",
       "sources": [
         "population-list",
+        "eu-list",
         "capitals"
       ]
     },
@@ -50,6 +51,7 @@
       "article": "Madrid",
       "sources": [
         "population-list",
+        "eu-list",
         "capitals"
       ]
     },
@@ -68,6 +70,7 @@
       "article": "Rome",
       "sources": [
         "population-list",
+        "eu-list",
         "capitals"
       ]
     },
@@ -86,6 +89,7 @@
       "article": "Paris",
       "sources": [
         "population-list",
+        "eu-list",
         "capitals"
       ]
     },
@@ -95,6 +99,7 @@
       "article": "Vienna",
       "sources": [
         "population-list",
+        "eu-list",
         "capitals"
       ]
     },
@@ -112,7 +117,8 @@
       "country": "Germany",
       "article": "Hamburg",
       "sources": [
-        "population-list"
+        "population-list",
+        "eu-list"
       ]
     },
     {
@@ -121,6 +127,7 @@
       "article": "Warsaw",
       "sources": [
         "population-list",
+        "eu-list",
         "capitals"
       ]
     },
@@ -129,7 +136,8 @@
       "country": "Spain",
       "article": "Barcelona",
       "sources": [
-        "population-list"
+        "population-list",
+        "eu-list"
       ]
     },
     {
@@ -138,6 +146,7 @@
       "article": "Bucharest",
       "sources": [
         "population-list",
+        "eu-list",
         "capitals"
       ]
     },
@@ -156,6 +165,7 @@
       "article": "Budapest",
       "sources": [
         "population-list",
+        "eu-list",
         "capitals"
       ]
     },
@@ -164,7 +174,8 @@
       "country": "Germany",
       "article": "Munich",
       "sources": [
-        "population-list"
+        "population-list",
+        "eu-list"
       ]
     },
     {
@@ -181,6 +192,7 @@
       "article": "Prague",
       "sources": [
         "population-list",
+        "eu-list",
         "capitals"
       ]
     },
@@ -198,7 +210,8 @@
       "country": "Italy",
       "article": "Milan",
       "sources": [
-        "population-list"
+        "population-list",
+        "eu-list"
       ]
     },
     {
@@ -215,6 +228,7 @@
       "article": "Sofia",
       "sources": [
         "population-list",
+        "eu-list",
         "capitals"
       ]
     },
@@ -296,7 +310,8 @@
       "country": "Germany",
       "article": "Cologne",
       "sources": [
-        "population-list"
+        "population-list",
+        "eu-list"
       ]
     },
     {
@@ -321,7 +336,652 @@
       "article": "Stockholm",
       "sources": [
         "population-list",
+        "eu-list",
         "capitals"
+      ]
+    },
+    {
+      "name": "Amsterdam",
+      "country": "Netherlands",
+      "article": "Amsterdam",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Naples",
+      "country": "Italy",
+      "article": "Naples",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Marseille",
+      "country": "France",
+      "article": "Marseille",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Turin",
+      "country": "Italy",
+      "article": "Turin",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Valencia",
+      "country": "Spain",
+      "article": "Valencia",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Kraków",
+      "country": "Poland",
+      "article": "Kraków",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Zagreb",
+      "country": "Croatia",
+      "article": "Zagreb",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Frankfurt",
+      "country": "Germany",
+      "article": "Frankfurt",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Helsinki",
+      "country": "Finland",
+      "article": "Helsinki",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Zaragoza",
+      "country": "Spain",
+      "article": "Zaragoza",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Seville",
+      "country": "Spain",
+      "article": "Seville",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Rotterdam",
+      "country": "Netherlands",
+      "article": "Rotterdam",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Wrocław",
+      "country": "Poland",
+      "article": "Wrocław",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Copenhagen",
+      "country": "Denmark",
+      "article": "Copenhagen",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Lisbon",
+      "country": "Portugal",
+      "article": "Lisbon",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Athens",
+      "country": "Greece",
+      "article": "Athens",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Łódź",
+      "country": "Poland",
+      "article": "Łódź",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Palermo",
+      "country": "Italy",
+      "article": "Palermo",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Düsseldorf",
+      "country": "Germany",
+      "article": "Düsseldorf",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Vilnius",
+      "country": "Lithuania",
+      "article": "Vilnius",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Gothenburg",
+      "country": "Sweden",
+      "article": "Gothenburg",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Stuttgart",
+      "country": "Germany",
+      "article": "Stuttgart",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Leipzig",
+      "country": "Germany",
+      "article": "Leipzig",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Dortmund",
+      "country": "Germany",
+      "article": "Dortmund",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Málaga",
+      "country": "Spain",
+      "article": "Málaga",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Dublin",
+      "country": "Ireland",
+      "article": "Dublin",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Riga",
+      "country": "Latvia",
+      "article": "Riga",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Bremen",
+      "country": "Germany",
+      "article": "Bremen",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Essen",
+      "country": "Germany",
+      "article": "Essen",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Antwerp",
+      "country": "Belgium",
+      "article": "Antwerp",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "The Hague",
+      "country": "Netherlands",
+      "article": "The Hague",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Genoa",
+      "country": "Italy",
+      "article": "Genoa",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Dresden",
+      "country": "Germany",
+      "article": "Dresden",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Poznań",
+      "country": "Poland",
+      "article": "Poznań",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Nuremberg",
+      "country": "Germany",
+      "article": "Nuremberg",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Lyon",
+      "country": "France",
+      "article": "Lyon",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Toulouse",
+      "country": "France",
+      "article": "Toulouse",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Hanover",
+      "country": "Germany",
+      "article": "Hanover",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Duisburg",
+      "country": "Germany",
+      "article": "Duisburg",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Gdańsk",
+      "country": "Poland",
+      "article": "Gdańsk",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Bratislava",
+      "country": "Slovakia",
+      "article": "Bratislava",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Murcia",
+      "country": "Spain",
+      "article": "Murcia",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Tallinn",
+      "country": "Estonia",
+      "article": "Tallinn",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Sintra",
+      "country": "Portugal",
+      "article": "Sintra",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Palma de Mallorca",
+      "country": "Spain",
+      "article": "Palma de Mallorca",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Brno",
+      "country": "Czech Republic",
+      "article": "Brno",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Bologna",
+      "country": "Italy",
+      "article": "Bologna",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Szczecin",
+      "country": "Poland",
+      "article": "Szczecin",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Las Palmas",
+      "country": "Spain",
+      "article": "Las Palmas",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Utrecht",
+      "country": "Netherlands",
+      "article": "Utrecht",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Aarhus",
+      "country": "Denmark",
+      "article": "Aarhus",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Malmö",
+      "country": "Sweden",
+      "article": "Malmö",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Alicante",
+      "country": "Spain",
+      "article": "Alicante",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Florence",
+      "country": "Italy",
+      "article": "Florence",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Bochum",
+      "country": "Germany",
+      "article": "Bochum",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Nice",
+      "country": "France",
+      "article": "Nice",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Wuppertal",
+      "country": "Germany",
+      "article": "Wuppertal",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Bilbao",
+      "country": "Spain",
+      "article": "Bilbao",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Plovdiv",
+      "country": "Bulgaria",
+      "article": "Plovdiv",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Nantes",
+      "country": "France",
+      "article": "Nantes",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Bielefeld",
+      "country": "Germany",
+      "article": "Bielefeld",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Varna",
+      "country": "Bulgaria",
+      "article": "Varna, Bulgaria",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Espoo",
+      "country": "Finland",
+      "article": "Espoo",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Lublin",
+      "country": "Poland",
+      "article": "Lublin",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Bonn",
+      "country": "Germany",
+      "article": "Bonn",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Córdoba",
+      "country": "Spain",
+      "article": "Córdoba, Spain",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Vila Nova de Gaia",
+      "country": "Portugal",
+      "article": "Vila Nova de Gaia",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Bydgoszcz",
+      "country": "Poland",
+      "article": "Bydgoszcz",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Mannheim",
+      "country": "Germany",
+      "article": "Mannheim",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Bari",
+      "country": "Italy",
+      "article": "Bari",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Montpellier",
+      "country": "France",
+      "article": "Montpellier",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Karlsruhe",
+      "country": "Germany",
+      "article": "Karlsruhe",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Thessaloniki",
+      "country": "Greece",
+      "article": "Thessaloniki",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Münster",
+      "country": "Germany",
+      "article": "Münster",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Graz",
+      "country": "Austria",
+      "article": "Graz",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Kaunas",
+      "country": "Lithuania",
+      "article": "Kaunas",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Ljubljana",
+      "country": "Slovenia",
+      "article": "Ljubljana",
+      "sources": [
+        "eu-list",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Valladolid",
+      "country": "Spain",
+      "article": "Valladolid",
+      "sources": [
+        "eu-list"
+      ]
+    },
+    {
+      "name": "Augsburg",
+      "country": "Germany",
+      "article": "Augsburg",
+      "sources": [
+        "eu-list"
       ]
     },
     {
@@ -357,14 +1017,6 @@
       ]
     },
     {
-      "name": "Zagreb",
-      "country": "Croatia",
-      "article": "Zagreb",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
       "name": "Nicosia",
       "country": "Cyprus",
       "article": "Nicosia",
@@ -373,49 +1025,9 @@
       ]
     },
     {
-      "name": "Copenhagen",
-      "country": "Denmark",
-      "article": "Copenhagen",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Tallinn",
-      "country": "Estonia",
-      "article": "Tallinn",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Helsinki",
-      "country": "Finland",
-      "article": "Helsinki",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Athens",
-      "country": "Greece",
-      "article": "Athens",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
       "name": "Reykjavík",
       "country": "Iceland",
       "article": "Reykjavík",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Dublin",
-      "country": "Ireland",
-      "article": "Dublin",
       "sources": [
         "capitals"
       ]
@@ -437,25 +1049,9 @@
       ]
     },
     {
-      "name": "Riga",
-      "country": "Latvia",
-      "article": "Riga",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
       "name": "Vaduz",
       "country": "Liechtenstein",
       "article": "Vaduz",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Vilnius",
-      "country": "Lithuania",
-      "article": "Vilnius",
       "sources": [
         "capitals"
       ]
@@ -501,14 +1097,6 @@
       ]
     },
     {
-      "name": "Amsterdam",
-      "country": "Netherlands",
-      "article": "Amsterdam",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
       "name": "Skopje",
       "country": "North Macedonia",
       "article": "Skopje",
@@ -525,33 +1113,9 @@
       ]
     },
     {
-      "name": "Lisbon",
-      "country": "Portugal",
-      "article": "Lisbon",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
       "name": "City of San Marino",
       "country": "San Marino",
       "article": "City of San Marino",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Bratislava",
-      "country": "Slovakia",
-      "article": "Bratislava",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Ljubljana",
-      "country": "Slovenia",
-      "article": "Ljubljana",
       "sources": [
         "capitals"
       ]

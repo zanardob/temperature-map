@@ -4,12 +4,14 @@
 import { CAPITALS } from '../capitals.js';
 import { fetchArticleHtml, fetchCoordinates } from './articles.js';
 import { mergeCandidates } from './candidates.js';
-import { parsePopulationList } from './lists.js';
+import { parseEuList, parsePopulationList } from './lists.js';
 import { parseClimateFromHtml } from './parse.js';
 import { checkCity } from './validate.js';
 
 export const POPULATION_LIST_PAGE =
   'List of European cities by population within city limits';
+export const EU_LIST_PAGE =
+  'List of cities in the European Union by population within city limits';
 
 function wikipediaUrl(article) {
   return `https://en.wikipedia.org/wiki/${encodeURIComponent(article.replace(/ /g, '_'))}`;
@@ -18,7 +20,13 @@ function wikipediaUrl(article) {
 export async function buildDataset({ offline = false } = {}) {
   const listHtml = await fetchArticleHtml(POPULATION_LIST_PAGE, { offline });
   const populationRows = listHtml ? parsePopulationList(listHtml) : [];
-  const candidates = mergeCandidates(populationRows, CAPITALS);
+  const euHtml = await fetchArticleHtml(EU_LIST_PAGE, { offline });
+  const euRows = euHtml ? parseEuList(euHtml) : [];
+  const candidates = mergeCandidates([
+    { rows: populationRows, source: 'population-list' },
+    { rows: euRows, source: 'eu-list' },
+    { rows: CAPITALS, source: 'capitals' },
+  ]);
 
   const coords = await fetchCoordinates(
     candidates.map((candidate) => candidate.article),

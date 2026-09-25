@@ -1,5 +1,6 @@
-// Parses the main ranking table from
-// "List of European cities by population within city limits".
+// Parsers for the ranking tables used to build the candidate list:
+// "List of European cities by population within city limits" and
+// "List of cities in the European Union by population within city limits".
 import { load } from 'cheerio';
 
 const FOOTNOTE = /\[[^\]]*\]/g;
@@ -10,13 +11,15 @@ function cellText(cell) {
   return clone.text().replace(/\s+/g, ' ').replace(FOOTNOTE, '').trim();
 }
 
-export function parsePopulationList(html) {
+// Row shape: city name | country (a <br> inside the header loses its space in
+// text()) | further columns we ignore.
+function parseRankingTable(html, countryHeaderPattern) {
   const $ = load(html);
   let table = null;
   $('table.wikitable').each((_, candidate) => {
     if (table) return;
     const header = $(candidate).find('tr').first().text().replace(/\s+/g, ' ');
-    if (/city/i.test(header) && /country/i.test(header)) table = $(candidate);
+    if (/city/i.test(header) && countryHeaderPattern.test(header)) table = $(candidate);
   });
   if (!table) return [];
 
@@ -31,4 +34,14 @@ export function parsePopulationList(html) {
     rows.push({ name, article, country });
   });
   return rows;
+}
+
+// "List of European cities by population within city limits"
+export function parsePopulationList(html) {
+  return parseRankingTable(html, /country/i);
+}
+
+// "List of cities in the European Union by population within city limits"
+export function parseEuList(html) {
+  return parseRankingTable(html, /member\s?state/i);
 }
