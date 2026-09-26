@@ -1,6 +1,6 @@
-// MediaWiki API client with on-disk caching and polite, sequential request pacing.
-// Every uncached request waits at least MIN_REQUEST_INTERVAL_MS after the previous
-// one so re-runs from cache never touch the network.
+// MediaWiki/QLever API client with on-disk caching and polite, sequential
+// request pacing. Every uncached request waits at least MIN_REQUEST_INTERVAL_MS
+// after the previous one, so re-runs from cache never touch the network.
 import { createHash } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -37,22 +37,22 @@ export function wikidataEntityUrl(title) {
   return `https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=${encodeURIComponent(title)}&props=claims&format=json&formatversion=2`;
 }
 
-export function cachePathFor(url) {
+export function cachePathFor(url, extension = 'json') {
   const hash = createHash('sha1').update(url).digest('hex');
-  return path.join(CACHE_DIR, `${hash}.json`);
+  return path.join(CACHE_DIR, `${hash}.${extension}`);
 }
 
-async function readCached(url) {
+async function readCached(url, extension) {
   try {
-    return JSON.parse(await readFile(cachePathFor(url), 'utf8'));
+    return await readFile(cachePathFor(url, extension), 'utf8');
   } catch {
     return undefined;
   }
 }
 
-async function writeCached(url, data) {
+async function writeCached(url, extension, text) {
   await mkdir(CACHE_DIR, { recursive: true });
-  await writeFile(cachePathFor(url), JSON.stringify(data));
+  await writeFile(cachePathFor(url, extension), text);
 }
 
 export class CacheMissError extends Error {
@@ -63,10 +63,10 @@ export class CacheMissError extends Error {
   }
 }
 
-// Returns parsed JSON for `url`, reading from cache when present.
+// Returns the response body for `url` as text, reading from cache when present.
 // Throws CacheMissError when offline and not cached; retries transient failures.
-export async function fetchJson(url, { offline = false } = {}) {
-  const cached = await readCached(url);
+async function requestText(url, { offline = false, extension = 'json' } = {}) {
+  const cached = await readCached(url, extension);
   if (cached !== undefined) {
     netStats.cacheHits += 1;
     return cached;
@@ -82,7 +82,7 @@ export async function fetchJson(url, { offline = false } = {}) {
     let response;
     try {
       response = await fetch(url, {
-        headers: { 'User-Agent': USER_AGENT, Accept: 'application/json' },
+        headers: { 'User-Agent': USER_AGENT },
       });
     } catch (error) {
       if (attempt < MAX_RETRIES) {
@@ -96,15 +96,26 @@ export async function fetchJson(url, { offline = false } = {}) {
     if (response.status === 429 || response.status >= 500) {
       if (attempt < MAX_RETRIES) {
         netStats.retries += 1;
-        await sleep(2000 * 2 ** attempt);
+        const retryAfter = Number(response.headers.get('retry-after'));
+        await sleep(Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : 2000 * 2 ** attempt);
         continue;
       }
       throw new Error(`HTTP ${response.status} for ${url}`);
     }
     if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`);
 
-    const json = await response.json();
-    await writeCached(url, json);
-    return json;
+    const text = await response.text();
+    await writeCached(url, extension, text);
+    return text;
   }
+}
+
+// Returns parsed JSON for `url`, reading from cache when present.
+export async function fetchJson(url, options = {}) {
+  return JSON.parse(await requestText(url, { ...options, extension: 'json' }));
+}
+
+// Returns the raw response body (e.g. TSV) for `url`, cached as `.txt`.
+export async function fetchText(url, options = {}) {
+  return requestText(url, { ...options, extension: 'txt' });
 }

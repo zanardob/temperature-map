@@ -7,6 +7,7 @@ import { mergeCandidates } from './candidates.js';
 import { parseEuList, parsePopulationList } from './lists.js';
 import { parseClimateFromHtml } from './parse.js';
 import { checkCity } from './validate.js';
+import { fetchWikidataCandidates } from './wikidata.js';
 
 export const POPULATION_LIST_PAGE =
   'List of European cities by population within city limits';
@@ -22,9 +23,12 @@ export async function buildDataset({ offline = false } = {}) {
   const populationRows = listHtml ? parsePopulationList(listHtml) : [];
   const euHtml = await fetchArticleHtml(EU_LIST_PAGE, { offline });
   const euRows = euHtml ? parseEuList(euHtml) : [];
+  // Bulk source: every European settlement >= 100k that has a weather box.
+  const wikidataRows = await fetchWikidataCandidates({ offline });
   const candidates = mergeCandidates([
     { rows: populationRows, source: 'population-list' },
     { rows: euRows, source: 'eu-list' },
+    { rows: wikidataRows, source: 'wikidata' },
     { rows: CAPITALS, source: 'capitals' },
   ]);
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T11:24:56.503Z",
+  "generatedAt": "2026-09-26T09:27:05.705Z",
   "candidates": [
     {
       "name": "Istanbul",
@@ -15,6 +15,7 @@
       "article": "Moscow",
       "sources": [
         "population-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -24,6 +25,7 @@
       "article": "London",
       "sources": [
         "population-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -32,7 +34,8 @@
       "country": "Russia",
       "article": "Saint Petersburg",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -42,6 +45,7 @@
       "sources": [
         "population-list",
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -52,6 +56,7 @@
       "sources": [
         "population-list",
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -61,6 +66,7 @@
       "article": "Kyiv",
       "sources": [
         "population-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -71,6 +77,7 @@
       "sources": [
         "population-list",
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -90,6 +97,7 @@
       "sources": [
         "population-list",
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -100,6 +108,7 @@
       "sources": [
         "population-list",
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -109,6 +118,7 @@
       "article": "Minsk",
       "sources": [
         "population-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -118,7 +128,8 @@
       "article": "Hamburg",
       "sources": [
         "population-list",
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -128,6 +139,7 @@
       "sources": [
         "population-list",
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -137,7 +149,8 @@
       "article": "Barcelona",
       "sources": [
         "population-list",
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -147,6 +160,7 @@
       "sources": [
         "population-list",
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -156,6 +170,7 @@
       "article": "Belgrade",
       "sources": [
         "population-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -166,6 +181,7 @@
       "sources": [
         "population-list",
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -175,7 +191,8 @@
       "article": "Munich",
       "sources": [
         "population-list",
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -183,7 +200,8 @@
       "country": "Ukraine",
       "article": "Kharkiv",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -193,6 +211,7 @@
       "sources": [
         "population-list",
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -211,7 +230,8 @@
       "article": "Milan",
       "sources": [
         "population-list",
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -219,7 +239,8 @@
       "country": "Russia",
       "article": "Kazan",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -229,6 +250,7 @@
       "sources": [
         "population-list",
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -237,7 +259,8 @@
       "country": "Russia",
       "article": "Nizhny Novgorod",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -245,7 +268,8 @@
       "country": "Russia",
       "article": "Ufa",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -253,7 +277,8 @@
       "country": "United Kingdom",
       "article": "Birmingham",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -261,7 +286,8 @@
       "country": "Russia",
       "article": "Krasnodar",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -269,7 +295,8 @@
       "country": "Russia",
       "article": "Samara",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -286,7 +313,8 @@
       "country": "Russia",
       "article": "Rostov-on-Don",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -294,7 +322,8 @@
       "country": "Russia",
       "article": "Voronezh",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -302,7 +331,8 @@
       "country": "Russia",
       "article": "Perm, Russia",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -311,7 +341,8 @@
       "article": "Cologne",
       "sources": [
         "population-list",
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -319,7 +350,8 @@
       "country": "Russia",
       "article": "Volgograd",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -327,7 +359,8 @@
       "country": "Ukraine",
       "article": "Odesa",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -337,6 +370,7 @@
       "sources": [
         "population-list",
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -346,6 +380,7 @@
       "article": "Amsterdam",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -354,7 +389,8 @@
       "country": "Italy",
       "article": "Naples",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -362,7 +398,8 @@
       "country": "France",
       "article": "Marseille",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -370,7 +407,8 @@
       "country": "Italy",
       "article": "Turin",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -378,7 +416,8 @@
       "country": "Spain",
       "article": "Valencia",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -386,7 +425,8 @@
       "country": "Poland",
       "article": "Kraków",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -395,6 +435,7 @@
       "article": "Zagreb",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -403,7 +444,8 @@
       "country": "Germany",
       "article": "Frankfurt",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -412,6 +454,7 @@
       "article": "Helsinki",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -420,7 +463,8 @@
       "country": "Spain",
       "article": "Zaragoza",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -428,7 +472,8 @@
       "country": "Spain",
       "article": "Seville",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -436,7 +481,8 @@
       "country": "Netherlands",
       "article": "Rotterdam",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -444,7 +490,8 @@
       "country": "Poland",
       "article": "Wrocław",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -453,6 +500,7 @@
       "article": "Copenhagen",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -462,6 +510,7 @@
       "article": "Lisbon",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -471,6 +520,7 @@
       "article": "Athens",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -479,7 +529,8 @@
       "country": "Poland",
       "article": "Łódź",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -487,7 +538,8 @@
       "country": "Italy",
       "article": "Palermo",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -495,7 +547,8 @@
       "country": "Germany",
       "article": "Düsseldorf",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -504,6 +557,7 @@
       "article": "Vilnius",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -512,7 +566,8 @@
       "country": "Sweden",
       "article": "Gothenburg",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -520,7 +575,8 @@
       "country": "Germany",
       "article": "Stuttgart",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -528,7 +584,8 @@
       "country": "Germany",
       "article": "Leipzig",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -536,7 +593,8 @@
       "country": "Germany",
       "article": "Dortmund",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -544,7 +602,8 @@
       "country": "Spain",
       "article": "Málaga",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -553,6 +612,7 @@
       "article": "Dublin",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -562,6 +622,7 @@
       "article": "Riga",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -570,7 +631,8 @@
       "country": "Germany",
       "article": "Bremen",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -578,7 +640,8 @@
       "country": "Germany",
       "article": "Essen",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -586,7 +649,8 @@
       "country": "Belgium",
       "article": "Antwerp",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -594,7 +658,8 @@
       "country": "Netherlands",
       "article": "The Hague",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -602,7 +667,8 @@
       "country": "Italy",
       "article": "Genoa",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -610,7 +676,8 @@
       "country": "Germany",
       "article": "Dresden",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -618,7 +685,8 @@
       "country": "Poland",
       "article": "Poznań",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -626,7 +694,8 @@
       "country": "Germany",
       "article": "Nuremberg",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -634,7 +703,8 @@
       "country": "France",
       "article": "Lyon",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -642,7 +712,8 @@
       "country": "France",
       "article": "Toulouse",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -650,7 +721,8 @@
       "country": "Germany",
       "article": "Hanover",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -658,7 +730,8 @@
       "country": "Germany",
       "article": "Duisburg",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -666,7 +739,8 @@
       "country": "Poland",
       "article": "Gdańsk",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -675,6 +749,7 @@
       "article": "Bratislava",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -683,7 +758,8 @@
       "country": "Spain",
       "article": "Murcia",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -692,6 +768,7 @@
       "article": "Tallinn",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -700,7 +777,8 @@
       "country": "Portugal",
       "article": "Sintra",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -708,7 +786,8 @@
       "country": "Spain",
       "article": "Palma de Mallorca",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -716,7 +795,8 @@
       "country": "Czech Republic",
       "article": "Brno",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -724,7 +804,8 @@
       "country": "Italy",
       "article": "Bologna",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -732,7 +813,8 @@
       "country": "Poland",
       "article": "Szczecin",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -748,7 +830,8 @@
       "country": "Netherlands",
       "article": "Utrecht",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -756,7 +839,8 @@
       "country": "Denmark",
       "article": "Aarhus",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -764,7 +848,8 @@
       "country": "Sweden",
       "article": "Malmö",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -772,7 +857,8 @@
       "country": "Spain",
       "article": "Alicante",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -780,7 +866,8 @@
       "country": "Italy",
       "article": "Florence",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -788,7 +875,8 @@
       "country": "Germany",
       "article": "Bochum",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -796,7 +884,8 @@
       "country": "France",
       "article": "Nice",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -812,7 +901,8 @@
       "country": "Spain",
       "article": "Bilbao",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -820,7 +910,8 @@
       "country": "Bulgaria",
       "article": "Plovdiv",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -828,7 +919,8 @@
       "country": "France",
       "article": "Nantes",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -836,7 +928,8 @@
       "country": "Germany",
       "article": "Bielefeld",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -844,7 +937,8 @@
       "country": "Bulgaria",
       "article": "Varna, Bulgaria",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -852,7 +946,8 @@
       "country": "Finland",
       "article": "Espoo",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -860,7 +955,8 @@
       "country": "Poland",
       "article": "Lublin",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -868,7 +964,8 @@
       "country": "Germany",
       "article": "Bonn",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -876,7 +973,8 @@
       "country": "Spain",
       "article": "Córdoba, Spain",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -892,7 +990,8 @@
       "country": "Poland",
       "article": "Bydgoszcz",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -900,7 +999,8 @@
       "country": "Germany",
       "article": "Mannheim",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -908,7 +1008,8 @@
       "country": "Italy",
       "article": "Bari",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -916,7 +1017,8 @@
       "country": "France",
       "article": "Montpellier",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -924,7 +1026,8 @@
       "country": "Germany",
       "article": "Karlsruhe",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -932,7 +1035,8 @@
       "country": "Greece",
       "article": "Thessaloniki",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -940,7 +1044,8 @@
       "country": "Germany",
       "article": "Münster",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -948,7 +1053,8 @@
       "country": "Austria",
       "article": "Graz",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -956,7 +1062,8 @@
       "country": "Lithuania",
       "article": "Kaunas",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -965,6 +1072,7 @@
       "article": "Ljubljana",
       "sources": [
         "eu-list",
+        "wikidata",
         "capitals"
       ]
     },
@@ -973,7 +1081,8 @@
       "country": "Spain",
       "article": "Valladolid",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
       ]
     },
     {
@@ -981,7 +1090,3183 @@
       "country": "Germany",
       "article": "Augsburg",
       "sources": [
-        "eu-list"
+        "eu-list",
+        "wikidata"
+      ]
+    },
+    {
+      "name": "A Coruña",
+      "country": "Spain",
+      "article": "A Coruña",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Aachen",
+      "country": "Germany",
+      "article": "Aachen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Aalborg",
+      "country": "Denmark",
+      "article": "Aalborg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Aberdeen",
+      "country": "United Kingdom",
+      "article": "Aberdeen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Aix-en-Provence",
+      "country": "France",
+      "article": "Aix-en-Provence",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Albacete",
+      "country": "Spain",
+      "article": "Albacete",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Alcalá de Henares",
+      "country": "Spain",
+      "article": "Alcalá de Henares",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Alchevsk",
+      "country": "Ukraine",
+      "article": "Alchevsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Alcobendas",
+      "country": "Spain",
+      "article": "Alcobendas",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Algeciras",
+      "country": "Spain",
+      "article": "Algeciras",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Almere",
+      "country": "Netherlands",
+      "article": "Almere",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Almería",
+      "country": "Spain",
+      "article": "Almería",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Amadora",
+      "country": "Portugal",
+      "article": "Amadora",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Amiens",
+      "country": "France",
+      "article": "Amiens",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Anderlecht",
+      "country": "Belgium",
+      "article": "Anderlecht",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Angers",
+      "country": "France",
+      "article": "Angers",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Annecy",
+      "country": "France",
+      "article": "Annecy",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Arad",
+      "country": "Romania",
+      "article": "Arad, Romania",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Arkhangelsk",
+      "country": "Russia",
+      "article": "Arkhangelsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Armavir",
+      "country": "Russia",
+      "article": "Armavir, Russia",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Arnhem",
+      "country": "Netherlands",
+      "article": "Arnhem",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Asker",
+      "country": "Norway",
+      "article": "Asker Municipality",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Astrakhan",
+      "country": "Russia",
+      "article": "Astrakhan",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Babruysk",
+      "country": "Belarus",
+      "article": "Babruysk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bacău",
+      "country": "Romania",
+      "article": "Bacău",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Badajoz",
+      "country": "Spain",
+      "article": "Badajoz",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Badalona",
+      "country": "Spain",
+      "article": "Badalona",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Baia Mare",
+      "country": "Romania",
+      "article": "Baia Mare",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Balakovo",
+      "country": "Russia",
+      "article": "Balakovo",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Banja Luka",
+      "country": "Bosnia and Herzegovina",
+      "article": "Banja Luka",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Baranavichy",
+      "country": "Belarus",
+      "article": "Baranavichy",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Barcelos",
+      "country": "Portugal",
+      "article": "Barcelos, Portugal",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Barysaw",
+      "country": "Belarus",
+      "article": "Barysaw",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Basel",
+      "country": "Switzerland",
+      "article": "Basel",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Basildon",
+      "country": "United Kingdom",
+      "article": "Basildon",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Belfast",
+      "country": "United Kingdom",
+      "article": "Belfast",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Belgorod",
+      "country": "Russia",
+      "article": "Belgorod",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bergamo",
+      "country": "Italy",
+      "article": "Bergamo",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bergen",
+      "country": "Norway",
+      "article": "Bergen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bern",
+      "country": "Switzerland",
+      "article": "Bern",
+      "sources": [
+        "wikidata",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Besançon",
+      "country": "France",
+      "article": "Besançon",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Białystok",
+      "country": "Poland",
+      "article": "Białystok",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bielsko-Biała",
+      "country": "Poland",
+      "article": "Bielsko-Biała",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bila Tserkva",
+      "country": "Ukraine",
+      "article": "Bila Tserkva",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Blackpool",
+      "country": "United Kingdom",
+      "article": "Blackpool",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bolzano",
+      "country": "Italy",
+      "article": "Bolzano",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bordeaux",
+      "country": "France",
+      "article": "Bordeaux",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bournemouth",
+      "country": "United Kingdom",
+      "article": "Bournemouth",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Braga",
+      "country": "Portugal",
+      "article": "Braga",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Brașov",
+      "country": "Romania",
+      "article": "Brașov",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bremerhaven",
+      "country": "Germany",
+      "article": "Bremerhaven",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Brescia",
+      "country": "Italy",
+      "article": "Brescia",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Brest",
+      "country": "Belarus",
+      "article": "Brest, Belarus",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Brest",
+      "country": "France",
+      "article": "Brest, France",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Brighton",
+      "country": "United Kingdom",
+      "article": "Brighton",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bristol",
+      "country": "United Kingdom",
+      "article": "Bristol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bruges",
+      "country": "Belgium",
+      "article": "Bruges",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Brunswick",
+      "country": "Germany",
+      "article": "Braunschweig",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bryansk",
+      "country": "Russia",
+      "article": "Bryansk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Burgas",
+      "country": "Bulgaria",
+      "article": "Burgas",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Burgos",
+      "country": "Spain",
+      "article": "Burgos",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Buzău",
+      "country": "Romania",
+      "article": "Buzău",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cádiz",
+      "country": "Spain",
+      "article": "Cádiz",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Caen",
+      "country": "France",
+      "article": "Caen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cagliari",
+      "country": "Italy",
+      "article": "Cagliari",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cambridge",
+      "country": "United Kingdom",
+      "article": "Cambridge",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cardiff",
+      "country": "United Kingdom",
+      "article": "Cardiff",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cartagena",
+      "country": "Spain",
+      "article": "Cartagena, Spain",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cascais",
+      "country": "Portugal",
+      "article": "Cascais",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Castellón de la Plana",
+      "country": "Spain",
+      "article": "Castellón de la Plana",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Catania",
+      "country": "Italy",
+      "article": "Catania",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cheboksary",
+      "country": "Russia",
+      "article": "Cheboksary",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Chelmsford",
+      "country": "United Kingdom",
+      "article": "Chelmsford",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cheltenham",
+      "country": "United Kingdom",
+      "article": "Cheltenham",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Chemnitz",
+      "country": "Germany",
+      "article": "Chemnitz",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cherepovets",
+      "country": "Russia",
+      "article": "Cherepovets",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cherkasy",
+      "country": "Ukraine",
+      "article": "Cherkasy",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cherkessk",
+      "country": "Russia",
+      "article": "Cherkessk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Chernihiv",
+      "country": "Ukraine",
+      "article": "Chernihiv",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Chernivtsi",
+      "country": "Ukraine",
+      "article": "Chernivtsi",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Chișinău",
+      "country": "Moldova",
+      "article": "Chișinău",
+      "sources": [
+        "wikidata",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Clermont-Ferrand",
+      "country": "France",
+      "article": "Clermont-Ferrand",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cluj-Napoca",
+      "country": "Romania",
+      "article": "Cluj-Napoca",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Coimbra",
+      "country": "Portugal",
+      "article": "Coimbra",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Colchester",
+      "country": "United Kingdom",
+      "article": "Colchester",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Constanța",
+      "country": "Romania",
+      "article": "Constanța",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Cork",
+      "country": "Ireland",
+      "article": "Cork (city)",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Coventry",
+      "country": "United Kingdom",
+      "article": "Coventry",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Craiova",
+      "country": "Romania",
+      "article": "Craiova",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Crawley",
+      "country": "United Kingdom",
+      "article": "Crawley",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Częstochowa",
+      "country": "Poland",
+      "article": "Częstochowa",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Darmstadt",
+      "country": "Germany",
+      "article": "Darmstadt",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Debrecen",
+      "country": "Hungary",
+      "article": "Debrecen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Derbent",
+      "country": "Russia",
+      "article": "Derbent",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Derby",
+      "country": "United Kingdom",
+      "article": "Derby",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Deventer",
+      "country": "Netherlands",
+      "article": "Deventer",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Dijon",
+      "country": "France",
+      "article": "Dijon",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Dnipro",
+      "country": "Ukraine",
+      "article": "Dnipro",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Doncaster",
+      "country": "United Kingdom",
+      "article": "Doncaster",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Donetsk",
+      "country": "Ukraine",
+      "article": "Donetsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Drammen",
+      "country": "Norway",
+      "article": "Drammen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Dundee",
+      "country": "United Kingdom",
+      "article": "Dundee",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Durrës",
+      "country": "Albania",
+      "article": "Durrës",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Eastbourne",
+      "country": "United Kingdom",
+      "article": "Eastbourne",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ede",
+      "country": "Netherlands",
+      "article": "Ede, Netherlands",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Edinburgh",
+      "country": "United Kingdom",
+      "article": "Edinburgh",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Eindhoven",
+      "country": "Netherlands",
+      "article": "Eindhoven",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Elbląg",
+      "country": "Poland",
+      "article": "Elbląg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Elche",
+      "country": "Spain",
+      "article": "Elche",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Elista",
+      "country": "Russia",
+      "article": "Elista",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Enschede",
+      "country": "Netherlands",
+      "article": "Enschede",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Erfurt",
+      "country": "Germany",
+      "article": "Erfurt",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Erlangen",
+      "country": "Germany",
+      "article": "Erlangen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Exeter",
+      "country": "United Kingdom",
+      "article": "Exeter",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ferizaj",
+      "country": "Kosovo",
+      "article": "Ferizaj",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ferrara",
+      "country": "Italy",
+      "article": "Ferrara",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Foggia",
+      "country": "Italy",
+      "article": "Foggia",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Forlì",
+      "country": "Italy",
+      "article": "Forlì",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Freiburg im Breisgau",
+      "country": "Germany",
+      "article": "Freiburg im Breisgau",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Galați",
+      "country": "Romania",
+      "article": "Galați",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Gateshead",
+      "country": "United Kingdom",
+      "article": "Gateshead",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Gelsenkirchen",
+      "country": "Germany",
+      "article": "Gelsenkirchen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Geneva",
+      "country": "Switzerland",
+      "article": "Geneva",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Getafe",
+      "country": "Spain",
+      "article": "Getafe",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ghent",
+      "country": "Belgium",
+      "article": "Ghent",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Gijón",
+      "country": "Spain",
+      "article": "Gijón",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Gillingham",
+      "country": "United Kingdom",
+      "article": "Gillingham, Kent",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Girona",
+      "country": "Spain",
+      "article": "Girona",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Glasgow",
+      "country": "United Kingdom",
+      "article": "Glasgow",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Gloucester",
+      "country": "United Kingdom",
+      "article": "Gloucester",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Gomel",
+      "country": "Belarus",
+      "article": "Gomel",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Gorzów Wielkopolski",
+      "country": "Poland",
+      "article": "Gorzów Wielkopolski",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Göttingen",
+      "country": "Germany",
+      "article": "Göttingen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Granada",
+      "country": "Spain",
+      "article": "Granada",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Grenoble",
+      "country": "France",
+      "article": "Grenoble",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Groningen",
+      "country": "Netherlands",
+      "article": "Groningen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Grozny",
+      "country": "Russia",
+      "article": "Grozny",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Győr",
+      "country": "Kingdom of Hungary",
+      "article": "Győr",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Halle (Saale)",
+      "country": "Germany",
+      "article": "Halle (Saale)",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Hanau",
+      "country": "Germany",
+      "article": "Hanau",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Heidelberg",
+      "country": "Germany",
+      "article": "Heidelberg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Heilbronn",
+      "country": "Germany",
+      "article": "Heilbronn",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Helsingborg",
+      "country": "Sweden",
+      "article": "Helsingborg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Heraklion",
+      "country": "Greece",
+      "article": "Heraklion",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "High Wycombe",
+      "country": "United Kingdom",
+      "article": "High Wycombe",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Hounslow",
+      "country": "United Kingdom",
+      "article": "Hounslow",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Hrodna",
+      "country": "Belarus",
+      "article": "Grodno",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Huddersfield",
+      "country": "United Kingdom",
+      "article": "Huddersfield",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Huelva",
+      "country": "Spain",
+      "article": "Huelva",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Iași",
+      "country": "Romania",
+      "article": "Iași",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Innsbruck",
+      "country": "Austria",
+      "article": "Innsbruck",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ipswich",
+      "country": "United Kingdom",
+      "article": "Ipswich",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ivano-Frankivsk",
+      "country": "Ukraine",
+      "article": "Ivano-Frankivsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Izhevsk",
+      "country": "Russia",
+      "article": "Izhevsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Jaén",
+      "country": "Spain",
+      "article": "Jaén, Spain",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Jena",
+      "country": "Germany",
+      "article": "Jena",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Jerez de la Frontera",
+      "country": "Spain",
+      "article": "Jerez de la Frontera",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Jönköping",
+      "country": "Sweden",
+      "article": "Jönköping",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Jyväskylä",
+      "country": "Finland",
+      "article": "Jyväskylä",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kaiserslautern",
+      "country": "Germany",
+      "article": "Kaiserslautern",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kaliningrad",
+      "country": "Russia",
+      "article": "Kaliningrad",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kaluga",
+      "country": "Russia",
+      "article": "Kaluga",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kamyshin",
+      "country": "Russia",
+      "article": "Kamyshin",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kaspiysk",
+      "country": "Russia",
+      "article": "Kaspiysk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kassel",
+      "country": "Germany",
+      "article": "Kassel",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Katowice",
+      "country": "Poland",
+      "article": "Katowice",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kecskemét",
+      "country": "Kingdom of Hungary",
+      "article": "Kecskemét",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kerch",
+      "country": "Russia",
+      "article": "Kerch",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Khasavyurt",
+      "country": "Russia",
+      "article": "Khasavyurt",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kherson",
+      "country": "Ukraine",
+      "article": "Kherson",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Khmelnytskyi",
+      "country": "Ukraine",
+      "article": "Khmelnytskyi",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kiel",
+      "country": "Germany",
+      "article": "Kiel",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kielce",
+      "country": "Poland",
+      "article": "Kielce",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kingston upon Hull",
+      "country": "Kingdom of England",
+      "article": "Kingston upon Hull",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kirov",
+      "country": "Russia",
+      "article": "Kirov, Kirov Oblast",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kislovodsk",
+      "country": "Russia",
+      "article": "Kislovodsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Klagenfurt am Wörthersee",
+      "country": "Austria",
+      "article": "Klagenfurt",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Klaipėda",
+      "country": "Lithuania",
+      "article": "Klaipėda",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Koblenz",
+      "country": "Germany",
+      "article": "Koblenz",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kolomna",
+      "country": "Russia",
+      "article": "Kolomna",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Košice",
+      "country": "Slovakia",
+      "article": "Košice",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kostroma",
+      "country": "Russia",
+      "article": "Kostroma",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Koszalin",
+      "country": "Poland",
+      "article": "Koszalin",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kragujevac",
+      "country": "Serbia",
+      "article": "Kragujevac",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kremenchuk",
+      "country": "Ukraine",
+      "article": "Kremenchuk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kropyvnytskyi",
+      "country": "Ukraine",
+      "article": "Kropyvnytskyi",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kryvyi Rih",
+      "country": "Ukraine",
+      "article": "Kryvyi Rih",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kuopio",
+      "country": "Finland",
+      "article": "Kuopio",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kursk",
+      "country": "Russia",
+      "article": "Kursk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Lahti",
+      "country": "Finland",
+      "article": "Lahti",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Larissa",
+      "country": "Greece",
+      "article": "Larissa",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Latina",
+      "country": "Italy",
+      "article": "Latina, Lazio",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Lausanne",
+      "country": "Switzerland",
+      "article": "Lausanne",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Le Havre",
+      "country": "France",
+      "article": "Le Havre",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Le Mans",
+      "country": "France",
+      "article": "Le Mans",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Leeds",
+      "country": "United Kingdom",
+      "article": "Leeds",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Leganés",
+      "country": "Spain",
+      "article": "Leganés",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Leicester",
+      "country": "United Kingdom",
+      "article": "Leicester",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Leiria",
+      "country": "Portugal",
+      "article": "Leiria",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "León",
+      "country": "Spain",
+      "article": "León, Spain",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Leuven",
+      "country": "Belgium",
+      "article": "Leuven",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Liberec",
+      "country": "Czech Republic",
+      "article": "Liberec",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Lida",
+      "country": "Belarus",
+      "article": "Lida",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Liège",
+      "country": "Belgium",
+      "article": "Liège",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Lille",
+      "country": "France",
+      "article": "Lille",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Limassol",
+      "country": "Cyprus",
+      "article": "Limassol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Limoges",
+      "country": "France",
+      "article": "Limoges",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Linköping",
+      "country": "Sweden",
+      "article": "Linköping",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Linz",
+      "country": "Austria",
+      "article": "Linz",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Liverpool",
+      "country": "United Kingdom",
+      "article": "Liverpool",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Livorno",
+      "country": "Italy",
+      "article": "Livorno",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Lleida",
+      "country": "Spain",
+      "article": "Lleida",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Logroño",
+      "country": "Spain",
+      "article": "Logroño",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Loures",
+      "country": "Portugal",
+      "article": "Loures",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Lübeck",
+      "country": "Germany",
+      "article": "Lübeck",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Lugo",
+      "country": "Spain",
+      "article": "Lugo",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Luhansk",
+      "country": "Ukraine",
+      "article": "Luhansk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Luton",
+      "country": "United Kingdom",
+      "article": "Luton",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Lutsk",
+      "country": "Ukraine",
+      "article": "Lutsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Luxembourg",
+      "country": "Luxembourg",
+      "article": "Luxembourg City",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Lviv",
+      "country": "Ukraine",
+      "article": "Lviv",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Maastricht",
+      "country": "Netherlands",
+      "article": "Maastricht",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Magdeburg",
+      "country": "Germany",
+      "article": "Magdeburg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Magnitogorsk",
+      "country": "Russia",
+      "article": "Magnitogorsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mahilyow",
+      "country": "Belarus",
+      "article": "Mogilev",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Maidstone",
+      "country": "United Kingdom",
+      "article": "Maidstone",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Makhachkala",
+      "country": "Russia",
+      "article": "Makhachkala",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Manchester",
+      "country": "United Kingdom",
+      "article": "Manchester",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Marbella",
+      "country": "Spain",
+      "article": "Marbella",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Maribor",
+      "country": "Slovenia",
+      "article": "Maribor",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mariupol",
+      "country": "Ukraine",
+      "article": "Mariupol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mataró",
+      "country": "Spain",
+      "article": "Mataró",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Maykop",
+      "country": "Russia",
+      "article": "Maykop",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mazyr",
+      "country": "Belarus",
+      "article": "Mazyr",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Melitopol",
+      "country": "Ukraine",
+      "article": "Melitopol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Messina",
+      "country": "Italy",
+      "article": "Messina",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Metz",
+      "country": "France",
+      "article": "Metz",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Middlesbrough",
+      "country": "United Kingdom",
+      "article": "Middlesbrough",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Milton Keynes",
+      "country": "United Kingdom",
+      "article": "Milton Keynes",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Miskolc",
+      "country": "Hungary",
+      "article": "Miskolc",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Modena",
+      "country": "Italy",
+      "article": "Modena",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mönchengladbach",
+      "country": "Germany",
+      "article": "Mönchengladbach",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Montreuil",
+      "country": "France",
+      "article": "Montreuil, Seine-Saint-Denis",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Monza",
+      "country": "Italy",
+      "article": "Monza",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mostar",
+      "country": "Bosnia and Herzegovina",
+      "article": "Mostar",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mulhouse",
+      "country": "France",
+      "article": "Mulhouse",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Murmansk",
+      "country": "Russia",
+      "article": "Murmansk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mykolaiv",
+      "country": "Ukraine",
+      "article": "Mykolaiv",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mytishchi",
+      "country": "Russia",
+      "article": "Mytishchi",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Nalchik",
+      "country": "Russia",
+      "article": "Nalchik",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Namur",
+      "country": "Belgium",
+      "article": "Namur",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Nancy",
+      "country": "France",
+      "article": "Nancy, France",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Nazran",
+      "country": "Russia",
+      "article": "Nazran",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Newcastle upon Tyne",
+      "country": "United Kingdom",
+      "article": "Newcastle upon Tyne",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Nijmegen",
+      "country": "Netherlands",
+      "article": "Nijmegen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Nikopol",
+      "country": "Ukraine",
+      "article": "Nikopol, Ukraine",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Nîmes",
+      "country": "France",
+      "article": "Nîmes",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Niš",
+      "country": "Serbia",
+      "article": "Niš",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Nizhny Tagil",
+      "country": "Russia",
+      "article": "Nizhny Tagil",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Northampton",
+      "country": "United Kingdom",
+      "article": "Northampton",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Norwich",
+      "country": "United Kingdom",
+      "article": "Norwich",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Nottingham",
+      "country": "United Kingdom",
+      "article": "Nottingham",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Novara",
+      "country": "Italy",
+      "article": "Novara",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Novi Sad",
+      "country": "Serbia",
+      "article": "Novi Sad",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Novorossiysk",
+      "country": "Russia",
+      "article": "Novorossiysk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Nyíregyháza",
+      "country": "Austria–Hungary",
+      "article": "Nyíregyháza",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Odense",
+      "country": "Denmark",
+      "article": "Odense",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Oeiras",
+      "country": "Portugal",
+      "article": "Oeiras, Portugal",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Oldenburg",
+      "country": "Germany",
+      "article": "Oldenburg (city)",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Olomouc",
+      "country": "Czech Republic",
+      "article": "Olomouc",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Olsztyn",
+      "country": "Poland",
+      "article": "Olsztyn",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Opole",
+      "country": "Poland",
+      "article": "Opole",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Oradea",
+      "country": "Romania",
+      "article": "Oradea",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Örebro",
+      "country": "Sweden",
+      "article": "Örebro",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Orenburg",
+      "country": "Russia",
+      "article": "Orenburg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Orléans",
+      "country": "France",
+      "article": "Orléans",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Oryol",
+      "country": "Russia",
+      "article": "Oryol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Osnabrück",
+      "country": "Germany",
+      "article": "Osnabrück",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ostrava",
+      "country": "Czech Republic",
+      "article": "Ostrava",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Oulu",
+      "country": "Finland",
+      "article": "Oulu",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ourense",
+      "country": "Spain",
+      "article": "Ourense",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Oviedo",
+      "country": "Spain",
+      "article": "Oviedo",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Oxford",
+      "country": "United Kingdom",
+      "article": "Oxford",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Paderborn",
+      "country": "Germany",
+      "article": "Paderborn",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Padua",
+      "country": "Italy",
+      "article": "Padua",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Pamplona",
+      "country": "Spain",
+      "article": "Pamplona",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Parma",
+      "country": "Italy",
+      "article": "Parma",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Patras",
+      "country": "Greece",
+      "article": "Patras",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Pécs",
+      "country": "Hungarian People's Republic",
+      "article": "Pécs",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Penza",
+      "country": "Russia",
+      "article": "Penza",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Perpignan",
+      "country": "France",
+      "article": "Perpignan",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Perugia",
+      "country": "Italy",
+      "article": "Perugia",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Pescara",
+      "country": "Italy",
+      "article": "Pescara",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Peterborough",
+      "country": "United Kingdom",
+      "article": "Peterborough",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Petrozavodsk",
+      "country": "Russia",
+      "article": "Petrozavodsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Pforzheim",
+      "country": "Germany",
+      "article": "Pforzheim",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Piacenza",
+      "country": "Italy",
+      "article": "Piacenza",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Pinsk",
+      "country": "Belarus",
+      "article": "Pinsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Piraeus",
+      "country": "Greece",
+      "article": "Piraeus",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Pitești",
+      "country": "Romania",
+      "article": "Pitești",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Płock",
+      "country": "Poland",
+      "article": "Płock",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ploiești",
+      "country": "Romania",
+      "article": "Ploiești",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Plymouth",
+      "country": "United Kingdom",
+      "article": "Plymouth",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Plzeň",
+      "country": "Czech Republic",
+      "article": "Plzeň",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Podgorica",
+      "country": "Montenegro",
+      "article": "Podgorica",
+      "sources": [
+        "wikidata",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Poltava",
+      "country": "Ukraine",
+      "article": "Poltava",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Poole",
+      "country": "United Kingdom",
+      "article": "Poole",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Porto",
+      "country": "Portugal",
+      "article": "Porto",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Portsmouth",
+      "country": "United Kingdom",
+      "article": "Portsmouth",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Potsdam",
+      "country": "Germany",
+      "article": "Potsdam",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Prague 4",
+      "country": "Czech Republic",
+      "article": "Prague 4",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Prague 6",
+      "country": "Czech Republic",
+      "article": "Prague 6",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Preston",
+      "country": "United Kingdom",
+      "article": "Preston, Lancashire",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Pristina",
+      "country": "Kosovo",
+      "article": "Pristina",
+      "sources": [
+        "wikidata",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Prizren",
+      "country": "Kosovo",
+      "article": "Prizren",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Pskov",
+      "country": "Russia",
+      "article": "Pskov",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Pyatigorsk",
+      "country": "Russia",
+      "article": "Pyatigorsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Radom",
+      "country": "Poland",
+      "article": "Radom",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ravenna",
+      "country": "Italy",
+      "article": "Ravenna",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Reading",
+      "country": "United Kingdom",
+      "article": "Reading, Berkshire",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Regensburg",
+      "country": "Germany",
+      "article": "Regensburg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Reggio Calabria",
+      "country": "Italy",
+      "article": "Reggio Calabria",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Reggio Emilia",
+      "country": "Italy",
+      "article": "Reggio Emilia",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Reims",
+      "country": "France",
+      "article": "Reims",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Rennes",
+      "country": "France",
+      "article": "Rennes",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Reus",
+      "country": "Spain",
+      "article": "Reus",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Reutlingen",
+      "country": "Germany",
+      "article": "Reutlingen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Reykjavík",
+      "country": "Iceland",
+      "article": "Reykjavík",
+      "sources": [
+        "wikidata",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Rhodes",
+      "country": "Greece",
+      "article": "Rhodes",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Rijeka",
+      "country": "Croatia",
+      "article": "Rijeka",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Rimini",
+      "country": "Italy",
+      "article": "Rimini",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Rivne",
+      "country": "Ukraine",
+      "article": "Rivne",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Rochdale",
+      "country": "United Kingdom",
+      "article": "Rochdale",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Roquetas de Mar",
+      "country": "Spain",
+      "article": "Roquetas de Mar",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Rostock",
+      "country": "Germany",
+      "article": "Rostock",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Rouen",
+      "country": "France",
+      "article": "Rouen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ruse",
+      "country": "Bulgaria",
+      "article": "Ruse, Bulgaria",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ryazan",
+      "country": "Russia",
+      "article": "Ryazan",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Rybinsk",
+      "country": "Russia",
+      "article": "Rybinsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Rybnik",
+      "country": "Poland",
+      "article": "Rybnik",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Rzeszów",
+      "country": "Poland",
+      "article": "Rzeszów",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Saarbrücken",
+      "country": "Germany",
+      "article": "Saarbrücken",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sabadell",
+      "country": "Spain",
+      "article": "Sabadell",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Saint-Étienne",
+      "country": "France",
+      "article": "Saint-Étienne",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Salamanca",
+      "country": "Spain",
+      "article": "Salamanca",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Salerno",
+      "country": "Italy",
+      "article": "Salerno",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Salzburg",
+      "country": "Austria",
+      "article": "Salzburg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "San Sebastián",
+      "country": "Spain",
+      "article": "San Sebastián",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Santander",
+      "country": "Spain",
+      "article": "Santander, Spain",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Santiago de Compostela",
+      "country": "Spain",
+      "article": "Santiago de Compostela",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sarajevo",
+      "country": "Bosnia and Herzegovina",
+      "article": "Sarajevo",
+      "sources": [
+        "wikidata",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Saransk",
+      "country": "Russia",
+      "article": "Saransk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Saratov",
+      "country": "Russia",
+      "article": "Saratov",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sassari",
+      "country": "Italy",
+      "article": "Sassari",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Setúbal",
+      "country": "Portugal",
+      "article": "Setúbal",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sevastopol",
+      "country": "Russia",
+      "article": "Sevastopol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Severodvinsk",
+      "country": "Russia",
+      "article": "Severodvinsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sheffield",
+      "country": "United Kingdom",
+      "article": "Sheffield",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Šiauliai",
+      "country": "Lithuania",
+      "article": "Šiauliai",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sibiu",
+      "country": "Romania",
+      "article": "Sibiu",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Simferopol",
+      "country": "Russia",
+      "article": "Simferopol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Skopje",
+      "country": "North Macedonia",
+      "article": "Skopje",
+      "sources": [
+        "wikidata",
+        "capitals"
+      ]
+    },
+    {
+      "name": "Slough",
+      "country": "United Kingdom",
+      "article": "Slough",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sloviansk",
+      "country": "Ukraine",
+      "article": "Sloviansk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Smolensk",
+      "country": "Russia",
+      "article": "Smolensk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sochi",
+      "country": "Russia",
+      "article": "Sochi",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Solingen",
+      "country": "Germany",
+      "article": "Solingen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Southampton",
+      "country": "United Kingdom",
+      "article": "Southampton",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Southend-on-Sea",
+      "country": "United Kingdom",
+      "article": "Southend-on-Sea",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Split",
+      "country": "Croatia",
+      "article": "Split, Croatia",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Stara Zagora",
+      "country": "Bulgaria",
+      "article": "Stara Zagora",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Stavanger",
+      "country": "Norway",
+      "article": "Stavanger",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Stavropol",
+      "country": "Russia",
+      "article": "Stavropol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sterlitamak",
+      "country": "Russia",
+      "article": "Sterlitamak",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Stoke-on-Trent",
+      "country": "United Kingdom",
+      "article": "Stoke-on-Trent",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Strasbourg",
+      "country": "France",
+      "article": "Strasbourg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Subotica",
+      "country": "Serbia",
+      "article": "Subotica",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Suceava",
+      "country": "Romania",
+      "article": "Suceava",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sumy",
+      "country": "Ukraine",
+      "article": "Sumy",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sunderland",
+      "country": "United Kingdom",
+      "article": "Sunderland",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Swansea",
+      "country": "United Kingdom",
+      "article": "Swansea",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Swindon",
+      "country": "United Kingdom",
+      "article": "Swindon",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Syktyvkar",
+      "country": "Russia",
+      "article": "Syktyvkar",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Syracuse",
+      "country": "Italy",
+      "article": "Syracuse, Sicily",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Szeged",
+      "country": "Kingdom of Hungary",
+      "article": "Szeged",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Taganrog",
+      "country": "Russia",
+      "article": "Taganrog",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tambov",
+      "country": "Russia",
+      "article": "Tambov",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tampere",
+      "country": "Finland",
+      "article": "Tampere",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Taranto",
+      "country": "Italy",
+      "article": "Taranto",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Târgu Mureș",
+      "country": "Romania",
+      "article": "Târgu Mureș",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tarnów",
+      "country": "Poland",
+      "article": "Tarnów",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tarragona",
+      "country": "Spain",
+      "article": "Tarragona",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Terni",
+      "country": "Italy",
+      "article": "Terni",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ternopil",
+      "country": "Ukraine",
+      "article": "Ternopil",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tilburg",
+      "country": "Netherlands",
+      "article": "Tilburg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Timișoara",
+      "country": "Romania",
+      "article": "Timișoara",
+      "sources": [
+        "wikidata"
       ]
     },
     {
@@ -989,7 +4274,408 @@
       "country": "Albania",
       "article": "Tirana",
       "sources": [
+        "wikidata",
         "capitals"
+      ]
+    },
+    {
+      "name": "Tiraspol",
+      "country": "Moldova",
+      "article": "Tiraspol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tokat",
+      "country": "Byzantine Empire",
+      "article": "Tokat",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Torrejón de Ardoz",
+      "country": "Spain",
+      "article": "Torrejón de Ardoz",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Toruń",
+      "country": "Poland",
+      "article": "Toruń",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Toulon",
+      "country": "France",
+      "article": "Toulon",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tours",
+      "country": "France",
+      "article": "Tours",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Trento",
+      "country": "Italy",
+      "article": "Trento",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Trier",
+      "country": "Germany",
+      "article": "Trier",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Trieste",
+      "country": "Italy",
+      "article": "Trieste",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Trondheim",
+      "country": "Norway",
+      "article": "Trondheim",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tula",
+      "country": "Russia",
+      "article": "Tula, Russia",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Turku",
+      "country": "Finland",
+      "article": "Turku",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tuzla",
+      "country": "Bosnia and Herzegovina",
+      "article": "Tuzla",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tver",
+      "country": "Russia",
+      "article": "Tver",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ulm",
+      "country": "Germany",
+      "article": "Ulm",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ulyanovsk",
+      "country": "Russia",
+      "article": "Ulyanovsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Uppsala",
+      "country": "Sweden",
+      "article": "Uppsala",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Uzhhorod",
+      "country": "Ukraine",
+      "article": "Uzhhorod",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Vantaa",
+      "country": "Finland",
+      "article": "Vantaa",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Västerås",
+      "country": "Sweden",
+      "article": "Västerås",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Venice",
+      "country": "Italy",
+      "article": "Venice",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Venlo",
+      "country": "Netherlands",
+      "article": "Venlo",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Verona",
+      "country": "Italy",
+      "article": "Verona",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Vicenza",
+      "country": "Italy",
+      "article": "Vicenza",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Vigo",
+      "country": "Spain",
+      "article": "Vigo",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Vila Franca de Xira",
+      "country": "Portugal",
+      "article": "Vila Franca de Xira",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Vinnytsia",
+      "country": "Ukraine",
+      "article": "Vinnytsia",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Vitebsk",
+      "country": "Belarus",
+      "article": "Vitebsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Vitoria-Gasteiz",
+      "country": "Spain",
+      "article": "Vitoria-Gasteiz",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Vladikavkaz",
+      "country": "Russia",
+      "article": "Vladikavkaz",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Vladimir",
+      "country": "Russia",
+      "article": "Vladimir, Russia",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Vologda",
+      "country": "Russia",
+      "article": "Vologda",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Vorsha",
+      "country": "Belarus",
+      "article": "Orsha",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Warrington",
+      "country": "United Kingdom",
+      "article": "Warrington",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "West Bromwich",
+      "country": "United Kingdom",
+      "article": "West Bromwich",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Wiesbaden",
+      "country": "Germany",
+      "article": "Wiesbaden",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Wolfsburg",
+      "country": "Germany",
+      "article": "Wolfsburg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Wolverhampton",
+      "country": "United Kingdom",
+      "article": "Wolverhampton",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Worcester",
+      "country": "United Kingdom",
+      "article": "Worcester, England",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Worthing",
+      "country": "United Kingdom",
+      "article": "Worthing",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Würzburg",
+      "country": "Germany",
+      "article": "Würzburg",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Yaroslavl",
+      "country": "Russia",
+      "article": "Yaroslavl",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Yevpatoriya",
+      "country": "Ukraine",
+      "article": "Yevpatoria",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "York",
+      "country": "United Kingdom",
+      "article": "York",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Yoshkar-Ola",
+      "country": "Russia",
+      "article": "Yoshkar-Ola",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Zaporizhzhia",
+      "country": "Ukraine",
+      "article": "Zaporizhzhia",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Zhytomyr",
+      "country": "Ukraine",
+      "article": "Zhytomyr",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Zielona Góra",
+      "country": "Poland",
+      "article": "Zielona Góra",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Zlatoust",
+      "country": "Russia",
+      "article": "Zlatoust",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Zurich",
+      "country": "Switzerland",
+      "article": "Zurich",
+      "sources": [
+        "wikidata"
       ]
     },
     {
@@ -1009,14 +4695,6 @@
       ]
     },
     {
-      "name": "Sarajevo",
-      "country": "Bosnia and Herzegovina",
-      "article": "Sarajevo",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
       "name": "Nicosia",
       "country": "Cyprus",
       "article": "Nicosia",
@@ -1025,25 +4703,9 @@
       ]
     },
     {
-      "name": "Reykjavík",
-      "country": "Iceland",
-      "article": "Reykjavík",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
       "name": "Astana",
       "country": "Kazakhstan",
       "article": "Astana",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Pristina",
-      "country": "Kosovo",
-      "article": "Pristina",
       "sources": [
         "capitals"
       ]
@@ -1073,33 +4735,9 @@
       ]
     },
     {
-      "name": "Chișinău",
-      "country": "Moldova",
-      "article": "Chișinău",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
       "name": "Monaco",
       "country": "Monaco",
       "article": "Monaco",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Podgorica",
-      "country": "Montenegro",
-      "article": "Podgorica",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Skopje",
-      "country": "North Macedonia",
-      "article": "Skopje",
       "sources": [
         "capitals"
       ]
@@ -1116,14 +4754,6 @@
       "name": "City of San Marino",
       "country": "San Marino",
       "article": "City of San Marino",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Bern",
-      "country": "Switzerland",
-      "article": "Bern",
       "sources": [
         "capitals"
       ]

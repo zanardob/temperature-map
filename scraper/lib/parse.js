@@ -158,8 +158,12 @@ function scoreBox(box, cityName) {
   if (/airport|airfield/.test(caption) || /\([A-Z]{3,4}\)/.test(box.source)) score -= 3;
   if (/1991\s*[–-]\s*2020/.test(caption)) score += 2;
   else if (/1981\s*[–-]\s*2010/.test(caption)) score += 1;
-  if (box.fields.meanDailyMax) score += 1;
-  if (box.fields.meanDailyMin) score += 1;
+  // The high/low rows are what the map plots, so they outweigh the optional
+  // daily mean when several boxes compete: some articles pair a long-normals
+  // box that only carries a daily mean with a second box that has the daily
+  // extremes (e.g. Drammen), and the extremes are the ones we need.
+  if (box.fields.meanDailyMax) score += 2;
+  if (box.fields.meanDailyMin) score += 2;
   if (box.fields.dailyMean) score += 1;
   return score;
 }
