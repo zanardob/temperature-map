@@ -462,9 +462,9 @@ function initApp() {
       filter: ['has', 'point_count'],
       layout: {
         // Two lines inside the circle, e.g. "22°C" over "(2)": bold average with
-        // the °C unit in the lighter regular face at full size; the count uses
-        // the same face and size. 'format' must be the root expression, so the
-        // blank case lives inside each section.
+        // the °C unit in the lighter regular face at full size; the count is the
+        // same regular face, slightly smaller (0.8). 'format' must be the root
+        // expression, so the blank case lives inside each section.
         'text-field': ['format',
           ['case',
             ['==', ['get', 'dataCount'], 0], EM_DASH,
@@ -477,7 +477,7 @@ function initApp() {
           ['case',
             ['==', ['get', 'dataCount'], 0], '',
             ['concat', '\n(', ['to-string', ['get', 'point_count']], ')'],
-          ], { 'font-scale': 1, 'text-font': ['literal', ['Noto Sans Regular']] },
+          ], { 'font-scale': 0.8, 'text-font': ['literal', ['Noto Sans Regular']] },
         ],
         'text-font': ['Noto Sans Bold'],
         'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 12, 6, 16],
