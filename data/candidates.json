@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-09-26T09:27:05.705Z",
+  "generatedAt": "2026-09-26T09:54:29.817Z",
   "candidates": [
     {
       "name": "Istanbul",
       "country": "Turkey",
       "article": "Istanbul",
       "sources": [
-        "population-list"
+        "population-list",
+        "wikidata"
       ]
     },
     {
@@ -1127,9 +1128,97 @@
       ]
     },
     {
+      "name": "Adana",
+      "country": "Turkey",
+      "article": "Adana",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Adapazarı",
+      "country": "Turkey",
+      "article": "Adapazarı",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Adıyaman",
+      "country": "Turkey",
+      "article": "Adıyaman",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Afyonkarahisar",
+      "country": "Turkey",
+      "article": "Afyonkarahisar",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Agadir",
+      "country": "Morocco",
+      "article": "Agadir",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ağrı",
+      "country": "Turkey",
+      "article": "Ağrı",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Aix-en-Provence",
       "country": "France",
       "article": "Aix-en-Provence",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Akçaabat",
+      "country": "Turkey",
+      "article": "Akçaabat",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Akçakale",
+      "country": "Turkey",
+      "article": "Akçakale",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Akhisar",
+      "country": "Turkey",
+      "article": "Akhisar",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Aksaray",
+      "country": "Turkey",
+      "article": "Aksaray",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Alanya",
+      "country": "Turkey",
+      "article": "Alanya",
       "sources": [
         "wikidata"
       ]
@@ -1199,6 +1288,14 @@
       ]
     },
     {
+      "name": "Amasya",
+      "country": "Turkey",
+      "article": "Amasya",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Amiens",
       "country": "France",
       "article": "Amiens",
@@ -1223,9 +1320,34 @@
       ]
     },
     {
+      "name": "Ankara",
+      "country": "Turkey",
+      "article": "Ankara",
+      "sources": [
+        "wikidata",
+        "capitals"
+      ]
+    },
+    {
       "name": "Annecy",
       "country": "France",
       "article": "Annecy",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Antakya",
+      "country": "Turkey",
+      "article": "Antakya",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Antalya",
+      "country": "Turkey",
+      "article": "Antalya",
       "sources": [
         "wikidata"
       ]
@@ -1279,6 +1401,14 @@
       ]
     },
     {
+      "name": "Aydın",
+      "country": "Turkey",
+      "article": "Aydın",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Babruysk",
       "country": "Belarus",
       "article": "Babruysk",
@@ -1311,6 +1441,14 @@
       ]
     },
     {
+      "name": "Bafra",
+      "country": "Turkey",
+      "article": "Bafra",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Baia Mare",
       "country": "Romania",
       "article": "Baia Mare",
@@ -1322,6 +1460,22 @@
       "name": "Balakovo",
       "country": "Russia",
       "article": "Balakovo",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Balıkesir",
+      "country": "Turkey",
+      "article": "Balıkesir",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bandırma",
+      "country": "Turkey",
+      "article": "Bandırma",
       "sources": [
         "wikidata"
       ]
@@ -1375,6 +1529,14 @@
       ]
     },
     {
+      "name": "Batman",
+      "country": "Turkey",
+      "article": "Batman, Turkey",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Belfast",
       "country": "United Kingdom",
       "article": "Belfast",
@@ -1386,6 +1548,22 @@
       "name": "Belgorod",
       "country": "Russia",
       "article": "Belgorod",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Beni Mellal",
+      "country": "Morocco",
+      "article": "Beni Mellal",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bergama",
+      "country": "Turkey",
+      "article": "Bergama",
       "sources": [
         "wikidata"
       ]
@@ -1448,9 +1626,33 @@
       ]
     },
     {
+      "name": "Bingöl",
+      "country": "Turkey",
+      "article": "Bingöl",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Blackpool",
       "country": "United Kingdom",
       "article": "Blackpool",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bodrum",
+      "country": "Turkey",
+      "article": "Bodrum",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Bolu",
+      "country": "Turkey",
+      "article": "Bolu",
       "sources": [
         "wikidata"
       ]
@@ -1584,6 +1786,14 @@
       ]
     },
     {
+      "name": "Bursa",
+      "country": "Turkey",
+      "article": "Bursa",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Buzău",
       "country": "Romania",
       "article": "Buzău",
@@ -1624,6 +1834,14 @@
       ]
     },
     {
+      "name": "Çanakkale",
+      "country": "Turkey",
+      "article": "Çanakkale",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Cardiff",
       "country": "United Kingdom",
       "article": "Cardiff",
@@ -1635,6 +1853,14 @@
       "name": "Cartagena",
       "country": "Spain",
       "article": "Cartagena, Spain",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Casablanca",
+      "country": "Morocco",
+      "article": "Casablanca",
       "sources": [
         "wikidata"
       ]
@@ -1659,6 +1885,22 @@
       "name": "Catania",
       "country": "Italy",
       "article": "Catania",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ceuta",
+      "country": "Spain",
+      "article": "Ceuta",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ceyhan",
+      "country": "Turkey",
+      "article": "Ceyhan",
       "sources": [
         "wikidata"
       ]
@@ -1745,6 +1987,14 @@
       ]
     },
     {
+      "name": "Cizre",
+      "country": "Turkey",
+      "article": "Cizre",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Clermont-Ferrand",
       "country": "France",
       "article": "Clermont-Ferrand",
@@ -1793,6 +2043,22 @@
       ]
     },
     {
+      "name": "Çorlu",
+      "country": "Turkey",
+      "article": "Çorlu",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Çorum",
+      "country": "Turkey",
+      "article": "Çorum",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Coventry",
       "country": "United Kingdom",
       "article": "Coventry",
@@ -1834,8 +2100,16 @@
     },
     {
       "name": "Debrecen",
-      "country": "Hungary",
+      "country": "Second Hungarian Republic",
       "article": "Debrecen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Denizli",
+      "country": "Turkey",
+      "article": "Denizli",
       "sources": [
         "wikidata"
       ]
@@ -1873,9 +2147,25 @@
       ]
     },
     {
+      "name": "Diyarbakır",
+      "country": "Turkey",
+      "article": "Diyarbakır",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Dnipro",
       "country": "Ukraine",
       "article": "Dnipro",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Doğubayazıt",
+      "country": "Turkey",
+      "article": "Doğubayazıt",
       "sources": [
         "wikidata"
       ]
@@ -1892,6 +2182,14 @@
       "name": "Donetsk",
       "country": "Ukraine",
       "article": "Donetsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Dörtyol",
+      "country": "Turkey",
+      "article": "Dörtyol",
       "sources": [
         "wikidata"
       ]
@@ -1921,6 +2219,14 @@
       ]
     },
     {
+      "name": "Düzce",
+      "country": "Turkey",
+      "article": "Düzce",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Eastbourne",
       "country": "United Kingdom",
       "article": "Eastbourne",
@@ -1945,9 +2251,49 @@
       ]
     },
     {
+      "name": "Edirne",
+      "country": "Turkey",
+      "article": "Edirne",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Edremit",
+      "country": "Turkey",
+      "article": "Edremit, Balıkesir",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Eindhoven",
       "country": "Netherlands",
       "article": "Eindhoven",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "El Jadida",
+      "country": "Morocco",
+      "article": "El Jadida",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Elazığ",
+      "country": "Turkey",
+      "article": "Elazığ",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Elbistan",
+      "country": "Turkey",
+      "article": "Elbistan",
       "sources": [
         "wikidata"
       ]
@@ -1985,6 +2331,30 @@
       ]
     },
     {
+      "name": "Erciş",
+      "country": "Turkey",
+      "article": "Erciş",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Erdemli",
+      "country": "Turkey",
+      "article": "Erdemli",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ereğli",
+      "country": "Turkey",
+      "article": "Ereğli, Konya",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Erfurt",
       "country": "Germany",
       "article": "Erfurt",
@@ -1993,9 +2363,41 @@
       ]
     },
     {
+      "name": "Ergani",
+      "country": "Turkey",
+      "article": "Ergani",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Erlangen",
       "country": "Germany",
       "article": "Erlangen",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Erzincan",
+      "country": "Turkey",
+      "article": "Erzincan",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Erzurum",
+      "country": "Turkey",
+      "article": "Erzurum",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Eskişehir",
+      "country": "Turkey",
+      "article": "Eskişehir",
       "sources": [
         "wikidata"
       ]
@@ -2010,7 +2412,7 @@
     },
     {
       "name": "Ferizaj",
-      "country": "Kosovo",
+      "country": "Serbia",
       "article": "Ferizaj",
       "sources": [
         "wikidata"
@@ -2020,6 +2422,14 @@
       "name": "Ferrara",
       "country": "Italy",
       "article": "Ferrara",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Fez",
+      "country": "Morocco",
+      "article": "Fez, Morocco",
       "sources": [
         "wikidata"
       ]
@@ -2060,6 +2470,14 @@
       "name": "Gateshead",
       "country": "United Kingdom",
       "article": "Gateshead",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Gaziantep",
+      "country": "Turkey",
+      "article": "Gaziantep",
       "sources": [
         "wikidata"
       ]
@@ -2108,6 +2526,14 @@
       "name": "Gillingham",
       "country": "United Kingdom",
       "article": "Gillingham, Kent",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Giresun",
+      "country": "Turkey",
+      "article": "Giresun",
       "sources": [
         "wikidata"
       ]
@@ -2188,6 +2614,14 @@
       "name": "Grozny",
       "country": "Russia",
       "article": "Grozny",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Guelmim",
+      "country": "Morocco",
+      "article": "Guelmim",
       "sources": [
         "wikidata"
       ]
@@ -2297,6 +2731,14 @@
       ]
     },
     {
+      "name": "Iğdır",
+      "country": "Turkey",
+      "article": "Iğdır",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Innsbruck",
       "country": "Austria",
       "article": "Innsbruck",
@@ -2313,6 +2755,22 @@
       ]
     },
     {
+      "name": "İskenderun",
+      "country": "Turkey",
+      "article": "İskenderun",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Isparta",
+      "country": "Turkey",
+      "article": "Isparta",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Ivano-Frankivsk",
       "country": "Ukraine",
       "article": "Ivano-Frankivsk",
@@ -2324,6 +2782,22 @@
       "name": "Izhevsk",
       "country": "Russia",
       "article": "Izhevsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "İzmir",
+      "country": "Turkey",
+      "article": "İzmir",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "İzmit",
+      "country": "Turkey",
+      "article": "İzmit",
       "sources": [
         "wikidata"
       ]
@@ -2369,6 +2843,22 @@
       ]
     },
     {
+      "name": "Kahramanmaraş",
+      "country": "Turkey",
+      "article": "Kahramanmaraş",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kâhta",
+      "country": "Turkey",
+      "article": "Kâhta",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Kaiserslautern",
       "country": "Germany",
       "article": "Kaiserslautern",
@@ -2401,6 +2891,22 @@
       ]
     },
     {
+      "name": "Karabük",
+      "country": "Turkey",
+      "article": "Karabük",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Karaman",
+      "country": "Turkey",
+      "article": "Karaman",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Kaspiysk",
       "country": "Russia",
       "article": "Kaspiysk",
@@ -2417,6 +2923,14 @@
       ]
     },
     {
+      "name": "Kastamonu",
+      "country": "Turkey",
+      "article": "Kastamonu",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Katowice",
       "country": "Poland",
       "article": "Katowice",
@@ -2425,9 +2939,25 @@
       ]
     },
     {
+      "name": "Kayseri",
+      "country": "Turkey",
+      "article": "Kayseri",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Kecskemét",
-      "country": "Kingdom of Hungary",
+      "country": "Hungarian People's Republic",
       "article": "Kecskemét",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kenitra",
+      "country": "Morocco",
+      "article": "Kenitra",
       "sources": [
         "wikidata"
       ]
@@ -2481,6 +3011,14 @@
       ]
     },
     {
+      "name": "Kilis",
+      "country": "Turkey",
+      "article": "Kilis",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Kingston upon Hull",
       "country": "Kingdom of England",
       "article": "Kingston upon Hull",
@@ -2500,6 +3038,22 @@
       "name": "Kislovodsk",
       "country": "Russia",
       "article": "Kislovodsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kırıkkale",
+      "country": "Turkey",
+      "article": "Kırıkkale",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kırşehir",
+      "country": "Turkey",
+      "article": "Kırşehir",
       "sources": [
         "wikidata"
       ]
@@ -2537,6 +3091,14 @@
       ]
     },
     {
+      "name": "Konya",
+      "country": "Turkey",
+      "article": "Konya",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Košice",
       "country": "Slovakia",
       "article": "Košice",
@@ -2556,6 +3118,14 @@
       "name": "Koszalin",
       "country": "Poland",
       "article": "Koszalin",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kozan",
+      "country": "Turkey",
+      "article": "Kozan, Adana",
       "sources": [
         "wikidata"
       ]
@@ -2609,9 +3179,33 @@
       ]
     },
     {
+      "name": "Kuşadası",
+      "country": "Turkey",
+      "article": "Kuşadası",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Kütahya",
+      "country": "Turkey",
+      "article": "Kütahya",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Lahti",
       "country": "Finland",
       "article": "Lahti",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Larache",
+      "country": "Morocco",
+      "article": "Larache",
       "sources": [
         "wikidata"
       ]
@@ -2833,6 +3427,14 @@
       ]
     },
     {
+      "name": "Lüleburgaz",
+      "country": "Turkey",
+      "article": "Lüleburgaz",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Luton",
       "country": "United Kingdom",
       "article": "Luton",
@@ -2913,6 +3515,22 @@
       ]
     },
     {
+      "name": "Malatya",
+      "country": "Turkey",
+      "article": "Malatya",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Manavgat",
+      "country": "Turkey",
+      "article": "Manavgat",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Manchester",
       "country": "United Kingdom",
       "article": "Manchester",
@@ -2921,9 +3539,25 @@
       ]
     },
     {
+      "name": "Manisa",
+      "country": "Turkey",
+      "article": "Manisa",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Marbella",
       "country": "Spain",
       "article": "Marbella",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mardin",
+      "country": "Turkey",
+      "article": "Mardin",
       "sources": [
         "wikidata"
       ]
@@ -2940,6 +3574,14 @@
       "name": "Mariupol",
       "country": "Ukraine",
       "article": "Mariupol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Marrakech",
+      "country": "Morocco",
+      "article": "Marrakesh",
       "sources": [
         "wikidata"
       ]
@@ -2969,9 +3611,41 @@
       ]
     },
     {
+      "name": "Meknes",
+      "country": "Morocco",
+      "article": "Meknes",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Melilla",
+      "country": "Spain",
+      "article": "Melilla",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Melitopol",
       "country": "Ukraine",
       "article": "Melitopol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Menderes",
+      "country": "Turkey",
+      "article": "Menderes, İzmir",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mersin",
+      "country": "Turkey",
+      "article": "Mersin",
       "sources": [
         "wikidata"
       ]
@@ -3001,6 +3675,22 @@
       ]
     },
     {
+      "name": "Midyat",
+      "country": "Turkey",
+      "article": "Midyat",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Milas",
+      "country": "Turkey",
+      "article": "Milas",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Milton Keynes",
       "country": "United Kingdom",
       "article": "Milton Keynes",
@@ -3020,6 +3710,14 @@
       "name": "Modena",
       "country": "Italy",
       "article": "Modena",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Mohammedia",
+      "country": "Morocco",
+      "article": "Mohammedia",
       "sources": [
         "wikidata"
       ]
@@ -3073,6 +3771,14 @@
       ]
     },
     {
+      "name": "Muş",
+      "country": "Turkey",
+      "article": "Muş",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Mykolaiv",
       "country": "Ukraine",
       "article": "Mykolaiv",
@@ -3084,6 +3790,14 @@
       "name": "Mytishchi",
       "country": "Russia",
       "article": "Mytishchi",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Nador",
+      "country": "Morocco",
+      "article": "Nador",
       "sources": [
         "wikidata"
       ]
@@ -3113,6 +3827,14 @@
       ]
     },
     {
+      "name": "Nazilli",
+      "country": "Turkey",
+      "article": "Nazilli",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Nazran",
       "country": "Russia",
       "article": "Nazran",
@@ -3121,9 +3843,25 @@
       ]
     },
     {
+      "name": "Nevşehir",
+      "country": "Turkey",
+      "article": "Nevşehir",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Newcastle upon Tyne",
       "country": "United Kingdom",
       "article": "Newcastle upon Tyne",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Niğde",
+      "country": "Turkey",
+      "article": "Niğde",
       "sources": [
         "wikidata"
       ]
@@ -3217,9 +3955,25 @@
       ]
     },
     {
+      "name": "Nusaybin",
+      "country": "Turkey",
+      "article": "Nusaybin",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Nyíregyháza",
-      "country": "Austria–Hungary",
+      "country": "Kingdom of Hungary",
       "article": "Nyíregyháza",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Ödemiş",
+      "country": "Turkey",
+      "article": "Ödemiş",
       "sources": [
         "wikidata"
       ]
@@ -3281,6 +4035,14 @@
       ]
     },
     {
+      "name": "Ordu",
+      "country": "Turkey",
+      "article": "Ordu",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Örebro",
       "country": "Sweden",
       "article": "Örebro",
@@ -3313,6 +4075,14 @@
       ]
     },
     {
+      "name": "Osmaniye",
+      "country": "Turkey",
+      "article": "Osmaniye",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Osnabrück",
       "country": "Germany",
       "article": "Osnabrück",
@@ -3324,6 +4094,14 @@
       "name": "Ostrava",
       "country": "Czech Republic",
       "article": "Ostrava",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Oujda",
+      "country": "Morocco",
+      "article": "Oujda",
       "sources": [
         "wikidata"
       ]
@@ -3402,7 +4180,7 @@
     },
     {
       "name": "Pécs",
-      "country": "Hungarian People's Republic",
+      "country": "Kingdom of Hungary (1000–1301)",
       "article": "Pécs",
       "sources": [
         "wikidata"
@@ -3538,6 +4316,14 @@
       ]
     },
     {
+      "name": "Polatlı",
+      "country": "Turkey",
+      "article": "Polatlı",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Poltava",
       "country": "Ukraine",
       "article": "Poltava",
@@ -3612,7 +4398,7 @@
     },
     {
       "name": "Prizren",
-      "country": "Kosovo",
+      "country": "Serbia",
       "article": "Prizren",
       "sources": [
         "wikidata"
@@ -3630,6 +4416,14 @@
       "name": "Pyatigorsk",
       "country": "Russia",
       "article": "Pyatigorsk",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Rabat",
+      "country": "Morocco",
+      "article": "Rabat",
       "sources": [
         "wikidata"
       ]
@@ -3756,6 +4550,14 @@
       ]
     },
     {
+      "name": "Rize",
+      "country": "Turkey",
+      "article": "Rize",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Rochdale",
       "country": "United Kingdom",
       "article": "Rochdale",
@@ -3860,9 +4662,25 @@
       ]
     },
     {
+      "name": "Salé",
+      "country": "Morocco",
+      "article": "Salé",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Salerno",
       "country": "Italy",
       "article": "Salerno",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Salihli",
+      "country": "Turkey",
+      "article": "Salihli",
       "sources": [
         "wikidata"
       ]
@@ -3876,9 +4694,33 @@
       ]
     },
     {
+      "name": "Samandağ",
+      "country": "Turkey",
+      "article": "Samandağ",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Samsun",
+      "country": "Turkey",
+      "article": "Samsun",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "San Sebastián",
       "country": "Spain",
       "article": "San Sebastián",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Şanlıurfa",
+      "country": "Turkey",
+      "article": "Urfa",
       "sources": [
         "wikidata"
       ]
@@ -3942,7 +4784,7 @@
     },
     {
       "name": "Sevastopol",
-      "country": "Russia",
+      "country": "Ukraine",
       "article": "Sevastopol",
       "sources": [
         "wikidata"
@@ -3981,9 +4823,41 @@
       ]
     },
     {
+      "name": "Siirt",
+      "country": "Turkey",
+      "article": "Siirt",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Silifke",
+      "country": "Turkey",
+      "article": "Silifke",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Simferopol",
       "country": "Russia",
       "article": "Simferopol",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Sivas",
+      "country": "Turkey",
+      "article": "Sivas",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Siverek",
+      "country": "Turkey",
+      "article": "Siverek",
       "sources": [
         "wikidata"
       ]
@@ -4175,7 +5049,7 @@
     },
     {
       "name": "Szeged",
-      "country": "Kingdom of Hungary",
+      "country": "France",
       "article": "Szeged",
       "sources": [
         "wikidata"
@@ -4201,6 +5075,14 @@
       "name": "Tampere",
       "country": "Finland",
       "article": "Tampere",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tangier",
+      "country": "Morocco",
+      "article": "Tangier",
       "sources": [
         "wikidata"
       ]
@@ -4238,6 +5120,38 @@
       ]
     },
     {
+      "name": "Tavşanlı",
+      "country": "Turkey",
+      "article": "Tavşanlı",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Taza",
+      "country": "Morocco",
+      "article": "Taza",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tekirdağ",
+      "country": "Turkey",
+      "article": "Tekirdağ",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Temara",
+      "country": "Morocco",
+      "article": "Temara",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Terni",
       "country": "Italy",
       "article": "Terni",
@@ -4249,6 +5163,14 @@
       "name": "Ternopil",
       "country": "Ukraine",
       "article": "Ternopil",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Tétouan",
+      "country": "Morocco",
+      "article": "Tétouan",
       "sources": [
         "wikidata"
       ]
@@ -4288,7 +5210,7 @@
     },
     {
       "name": "Tokat",
-      "country": "Byzantine Empire",
+      "country": "Turkey",
       "article": "Tokat",
       "sources": [
         "wikidata"
@@ -4322,6 +5244,14 @@
       "name": "Tours",
       "country": "France",
       "article": "Tours",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Trabzon",
+      "country": "Turkey",
+      "article": "Trabzon",
       "sources": [
         "wikidata"
       ]
@@ -4407,6 +5337,14 @@
       ]
     },
     {
+      "name": "Ünye",
+      "country": "Turkey",
+      "article": "Ünye",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Uppsala",
       "country": "Sweden",
       "article": "Uppsala",
@@ -4415,9 +5353,25 @@
       ]
     },
     {
+      "name": "Uşak",
+      "country": "Turkey",
+      "article": "Uşak",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Uzhhorod",
       "country": "Ukraine",
       "article": "Uzhhorod",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Van",
+      "country": "Turkey",
+      "article": "Van, Turkey",
       "sources": [
         "wikidata"
       ]
@@ -4607,6 +5561,14 @@
       ]
     },
     {
+      "name": "Yalova",
+      "country": "Turkey",
+      "article": "Yalova",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
       "name": "Yaroslavl",
       "country": "Russia",
       "article": "Yaroslavl",
@@ -4616,7 +5578,7 @@
     },
     {
       "name": "Yevpatoriya",
-      "country": "Ukraine",
+      "country": "Russia",
       "article": "Yevpatoria",
       "sources": [
         "wikidata"
@@ -4634,6 +5596,22 @@
       "name": "Yoshkar-Ola",
       "country": "Russia",
       "article": "Yoshkar-Ola",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Yozgat",
+      "country": "Turkey",
+      "article": "Yozgat",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Yüksekova",
+      "country": "Turkey",
+      "article": "Yüksekova District",
       "sources": [
         "wikidata"
       ]
@@ -4666,6 +5644,14 @@
       "name": "Zlatoust",
       "country": "Russia",
       "article": "Zlatoust",
+      "sources": [
+        "wikidata"
+      ]
+    },
+    {
+      "name": "Zonguldak",
+      "country": "Turkey",
+      "article": "Zonguldak",
       "sources": [
         "wikidata"
       ]
@@ -4754,14 +5740,6 @@
       "name": "City of San Marino",
       "country": "San Marino",
       "article": "City of San Marino",
-      "sources": [
-        "capitals"
-      ]
-    },
-    {
-      "name": "Ankara",
-      "country": "Turkey",
-      "article": "Ankara",
       "sources": [
         "capitals"
       ]

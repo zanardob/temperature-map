@@ -1,12 +1,12 @@
 # Data coverage
 
-Generated: 2026-09-26T09:27:05.705Z
+Generated: 2026-09-26T09:54:29.817Z
 
 ## Summary
 
-- Included cities: 560
-- Excluded cities: 16
-- Derived daily mean (avgDerived): 31
+- Included cities: 681
+- Excluded cities: 17
+- Derived daily mean (avgDerived): 36
 - Converted from Fahrenheit: 0
 
 ## Included cities
@@ -18,7 +18,18 @@ Generated: 2026-09-26T09:27:05.705Z
 | Aalborg | Denmark | Climate data for Aalborg (Aalborg Airport) (1991–2020 normals, extremes 1971–2000) | — |
 | Aarhus | Denmark | Climate data for Aarhus (Aarhus Airport) (1991–2020 normals, extremes 1971–2000) | — |
 | Aberdeen | United Kingdom | Climate data for Aberdeen (Craibstone), elevation: 102 m (335 ft), 1981–2010 normals, extremes 1958–present | — |
+| Adana | Turkey | Climate data for Adana (1991–2020, extremes 1929-present) | — |
+| Adapazarı | Turkey | Climate data for Adapazarı (1991–2020, extremes 1951–2023) | — |
+| Adıyaman | Turkey | Climate data for Adıyaman (1991–2020, extremes 1963–2024) | — |
+| Afyonkarahisar | Turkey | Climate data for Afyonkarahisar (1991–2020, extremes 1929–2023) | — |
+| Agadir | Morocco | Climate data for Agadir (Inezgane) (1991–2020) | — |
+| Ağrı | Turkey | Climate data for Ağrı (1991–2020, extremes 1940–2023) (elevation:1646 m) | — |
 | Aix-en-Provence | France | Climate data for Aix-en-Provence, elevation: 173 m (568 ft) (1991–2020 normals, extremes 1955–present) | — |
+| Akçaabat | Turkey | Climate data for Akçaabat | avgDerived |
+| Akçakale | Turkey | Climate data for Akçakale (1991–2020) | — |
+| Akhisar | Turkey | Climate data for Akhisar (1991–2020) | — |
+| Aksaray | Turkey | Climate data for Aksaray (1991–2020, extremes 1929–2023) (Elevation: 970m, coordinates:38°22′14″N 33°59′55″E / 38.37056°N 33.99861°E / 38.37056; 33.99861 | — |
+| Alanya | Turkey | Climate data for Alanya (1991-2020, extremes 1970-present) | — |
 | Albacete | Spain | Climate data for Albacete 674 m (2,211 ft) (1991–2020), extremes (1983-present) | — |
 | Alcalá de Henares | Spain | Climate data for Alcalá de Henares, 1981–2010 | avgDerived |
 | Alcobendas | Spain | Climate data for Alcobendas | avgDerived |
@@ -26,6 +37,7 @@ Generated: 2026-09-26T09:27:05.705Z
 | Alicante | Spain | Climate data for Alicante, 81 m (266 ft) (1991–2020 normals, extremes 1960-present) | — |
 | Almere | Netherlands | Climate data for Almere | — |
 | Almería | Spain | Climate data for Almería (Almería Airport)WMO ID: 08487; coordinates 36°50′47″N 02°21′25″W / 36.84639°N 2.35694°W / 36.84639; -2.35694; elevation: 21 m (69 ft); (1991–2020) extremes (1933–present) | — |
+| Amasya | Turkey | Climate data for Amasya (1991–2020, extremes 1961–2022) (Elevation: 409, coordinates: 40°40′0″N 35°50′7″E / 40.66667°N 35.83528°E / 40.66667; 35.83528) | — |
 | Amiens | France | Climate data for Amiens(Amiens – Glisy Aerodrome), elevation: 60 m (197 ft), 1991–2020 normals, extremes since 1988 | — |
 | Amsterdam | Netherlands | Climate data for Amsterdam Airport Schiphol (1991-2020) | — |
 | Anderlecht | Belgium | Climate data for Anderlecht (1991−2020 normals) | — |
@@ -33,6 +45,8 @@ Generated: 2026-09-26T09:27:05.705Z
 | Angers | France | Climate data for Angers (located in Beaucouzé, 1991–2020 normals) | — |
 | Ankara | Turkey | Climate data for Ankara (Turkish State Meteorological Service Compound, Keçiören), 1991–2020, extremes 1927–2023 | — |
 | Annecy | France | Climate data for Annecy (Meythet), elevation 455 m (1,493 ft), (1992–2020 normals, extremes 1970–present) | — |
+| Antakya | Turkey | Climate data for Antakya (1991–2020, extremes 1940–2023) | — |
+| Antalya | Turkey | Climate data for Antalya (1991–2020, extremes 1930–present) | — |
 | Antwerp | Belgium | Climate data for Antwerp (1991−2020 normals, extremes 1949−present) | — |
 | Arad | Romania | Climate data for Arad (1991−2020 normals, extremes 1981−present) | — |
 | Arkhangelsk | Russia | Climate data for Arkhangelsk (1991–2020, extremes 1881–present) | — |
@@ -43,13 +57,17 @@ Generated: 2026-09-26T09:27:05.705Z
 | Astrakhan | Russia | Climate data for Astrakhan (1991–2020, extremes 1837–present) | — |
 | Athens | Greece | Climate data for downtown Athens (1991–2020 normals, extremes 1890–present) | — |
 | Augsburg | Germany | Climate data for Augsburg (1991–2020 normals) | — |
+| Aydın | Turkey | Climate data for Aydın (1991–2020, extremes 1941–2023) (elevation: 56, coordinates:37°50′25″N 27°50′16″E / 37.84028°N 27.83778°E / 37.84028; 27.83778) | — |
 | Babruysk | Belarus | Climate data for Babruysk (1991–2020, extremes 1901–present) | — |
 | Bacău | Romania | Climate data for Bacău, Romania (1991–2020 normals, extremes since 1980) | — |
 | Badajoz | Spain | Climate data for Badajoz Airport (1991–2020), extremes (1955–present) | — |
 | Badalona | Spain | Climate data for Badalona | — |
+| Bafra | Turkey | Climate data for Bafra (1991–2020) | — |
 | Baia Mare | Romania | Climate data for Baia Mare (altitude 186m, 2014–2026 normals, extremes 1884–present) | — |
 | Baku | Azerbaijan | Climate data for Baku (Maştağa) (1991–2020 normals, extremes 1987–present) | — |
 | Balakovo | Russia | Climate data for Balakovo | — |
+| Balıkesir | Turkey | Climate data for Balıkesir (1991–2020, extremes 1938–present) | — |
+| Bandırma | Turkey | Climate data for Bandırma (1991–2020) | — |
 | Banja Luka | Bosnia and Herzegovina | Climate data for Banja Luka (1991–2020, extremes 1961–present) | — |
 | Baranavichy | Belarus | Climate data for Baranavichy (1991–2020, extremes 1940–present) | — |
 | Barcelona | Spain | Climate data for Barcelona centre (1994–2020 averages, extremes 1994–present) | — |
@@ -57,9 +75,12 @@ Generated: 2026-09-26T09:27:05.705Z
 | Barysaw | Belarus | Climate data for Barysaw (1991–2020) | — |
 | Basel | Switzerland | Climate data for Basle (Binningen), elevation: 316 m (1,037 ft), 1991–2020 normals, extremes 1901–present | — |
 | Basildon | United Kingdom | Climate data for Basildon | avgDerived |
+| Batman | Turkey | Climate data for Batman (1991–2020, extremes 1959–2023) | — |
 | Belfast | United Kingdom | Climate data for Belfast (Newforge), elevation: 40 m (131 ft), 1991–2020 normals, extremes 1982–present | — |
 | Belgorod | Russia | Climate data for Belgorod | — |
 | Belgrade | Serbia | Climate data for Belgrade (1991–2020, extremes 1920–present) | — |
+| Beni Mellal | Morocco | Climate data for Beni Mellal (1991-2020) | — |
+| Bergama | Turkey | Climate data for Bergama (1991–2020) | — |
 | Bergamo | Italy | Climate data for Bergamo (1991–2020, extremes 1946–present) | — |
 | Bergen | Norway | Climate data for Bergen – Florida 1991–2020 normals (12 m, extremes 1957–present, sunshine 2016–2024 (Bergen Airport, Flesland)) | — |
 | Berlin | Germany | Climate data for Berlin (Brandenburg), 1991–2020, extremes 1957–present | — |
@@ -70,10 +91,13 @@ Generated: 2026-09-26T09:27:05.705Z
 | Bielsko-Biała | Poland | Climate data for Bielsko-Biała (1991–2020 normals, extremes 1951–present) | — |
 | Bila Tserkva | Ukraine | Climate data for Bila Tserkva (1981–2010) | — |
 | Bilbao | Spain | Climate data for Bilbao airport (1991–2020 normals, extremes 1947-present) | — |
+| Bingöl | Turkey | Climate data for Bingöl (1991–2020, extremes 1961–2025) (Station height:1139, coordinates:38°53′5″N 40°30′3″E / 38.88472°N 40.50083°E / 38.88472; 40.50083) | — |
 | Birmingham | United Kingdom | Climate data for Birmingham (Winterbourne), elevation: 140 m (459 ft), 1991–2020 normals, extremes 1959–present | — |
 | Blackpool | United Kingdom | Climate data for Blackpool (BLK), elevation: 10 m (33 ft), 1991–2020 normals, extremes 1960–present | — |
 | Bochum | Germany | Climate data for Bochum (1991–2020 normals, extremes 1940–present) | — |
+| Bodrum | Turkey | Climate data for Bodrum (1991–2020) | — |
 | Bologna | Italy | Climate data for Bologna, Guglielmo Marconi Airport (1991–2020 normals, extremes 1991–2020) | — |
+| Bolu | Turkey | Climate data for Bolu (1991–2020, extremes 1929–2023) | — |
 | Bolzano | Italy | Climate data for Bolzano (1991–2020 normals, extremes 1946–present) | — |
 | Bonn | Germany | Climate data for Bonn (1991–2020 normals, extremes 1933–present) | — |
 | Bordeaux | France | Climate data for Bordeaux (Bordeaux–Mérignac Airport), elevation: 47 m (154 ft), 1991–2020 normals, extremes 1920–present | — |
@@ -97,17 +121,22 @@ Generated: 2026-09-26T09:27:05.705Z
 | Budapest | Hungary | Climate data for Pestszentlőrinc, Budapest (WMO number: 12843) 1991-2020; elevation: 139m | — |
 | Burgas | Bulgaria | Climate data for Burgas, Bulgaria (1991-2020, extremes 1953-present) | — |
 | Burgos | Spain | Climate data for Burgos Airport 891 metres (2,923 ft) (1991–2020), extremes (1943-present) | — |
+| Bursa | Turkey | Climate data for Bursa (1991–2020, extremes 1928–2023) | — |
 | Buzău | Romania | Climate data for Buzău, 1991–2020 normals, extremes 1901-present | — |
 | Bydgoszcz | Poland | Climate data for Bydgoszcz (1991–2020 normals, extremes 1951–1982 and 1992–2015) | — |
 | Cádiz | Spain | Climate data for CádizWMO ID: 08452; Climate ID: 5973; coordinates 36°29′59″N 06°15′28″W / 36.49972°N 6.25778°W / 36.49972; -6.25778; elevation: 2 m (6 ft 7 in); 1991–2020 provisional normals, extremes 1955–present | — |
 | Caen | France | Climate data for Caen (CFR), elevation: 67 m (220 ft), 1991–2020 normals, extremes 1945–present, humidity 1961–1990 | — |
 | Cagliari | Italy | Climate data for Cagliari (Elmas Airport), elevation: 4 m (13 ft), 1991–2020 normals, extremes 1981–present | — |
 | Cambridge | United Kingdom | Climate data for Cambridge University Botanic Garden, elevation: 13 m (43 ft), 1991–2020 normals, extremes 1914–present | — |
+| Çanakkale | Turkey | Climate data for Çanakkale (1991–2020, extremes 1929–2023) | — |
 | Cardiff | United Kingdom | Climate data for Cardiff (Bute Park)WMO ID: 99610; coordinates 51°29′17″N 3°11′19″W / 51.48818°N 3.18859°W / 51.48818; -3.18859 (Met Office Bute Park); elevation: 9 m (30 ft); 1991–2020 normals, extremes 1913–present | — |
 | Cartagena | Spain | Climate data for Cartagena 1991-2020 normals, extremes (1988-present) | — |
+| Casablanca | Morocco | Climate data for Casablanca (1991–2020 normals, extremes 1941–present) | — |
 | Cascais | Portugal | Climate data for Monte Estoril, 1931-1960 | — |
 | Castellón de la Plana | Spain | Climate data for Castellón de la Plana, Almazora 43m (1991–2020), extremes (1976–present) | — |
 | Catania | Italy | Climate data for Catania-Sigonella, 1991–2020 normals, extremes 1960–present | — |
+| Ceuta | Spain | Climate data for Ceuta, 2003–2010 normals | — |
+| Ceyhan | Turkey | Climate data for Ceyhan (1991–2020) | — |
 | Cheboksary | Russia | Climate data for Cheboksary (1991–2020 normals, extremes 1929–present) | — |
 | Chelmsford | United Kingdom | Climate data for Writtle, elevation: 32 m (105 ft), 1981–2010 normals, extremes 1960–present | — |
 | Cheltenham | United Kingdom | Climate data for Cheltenham (1991–2020 normals, extremes 1889–2001) | — |
@@ -119,6 +148,7 @@ Generated: 2026-09-26T09:27:05.705Z
 | Chernivtsi | Ukraine | Climate data for Chernivtsi (1991–2020, extremes 1941–present) | — |
 | Chișinău | Moldova | Climate data for Chișinău (1991–2020, extremes 1886–present) | — |
 | City of San Marino | San Marino | Climate data for City of San Marino | — |
+| Cizre | Turkey | Climate data for Cizre (1991–2020) | — |
 | Clermont-Ferrand | France | Climate data for Clermont-Ferrand, elevation: 331 m (1,086 ft) (1991–2020 normals, extremes 1923–present) | — |
 | Cluj-Napoca | Romania | Climate data for Cluj-Napoca, 1991–2020 normals, extremes 1901–present | — |
 | Coimbra | Portugal | Climate data for Coimbra (Mesura), 1991-2020 normals, extremes (1971-2020) | — |
@@ -128,20 +158,26 @@ Generated: 2026-09-26T09:27:05.705Z
 | Copenhagen | Denmark | Climate data for Copenhagen, Denmark (1981–2010 normals, extremes 1768–present) | — |
 | Córdoba | Spain | Climate data for Córdoba Airport (1991–2020), extremes (1949–present) | — |
 | Cork | Ireland | Climate data for Cork Airport (ORK)(ICAO code: EICK, WMO identifier: 03955), 153m amsl, 1991−2020 normals, extremes 1961-present | — |
+| Çorlu | Turkey | Climate data for Çorlu (1991–2020) | — |
+| Çorum | Turkey | Climate data for Çorum (1991–2020, extremes 1929–2023) | — |
 | Coventry | United Kingdom | Climate data for Coventry (Coundon), elevation: 122 m (400 ft), 1991–2020 normals, extremes 1892–present | — |
 | Craiova | Romania | Climate data for Craiova (1991–2020, extremes since 1931) | — |
 | Crawley | United Kingdom | Climate data for Gatwick, elevation 62 metres (203 ft), 1971–2000, Sunshine 1961–1990, extremes 1960–date | avgDerived |
 | Częstochowa | Poland | Climate data for Częstochowa (Parkitka), elevation: 293 m, 1991–2020 normals, extremes 1951–present | — |
 | Darmstadt | Germany | Climate data for Darmstadt (1991–2020 normals, extremes 1937–present) | — |
-| Debrecen | Hungary | Climate data for Debrecen, 1991−2020 normals, extremes 1901-present | — |
+| Debrecen | Second Hungarian Republic | Climate data for Debrecen, 1991−2020 normals, extremes 1901-present | — |
+| Denizli | Turkey | Climate data for Denizli (1991–2020, extremes 1957–2025) | — |
 | Derbent | Russia | Climate data for Derbent | — |
 | Derby | United Kingdom | Climate data for Sutton BoningtonCDL ID: 99025; coordinates: 52°50′11″N 1°15′04″W / 52.83643°N 1.25114°W / 52.83643; -1.25114 (Sutton Bonington W S); elevation: 48 m (157 ft); 1991–2020 normals, extremes 1924–present | — |
 | Deventer | Netherlands | Climate data for Deventer | — |
 | Dijon | France | Climate data for Dijon - Longvic (DIJ), elevation: 219 m (719 ft) (1991–2020 normals, extremes 1921−present) | — |
+| Diyarbakır | Turkey | Climate data for Diyarbakır (1991–2020, extremes 1929–2023) | — |
 | Dnipro | Ukraine | Climate data for Dnipro (1991–2020, extremes 1948–present) | — |
+| Doğubayazıt | Turkey | Climate data for Doğubayazıt (1991–2020) | — |
 | Doncaster | United Kingdom | Climate data for Doncaster (DSA), elevation: 12 m (39 ft), 1991–2020 normals, extremes 1960–2000 | — |
 | Donetsk | Ukraine | Climate data for Donetsk (1991–2020, extremes 1926–present) | — |
 | Dortmund | Germany | Climate data for Dortmund | avgDerived |
+| Dörtyol | Turkey | Climate data for Dörtyol (1991–2020) | — |
 | Drammen | Norway | Climate data for Drammen - Berskog avg high/low 2005–2025. | avgDerived |
 | Dresden | Germany | Climate data for Dresden (1991–2020 normals, extremes 1934–present) | — |
 | Dublin | Ireland | Climate data for Merrion Square, Dublin, (1991–2020), elevation: 13 m (43 ft) | avgDerived |
@@ -149,21 +185,35 @@ Generated: 2026-09-26T09:27:05.705Z
 | Dundee | United Kingdom | Climate data for Mylnefield, elevation 31m, 1991–2020, extremes 1960–2010 | — |
 | Durrës | Albania | Climate data for Durrës | — |
 | Düsseldorf | Germany | Climate data for Düsseldorf (1991–2020 normals, extremes 1981–present) | — |
+| Düzce | Turkey | Climate data for Düzce (1991–2020, extremes 1959–2023) | — |
 | Eastbourne | United Kingdom | Climate data for Eastbourne 7 m asl, 1991–2020, Extremes 1887-2023 | — |
 | Ede | Netherlands | Climate data for Deelen, Ede (1991−2020 normals, extremes 1953−present) | — |
 | Edinburgh | United Kingdom | Climate data for Edinburgh (Gogarbank), elevation: 57 m (187 ft), 1991–2020 normals | — |
+| Edirne | Turkey | Climate data for Edirne (1991–2020, extremes 1930–2023) | — |
+| Edremit | Turkey | Climate data for Edremit, Balıkesir (1991–2020) | — |
 | Eindhoven | Netherlands | Climate data for Eindhoven (1991−2020 normals, extremes 1951−present) | — |
+| El Jadida | Morocco | Climate data for El Jadida | avgDerived |
+| Elazığ | Turkey | Climate data for Elazığ (1991–2020, extremes 1939–2025) | — |
+| Elbistan | Turkey | Climate data for Elbistan (1991–2020) | — |
 | Elbląg | Poland | Climate data for Elbląg (1991–2020 normals, extremes 1951–present) | — |
 | Elche | Spain | Climate data for Alicante–Elche Airport, 1981-2010 normals, 1967-2023 extremes | — |
 | Elista | Russia | Climate data for Elista (1991–2020, extremes 1927–present) | — |
 | Enschede | Netherlands | Climate data for Twenthe, Enschede (1991–2020 normals, extremes 1951–present) | — |
+| Erciş | Turkey | Climate data for Erciş (1991–2020) | — |
+| Erdemli | Turkey | Climate data for Erdemli (1991–2020) | — |
+| Ereğli | Turkey | Climate data for Ereğli, Konya (1991–2020) | — |
 | Erfurt | Germany | Climate data for Erfurt–Weimar Airport, 1991–2020 normals, extremes 1951–present | — |
+| Ergani | Turkey | Climate data for Ergani (1991–2020) | — |
 | Erlangen | Germany | Climate data for Flughafen Nürnberg, 1961–1990 | — |
+| Erzincan | Turkey | Climate data for Erzincan (1991–2020, extremes 1929–2022) | — |
+| Erzurum | Turkey | Climate data for Erzurum (1991–2020 normals, extremes 1929–2023) | — |
+| Eskişehir | Turkey | Climate data for Eskişehir (1991–2020, extremes 1928–2023) | — |
 | Espoo | Finland | Climate data for Espoo (extremes 1968–1979, 2005–present) | — |
 | Essen | Germany | Climate data for Essen-Bredeney: 161m, 1991−2020 normals, extremes 1935–present | — |
 | Exeter | United Kingdom | Climate data for Exeter Airport (EXT), elevation: 27 m (89 ft), 1991–2020 normals, extremes 1958–present | — |
-| Ferizaj | Kosovo | Climate data for Ferizaj | avgDerived |
+| Ferizaj | Serbia | Climate data for Ferizaj | avgDerived |
 | Ferrara | Italy | Climate data for Ferrara (1991–2020 normals, extremes 1879–present) | — |
+| Fez | Morocco | Climate data for Fez (Fès–Saïs Airport), altitude: 579 m (1,900 ft) 1991–2020 | — |
 | Florence | Italy | Climate data for Florence (Florence Airport) (1991–2020 normals) | — |
 | Foggia | Italy | Climate data for Foggia (Amendola Air Base) (1991–2020 normals, Extremes 1980–2020) | — |
 | Forlì | Italy | Climate data for Forlì (1991–2020) | — |
@@ -171,6 +221,7 @@ Generated: 2026-09-26T09:27:05.705Z
 | Freiburg im Breisgau | Germany | Climate data for Freiburg (1991–2020 normals, extremes 1874–present) | — |
 | Galați | Romania | Climate data for Galați, Romania (1991–2020 normals, extremes 1901-present) | — |
 | Gateshead | United Kingdom | Climate data for Gateshead, UK | avgDerived |
+| Gaziantep | Turkey | Climate data for Gaziantep (1991–2020, extremes 1940–2023) | — |
 | Gdańsk | Poland | Climate data for Gdańsk (1991–2020) | — |
 | Geneva | Switzerland | Climate data for Geneva (GVA), elevation: 412 m (1,352 ft), 1991–2020 normals, extremes 1901–present | — |
 | Genoa | Italy | Climate data for Genoa (1991–2020 normals), 2 m (6.6 ft) a.s.l., sunshine 1971–2000, extremes 1955–present | — |
@@ -178,6 +229,7 @@ Generated: 2026-09-26T09:27:05.705Z
 | Ghent | Belgium | Climate data for Ghent (1991–2020 normals) | — |
 | Gijón | Spain | Climate data for Gijón (1991–2020, extremes since 1938) | — |
 | Gillingham | United Kingdom | Climate data for Gillingham (1991–2020) | — |
+| Giresun | Turkey | Climate data for Giresun (1991–2020, extremes 1929–2023) | — |
 | Girona | Spain | Climate data for Girona Airport (1991-2020), extremes (1973-present) | — |
 | Glasgow | United Kingdom | Climate data for Paisley, elevation: 16 m (52 ft) 1991–2020 normals, extremes 1959–present | — |
 | Gloucester | United Kingdom | Climate data for Gloucester/Cheltenham, (1991–2020 normals, extremes 1889–2001) | — |
@@ -190,6 +242,7 @@ Generated: 2026-09-26T09:27:05.705Z
 | Grenoble | France | Climate data for Grenoble-St Geoirs (1991–2020 normals, extremes 1941–July 2026) | — |
 | Groningen | Netherlands | Climate data for Groningen (Groningen Airport Eelde), 1991–2020 normals, extremes 1906–present | — |
 | Grozny | Russia | Climate data for Grozny (1991–2020 normals, extremes 1938–present) | — |
+| Guelmim | Morocco | Climate data for Guelmim (1991–2020) | — |
 | Győr | Kingdom of Hungary | Climate data for Győr, 1991−2020 normals | — |
 | Halle (Saale) | Germany | Climate data for Halle (Leipzig/Halle Airport) (1991–2020 normals, extremes 1973–2013) | — |
 | Hamburg | Germany | Climate data for Hamburg-FuhlsbüttelWMO ID: 10147; coordinates 53°37′59″N 9°59′17″E / 53.63306°N 9.98806°E / 53.63306; 9.98806; elevation: 10.7 m (35 ft); 1991–2020 normals, extremes 1936–present | — |
@@ -205,27 +258,39 @@ Generated: 2026-09-26T09:27:05.705Z
 | Huddersfield | United Kingdom | Climate data for Huddersfield (1991–2020) | avgDerived |
 | Huelva | Spain | Climate data for Huelva, Ronda Este 1991–2020 | — |
 | Iași | Romania | Climate data for Iași, Romania (Iași International Airport) (1991–2020, extremes 1896-present) | — |
+| Iğdır | Turkey | Climate data for Iğdır (1991–2020, extremes 1941–2023) | — |
 | Innsbruck | Austria | Climate data for Innsbruck-Flugplatz (1991–2020) | — |
 | Ipswich | United Kingdom | Climate data for Levington, elevation 22 m, 5.8 miles (9.4 km) from Ipswich, 1991–2020 averages | avgDerived |
+| İskenderun | Turkey | Climate data for İskenderun (1991-2020 normals, extremes 1975-2010) | — |
+| Isparta | Turkey | Climate data for Isparta (1991–2020, extremes 1929–2023) | — |
 | Istanbul | Turkey | Climate data for Kireçburnu (normals 1991–2020, precipitation days and sunshine 1981–2010; see the main article for more information) | — |
 | Ivano-Frankivsk | Ukraine | Climate data for Ivano-Frankivsk (1991–2020, extremes 1948–present) | — |
 | Izhevsk | Russia | Climate data for Izhevsk (1991–2020 normals, extremes 1933–present) | — |
+| İzmir | Turkey | Climate data for İzmir (1991–2020, extremes 1938–present) | — |
+| İzmit | Turkey | Climate data for Akçakoca [tr], İzmit (1991–2020, extremes 1929–2023) | — |
 | Jaén | Spain | Climate data for Jaén, 580 metres (1,900 ft) 1991-2020 averages, 1920-present extremes | — |
 | Jena | Germany | Climate data for Jena, 1991–2020 normals, extremes 1821–present | — |
 | Jerez de la Frontera | Spain | Climate data for Jerez de la Frontera (Jerez Airport) (1991–2020), Extremes (1921–) | — |
 | Jönköping | Sweden | Climate data for Jönköping Airport 2002–2018; extremes since 1901 | — |
 | Jyväskylä | Finland | Climate data for Jyväskylä Airport (1991-2020 normals, extremes 1959-present) | — |
+| Kahramanmaraş | Turkey | Climate data for Kahramanmaraş (1991–2020, extremes 1930–2023) | — |
+| Kâhta | Turkey | Climate data for Kâhta (1991–2020) | — |
 | Kaiserslautern | Germany | Climate data for Kaiserslautern | — |
 | Kaliningrad | Russia | Climate data for Kaliningrad (1991–2020, extremes 1848–present) | — |
 | Kaluga | Russia | Climate data for Kaluga, Russia (period 1961–1990) | — |
 | Kamyshin | Russia | Climate data for Kamyshin | — |
+| Karabük | Turkey | Climate data for Karabük (1991–2020, extremes 1965–2023) | — |
+| Karaman | Turkey | Climate data for Karaman (1991–2020, extremes 1951–2023) | — |
 | Karlsruhe | Germany | Climate data for Karlsruhe normals 1991-10/2008, Rheinstetten normals 11/2008-2020, extremes 1948–2020 | — |
 | Kaspiysk | Russia | Climate data for Kaspiysk | — |
 | Kassel | Germany | Climate data for Kassel (1991–2020 normals) | — |
+| Kastamonu | Turkey | Climate data for Kastamonu (1991–2020, extremes 1930–present) | — |
 | Katowice | Poland | Climate data for Katowice (1991–2020 normals, extremes 1951–present) | — |
 | Kaunas | Lithuania | Climate data for Kaunas (1991–2020 normals, extremes 1901-present) | — |
+| Kayseri | Turkey | Climate data for Kayseri (1991–2020, extremes 1931–2023) | — |
 | Kazan | Russia | Climate data for Kazan (1991–2020, extremes 1812–present) | — |
-| Kecskemét | Kingdom of Hungary | Climate data for Kecskemét, 1991−2020 normals | — |
+| Kecskemét | Hungarian People's Republic | Climate data for Kecskemét, 1991−2020 normals | — |
+| Kenitra | Morocco | Climate data for Kenitra (normals and extremes 1991–2020, sun 1981-2010, rainy days 1961-1990) | — |
 | Kerch | Russia | Climate data for Kerch (1991–2020, extremes 1936–present) | — |
 | Kharkiv | Ukraine | Climate data for Kharkiv, Ukraine (1991–2020, extremes 1841–present) | — |
 | Khasavyurt | Russia | Climate data for Khasavyurt | — |
@@ -233,16 +298,21 @@ Generated: 2026-09-26T09:27:05.705Z
 | Khmelnytskyi | Ukraine | Climate data for Khmelnytskyi (1991–2020, extremes 1955–2011) | — |
 | Kiel | Germany | Climate data for Kiel (1991–2020 normals, extremes 1940–present) | — |
 | Kielce | Poland | Climate data for Kielce (Suków) 1991–2020 normals, extremes 1951–present | — |
+| Kilis | Turkey | Climate data for Kilis (normals 1991-2020, extremes 1959-present) | — |
 | Kingston upon Hull | Kingdom of England | Climate data for Kingston upon Hull:Average maximum and minimum temperatures, and average rainfall recorded between 1991 and 2020 by the Met Office. | avgDerived |
 | Kirov | Russia | Climate data for Kirov (1991–2020, extremes 1845–present) | — |
 | Kislovodsk | Russia | Climate data for Kislovodsk (extremes 1886-present) | — |
+| Kırıkkale | Turkey | Climate data for Kırıkkale (1991–2020, extremes 1963–2023) | — |
+| Kırşehir | Turkey | Climate data for Kırşehir (1991–2020, extremes 1930–2023) | — |
 | Klagenfurt am Wörthersee | Austria | Climate data for Klagenfurt (1991–2020 normals, extremes 1961-2025, humidity and dew point 1961-1990) | — |
 | Klaipėda | Lithuania | Climate data for Klaipėda (1991–2020 normals, extremes 1929–present) | — |
 | Koblenz | Germany | Climate data for Koblenz (Bendorf) (1991–2020 normals) | — |
 | Kolomna | Russia | Climate data for Kolomna (extremes 1913–present) | — |
+| Konya | Turkey | Climate data for Konya (1991–2020, extremes 1929–2023) | — |
 | Košice | Slovakia | Climate data for Košice, Slovakia (1991–2020 normals, extremes 1951–present) | — |
 | Kostroma | Russia | Climate data for Kostroma (1991–2020, extremes 1842–present) | — |
 | Koszalin | Poland | Climate data for Koszalin (Wilkowo), elevation: 33 m, 1991–2020 normals, extremes 1951–present | — |
+| Kozan | Turkey | Climate data for Kozan (1991–2020) | — |
 | Kragujevac | Serbia | Climate data for Kragujevac (1991–2020, extremes 1961–present) | — |
 | Kraków | Poland | Climate data for Kraków-Observatory, 1991–2020 normals, extremes 1951–present | — |
 | Krasnodar | Russia | Climate data for Krasnodar (1991–2020, extremes 1881–present) | — |
@@ -250,8 +320,11 @@ Generated: 2026-09-26T09:27:05.705Z
 | Kryvyi Rih | Ukraine | Climate data for Kryvyi Rih (1991–2020, extremes 1948–present) | — |
 | Kuopio | Finland | Climate data for Kuopio Maaninka (normals 1991–2020, extremes 1959–present) | — |
 | Kursk | Russia | Climate data for Kursk (1991–2020, extremes 1833–present) | — |
+| Kuşadası | Turkey | Climate data for Kuşadası (1991–2020) | — |
+| Kütahya | Turkey | Climate data for Kütahya (1991–2020, extremes 1929–2023) | — |
 | Kyiv | Ukraine | Climate data for Kyiv (1991–2020, extremes 1881–present) | — |
 | Lahti | Finland | Climate data for Lahti Laune (1991–2020 normals, extremes 1938–05/2019 from Laune, 05/2019 -present from Sopenkorpi) | — |
+| Larache | Morocco | Climate data for Larache (1991–2020) | — |
 | Larissa | Greece | Climate data for Larissa (1991–2020, extremes 1955–present) | — |
 | Las Palmas | Spain | Climate data for Las Palmas de Gran Canaria, 1981–2010 normals | — |
 | Latina | Italy | Climate data for Latina | avgDerived |
@@ -285,6 +358,7 @@ Generated: 2026-09-26T09:27:05.705Z
 | Lublin | Poland | Climate data for Lublin (1991–2020, extremes 1951–present) | — |
 | Lugo | Spain | Climate data for Lugo Airport 445 metres (1,460 ft) (1991–2020) | — |
 | Luhansk | Ukraine | Climate data for Luhansk (1991-2020, extremes 1882–present) | — |
+| Lüleburgaz | Turkey | Climate data for Lüleburgaz (1991–2020) | — |
 | Luton | United Kingdom | Climate data for RothamstedWMO ID: 03680; coordinates 51°48′24″N 0°21′37″W / 51.80671°N 0.36017°W / 51.80671; -0.36017 (Met Office Rothamsted); elevation: 128 m (420 ft); 1991–2020 normals, extremes 1914–present | — |
 | Lutsk | Ukraine | Climate data for Lutsk (1991–2020) | — |
 | Luxembourg | Luxembourg | Climate data for Luxembourg Airport (LUX), elevation: 368 m (1,207 ft) (1991–2020 normals, extremes 1947–present) | — |
@@ -299,25 +373,36 @@ Generated: 2026-09-26T09:27:05.705Z
 | Maidstone | United Kingdom | Climate data for East Malling 1961–1990 (Weather station 3 miles (5 km) to the West of Maidstone) | avgDerived |
 | Makhachkala | Russia | Climate data for Makhachkala (1991–2020 normals, extremes 1882–present) | — |
 | Málaga | Spain | Climate data for Málaga Airport (AGP), Churrianacoordinates 36°39′58″N 04°28′56″W / 36.66611°N 4.48222°W / 36.66611; -4.48222; elevation: 6 m (20 ft); (1991–2020, extremes 1942–present) | — |
+| Malatya | Turkey | Climate data for Malatya (1991–2020, extremes 1929–2023) | — |
 | Malmö | Sweden | Climate data for Malmö, 1991–2018; extremes since 1901 | — |
+| Manavgat | Turkey | Climate data for Manavgat (1991–2020) | — |
 | Manchester | United Kingdom | Climate data for Manchester (MAN), 69 m (226 ft) amsl, 1991–2020 normals, extremes 1949–2004, precipitation days 1981–2010 | — |
+| Manisa | Turkey | Climate data for Manisa (1991–2020, extremes 1930–2023) | — |
 | Mannheim | Germany | Climate data for Mannheim (1991–2020 normals) | — |
 | Marbella | Spain | Climate data for Marbella, 1981–2010 | — |
+| Mardin | Turkey | Climate data for Mardin (1991–2020 normals, extremes 1941–2023) | — |
 | Maribor | Slovenia | Climate data for Maribor Vrbanski plato, 1991–2020 normals, extremes 1951–2020 | — |
 | Mariupol | Ukraine | Climate data for Mariupol (1991–2020, extremes 1955–present) | — |
+| Marrakech | Morocco | Climate data for Marrakesh, Morocco (Marrakesh Menara Airport) 1991–2020, extremes 1900–present | — |
 | Marseille | France | Climate data for Marseille (Longchamp observatory), elevation: 75 m, 1981–2010 averages, extremes 1868–2003 | — |
 | Mataró | Spain | Climate data for Mataró (data from 1931 to 1969) | — |
 | Maykop | Russia | Climate data for Maykop | — |
 | Mazyr | Belarus | Climate data for Mazyr (1991–2020) | — |
+| Meknes | Morocco | Climate data for Meknes (Bassatine Air Base) (1991–2020, extremes 1919–present) | — |
+| Melilla | Spain | Climate data for Melilla, altitude: 52 m (1991–2020) | — |
 | Melitopol | Ukraine | Climate data for Melitopol (1981–2010 normals) | — |
+| Mersin | Turkey | Climate data for Mersin (1991–2020, extremes 1940–2025) | — |
 | Messina | Italy | Climate data for Messina, elevation: 59 m or 194 ft, 1991–2020 normals, extremes 1909–present | — |
 | Metz | France | Climate data for Metz - Frescaty (MZM), elevation: 192 m (630 ft) (1991–2020 normals, extremes 1940–present) | — |
 | Middlesbrough | United Kingdom | Climate data for Middlesbrough, England (1991–2010, Stockton-on-Tees climate station) | — |
+| Midyat | Turkey | Climate data for Mardin, Midyat | — |
 | Milan | Italy | Climate data for Linate Airport, Milan (1991–2020 normals, extremes 1946–present) | — |
+| Milas | Turkey | Climate data for Milas (1991–2020) | — |
 | Milton Keynes | United Kingdom | Climate data for Woburn, (1991–2020 normals, extremes 1898–present) | — |
 | Minsk | Belarus | Climate data for Minsk (1991–2020 normals, extremes 1887–present) | — |
 | Miskolc | Hungary | Climate data for Miskolc, 1991−2020 normals, extremes 1961−2020 | — |
 | Modena | Italy | Climate data for Modena (1991–2020) | — |
+| Mohammedia | Morocco | Climate data for Mohammedia | avgDerived |
 | Monaco | Monaco | Climate data for Monaco (1981–2010 averages, extremes 1966–present) | — |
 | Montpellier | France | Climate data for Montpellier (MPL), elevation: 1 m (3 ft), 1991–2020 normals, extremes 1946–present | — |
 | Montreuil | France | Climate data for Montreuil (1981−2010 normals, extremes 1981−present) | — |
@@ -329,17 +414,22 @@ Generated: 2026-09-26T09:27:05.705Z
 | Münster | Germany | Climate data for Münster (Münster Osnabrück Airport) (1991–2020 normals) | — |
 | Murcia | Spain | Climate data for Murcia (1991–2020), extremes (1984–) | — |
 | Murmansk | Russia | Climate data for Murmansk (1991–2020, extremes 1918–present) | — |
+| Muş | Turkey | Climate data for Muş (1991–2020, extremes 1964–2022) | — |
 | Mykolaiv | Ukraine | Climate data for Mykolaiv (1981–2010, extremes 1900–2015) | — |
 | Mytishchi | Russia | Climate data for Mytishchi | — |
+| Nador | Morocco | Climate data for Nador | avgDerived |
 | Nalchik | Russia | Climate data for Nalchik (Нальчик) | avgDerived |
 | Namur | Belgium | Climate data for Namur(1991–2020) | — |
 | Nancy | France | Climate data for Nancy-Ochey (Les Ensanges, altitude 336m, 1991–2020 normals, extremes 1966–present) | — |
 | Nantes | France | Climate data for Nantes-Bouguenais (Nantes Atlantique Airport), elevation: 27 m or 89 ft, 1991–2020 normals, extremes 1945–present | — |
 | Naples | Italy | Climate data for Naples (Naples International Airport) (1991–2020 normals, extremes 1971–present) | — |
+| Nazilli | Turkey | Climate data for Nazilli (1991–2020) | — |
 | Nazran | Russia | Climate data for Nazran | — |
+| Nevşehir | Turkey | Climate data for Nevşehir (1991–2020, extremes 1959–2023) | — |
 | Newcastle upon Tyne | United Kingdom | Climate data for Newcastle, 1991–2020, (Met Office Durham) Extremes Newcastle 1974–2005 | — |
 | Nice | France | Climate data for Nice (Nice Côte d'Azur Airport), elevation: 4 m or 13 ft, 1991–2020 normals, extremes 1942–present | — |
 | Nicosia | Cyprus | Climate data for Athalassa, Nicosia, elevation: 162 m (1991–2020) (Satellite view) | — |
+| Niğde | Turkey | Climate data for Niğde (1991–2020, extremes 1935–2023) | — |
 | Nijmegen | Netherlands | Climate data for Nijmegen, Netherlands (1971–2000) | — |
 | Nikopol | Ukraine | Climate data for Nikopol (1991–2020) | — |
 | Nîmes | France | Climate data for Nîmes (Météo France Office Nîmes-Courbessac, altitude 59m, 1991–2020 normals, extremes 1922–present) | — |
@@ -353,7 +443,9 @@ Generated: 2026-09-26T09:27:05.705Z
 | Novi Sad | Serbia | Climate data for Rimski Šančevi, Novi Sad (1991–2020, extremes 1948–present) | — |
 | Novorossiysk | Russia | Climate data for Novorossiysk (1936-1987) | — |
 | Nuremberg | Germany | Climate data for Nuremberg (1991–2020 normals, extremes since 1955) | — |
-| Nyíregyháza | Austria–Hungary | Climate data for Nyíregyháza, 1991−2020 normals | — |
+| Nusaybin | Turkey | Climate data for Nusaybin | — |
+| Nyíregyháza | Kingdom of Hungary | Climate data for Nyíregyháza, 1991−2020 normals | — |
+| Ödemiş | Turkey | Climate data for Ödemiş (1991–2020) | — |
 | Odense | Denmark | Climate data for Odense (Hans Christian Andersen Airport) (1991–2020 normals, extremes 1971–2000) | — |
 | Odesa | Ukraine | Climate data for Odesa (1991–2020, extremes 1894–present) | — |
 | Oeiras | Portugal | Climate data for Sassoeiros, 1 km (0.62 mi) northwest of Oeiras, 1961-1990 normals and extremes, altitude: 50 m (160 ft) | — |
@@ -362,13 +454,16 @@ Generated: 2026-09-26T09:27:05.705Z
 | Olsztyn | Poland | Climate data for Olsztyn (1991–2020 normals, extremes 1951–present) | — |
 | Opole | Poland | Climate data for Opole (1991–2020 normals, extremes 1951–present) | — |
 | Oradea | Romania | Climate data for Oradea | — |
+| Ordu | Turkey | Climate data for Ordu (1991–2020, extremes 1959–present) | — |
 | Örebro | Sweden | Climate data for Örebro Airport (2002–2021 averages; precipitation in the ward of Almby; extremes since 1901) | — |
 | Orenburg | Russia | Climate data for Orenburg (1991–2020, extremes 1832–present) | — |
 | Orléans | France | Climate data for Orléans, elevation: 123 m (404 ft), 1991–2020 normals, extremes 1938–present | — |
 | Oryol | Russia | Climate data for Oryol (1991–2020, extremes 1948–present) | — |
 | Oslo | Norway | Climate data for Oslo (Blindern, 94 m (308 ft)) (1991–2020 normals, extremes 1937–present) | — |
+| Osmaniye | Turkey | Climate data for Osmaniye (1991–2020, extremes 1987–present) | — |
 | Osnabrück | Germany | Climate data for Osnabrück (1991–2020 normals) | — |
 | Ostrava | Czech Republic | Climate data for Ostrava (Leoš Janáček Airport Ostrava, 1991−2020 normals, extremes 1960−present) | — |
+| Oujda | Morocco | Climate data for Oujda (Oujda Airport) 1991–2020, extremes 1910–present | — |
 | Oulu | Finland | Climate data for Oulu, 1991–2020 normals, records 1921–present | — |
 | Ourense | Spain | Climate data for Ourense (1991–2020 normals) | — |
 | Oviedo | Spain | Climate data for Oviedo, altitude 336 m (1,102 ft) (1991-2020), extremes (1972-2023) | — |
@@ -381,7 +476,7 @@ Generated: 2026-09-26T09:27:05.705Z
 | Paris | France | Climate data for Paris (Parc Montsouris), elevation: 75 m (246 ft), 1991–2020 normals, extremes 1872–present | — |
 | Parma | Italy | Climate data for Parma (1991–2020 normals, extremes 1878–present) | — |
 | Patras | Greece | Climate data for Patras Port (2008-2025) | — |
-| Pécs | Hungarian People's Republic | Climate data for Pécs, 1991−2020 normals, extremes 1901-2020 | — |
+| Pécs | Kingdom of Hungary (1000–1301) | Climate data for Pécs, 1991−2020 normals, extremes 1901-2020 | — |
 | Penza | Russia | Climate data for Penza (1991–2020, extremes 1850–present) | — |
 | Perm | Russia | Climate data for Perm (1991–2020, extremes 1882–present) | — |
 | Perpignan | France | Climate data for Perpignan (1991–2020 normals), extremes since 1924 | — |
@@ -400,6 +495,7 @@ Generated: 2026-09-26T09:27:05.705Z
 | Plymouth | United Kingdom | Climate data for Plymouth (Mount Batten)WMO ID: 03827; coordinates 50°21′18″N 4°07′16″W / 50.35489°N 4.12103°W / 50.35489; -4.12103 (Met Office Plymouth); elevation: 50 m (164 ft), 1991–2020 normals, extremes 1930–present | — |
 | Plzeň | Czech Republic | Climate data for Plzeň-Bolevec, 1991–2020 normals, extremes 1969–present | — |
 | Podgorica | Montenegro | Climate data for Podgorica (1991–2020, extremes 1947–present) | avgDerived |
+| Polatlı | Turkey | Climate data for Polatlı (1991–2020) | — |
 | Poltava | Ukraine | Climate data for Poltava (1991–2020, extremes 1948–present) | — |
 | Poole | United Kingdom | Climate data for Poole, Dorset, England | avgDerived |
 | Porto | Portugal | Climate data for Porto (Fontainhas/Serra Do Pilar), elevation: 93 m, normals 1991–2020, extremes 1973–present | — |
@@ -411,9 +507,10 @@ Generated: 2026-09-26T09:27:05.705Z
 | Prague 6 | Czech Republic | Climate data for Ruzyně, Praha 6 (normals 1991-2020, extremes 1961-2020) | — |
 | Preston | United Kingdom | Climate data for Preston Moor Park, elevation 33 m, 1971–2000, extremes 1960–2005 | avgDerived |
 | Pristina | Kosovo | Climate data for Pristina (Velania Station) 1991–2020 normals, extremes 1940–present | — |
-| Prizren | Kosovo | Climate data for Prizren (1961–1990) | — |
+| Prizren | Serbia | Climate data for Prizren (1961–1990) | — |
 | Pskov | Russia | Climate data for Pskov (1991-2020, extremes 1874–present) | — |
 | Pyatigorsk | Russia | Climate data for Pyatigorsk | — |
+| Rabat | Morocco | Climate data for Rabat (Rabat–Salé Airport) 1991–2020, extremes 1943–present | — |
 | Ravenna | Italy | Climate data for Ravenna (1991–2020 normals, extremes 1947–present) | — |
 | Reading | United Kingdom | Climate data for Reading University, elevation: 62 m (203 ft), 1991–2020 normals, extremes 1959–present | — |
 | Regensburg | Germany | Climate data for Regensburg (1991–2020 normals) | — |
@@ -428,6 +525,7 @@ Generated: 2026-09-26T09:27:05.705Z
 | Rijeka | Croatia | Climate data for Rijeka (1991–2020, extremes 1948–present) | — |
 | Rimini | Italy | Climate data for Rimini-Miramare, elevation: 12 m or 39 ft, 1991–2020 normals, extremes 1946–present | — |
 | Rivne | Ukraine | Climate data for Rivne, Ukraine (1991–2020, extremes 1951–present) | — |
+| Rize | Turkey | Climate data for Rize (1991–2020, extremes 1928–2023) | — |
 | Rochdale | United Kingdom | Climate data for Rochdale (1991–2020) | — |
 | Rome | Italy | Climate data for Rome Urbe Airport (1991–2020 averages, extremes 1862–present) | — |
 | Roquetas de Mar | Spain | Climate data for Roquetas de Mar | — |
@@ -445,10 +543,15 @@ Generated: 2026-09-26T09:27:05.705Z
 | Saint Petersburg | Russia | Climate data for Saint Petersburg (1991–2020 normals, extremes 1743–present) | — |
 | Saint-Étienne | France | Climate data for Saint-Étienne–Bouthéon Airport (1991–2020 normals, extremes 1946–present), Alt: 400 m / 1312 ft | — |
 | Salamanca | Spain | Climate data for Salamanca 775 m (2,543 ft) 1991-2020 normals, 1970-present extremes | — |
+| Salé | Morocco | Climate data for Salé (Rabat–Salé Airport) 1991–2020, extremes 1943–present | — |
 | Salerno | Italy | Climate data for Salerno, Italy | — |
+| Salihli | Turkey | Climate data for Salihli (1991–2020) | — |
 | Salzburg | Austria | Climate data for Salzburg-Flughafen (LOWS) 1991–2020, extremes 1874–present | — |
+| Samandağ | Turkey | Climate data for Samandağ (1991–2020) | — |
 | Samara | Russia | Climate data for Samara (1991–2020, extremes 1852–present) | — |
+| Samsun | Turkey | Climate data for Samsun (1991–2020, extremes 1929–2023) | — |
 | San Sebastián | Spain | Climate data for San Sebastián Airport Hondarribia, (15 km (9 miles) east of San Sebastián) (1991–2020, extremes since 1955) | — |
+| Şanlıurfa | Turkey | Climate data for Urfa (1991–2020, extremes 1929–2023) | — |
 | Santander | Spain | Climate data for Santander, downtown, 64 m (1991–2020), extremes since 1877 | — |
 | Santiago de Compostela | Spain | Climate data for Santiago de Compostela (1991–2020) (Provisional Normals) | — |
 | Sarajevo | Bosnia and Herzegovina | Climate data for Sarajevo (1991–2020 normals), extremes 1901-present | — |
@@ -456,13 +559,17 @@ Generated: 2026-09-26T09:27:05.705Z
 | Saratov | Russia | Climate data for Saratov (1991-2020, extremes 1836-present) | — |
 | Sassari | Italy | Climate data for Sassari, Sardinia | avgDerived |
 | Setúbal | Portugal | Climate data for Setúbal (Varzinha orchard station) 1991-2020, extremes (1949-present) | — |
-| Sevastopol | Russia | Climate data for Sevastopol | — |
+| Sevastopol | Ukraine | Climate data for Sevastopol | — |
 | Seville | Spain | Climate data for Seville Airport (1991–2020 normals, extremes 1951–present) | — |
 | Sheffield | United Kingdom | Climate data for Sheffield (Weston Park)WMO ID: 99107; coordinates 53°22′53″N 1°29′29″W / 53.38139°N 1.49137°W / 53.38139; -1.49137 (Sheffield Cdl); elevation: 131 m (430 ft); 1991–2020 normals, extremes 1882–present | — |
 | Šiauliai | Lithuania | Climate data for Šiauliai (1991–2020 normals, extremes 1937-present) | — |
 | Sibiu | Romania | Climate data for Sibiu (1991–2020, extremes 1901-present) | — |
+| Siirt | Turkey | Climate data for Siirt (1991–2020, extremes 1939–2022) | — |
+| Silifke | Turkey | Climate data for Silifke (1991–2020) | — |
 | Simferopol | Russia | Climate data for Simferopol (1991–2020, extremes 1886–present) | — |
 | Sintra | Portugal | Climate data for Sintra (Sintra Air Base) 1971–2000 | — |
+| Sivas | Turkey | Climate data for Sivas (1991–2020, extremes 1930–2023) | — |
+| Siverek | Turkey | Climate data for Siverek (1991–2020) | — |
 | Skopje | North Macedonia | Climate data for Skopje International Airport (1991–2020 normals, extremes 1949–present) | — |
 | Slough | United Kingdom | Climate data for Heathrow AirportWMO ID: 03772; coordinates 51°28′45″N 0°27′02″W / 51.47921°N 0.45057°W / 51.47921; -0.45057 (Met Office LHR); elevation: 25 m (82 ft); 1991–2020 normals, extremes 1948–present | — |
 | Smolensk | Russia | Climate data for Smolensk (1991–2020, extremes 1887–present) | — |
@@ -489,30 +596,37 @@ Generated: 2026-09-26T09:27:05.705Z
 | Syktyvkar | Russia | Climate data for Syktyvkar (1991–2020 normals, extremes 1888–present) | — |
 | Syracuse | Italy | Climate data for Syracuse | avgDerived |
 | Szczecin | Poland | Climate data for Szczecin (Szczecin Dąbie), elevation: 1 m, 1991-2020 normals, extremes 1951–present | — |
-| Szeged | Kingdom of Hungary | Climate data for Szeged, 1991–2020 | — |
+| Szeged | France | Climate data for Szeged, 1991–2020 | — |
 | Taganrog | Russia | Climate data for Taganrog (1991–2020, extremes 1905–present) | — |
 | Tallinn | Estonia | Climate data for Tallinn, Estonia (normals 1991–2020 and extremes 1805–present) | — |
 | Tambov | Russia | Climate data for Tambov (1991–2020, extremes 1845–present) | — |
 | Tampere | Finland | Climate data for Tampere Härmälä (TMP), elevation: 85 m (279 ft), 1991–2020 normals, extremes 1900–present (Härmälä and Tampella) | — |
+| Tangier | Morocco | Climate data for Tangier (Tangier Airport) 1961–1990, extremes 1917–1963 | — |
 | Taranto | Italy | Climate data for Taranto (1981–2010 normals, extremes 1943–present) | — |
 | Târgu Mureș | Romania | Climate data for Târgu Mureș (Elevation: 320 m or 1,050 ft, 2014–2026 normals) | — |
 | Tarnów | Poland | Climate data for Tarnów (1991–2020 normals, extremes 1951–present) | — |
 | Tarragona | Spain | Climate data for Vila-seca (1971–2000) town in Tarragona province, (14 km (8.70 mi) south-west of Tarragona | — |
+| Tavşanlı | Turkey | Climate data for Tavşanlı (1991–2020) | — |
+| Taza | Morocco | Climate data for Taza (1980–2025) | — |
 | Tbilisi | Georgia | Climate data for Tbilisi (1991–2020 normals, extremes 1881–present) | — |
+| Tekirdağ | Turkey | Climate data for Tekirdağ (1991–2020, extremes 1940–2025) | — |
+| Temara | Morocco | Climate data for Temara | avgDerived |
 | Terni | Italy | Climate data for Terni (1981–2010) | — |
 | Ternopil | Ukraine | Climate data for Ternopil (1991–2020, extremes 1949–present) | — |
+| Tétouan | Morocco | Climate data for Tétouan 1991–2020 normals, 1961–present extremes | — |
 | The Hague | Netherlands | Climate data for Valkenburg Naval Air Base | — |
 | Thessaloniki | Greece | Climate data for Aristotle University of Thessaloniki, 32 m (105 ft) a.s.l., (1991–2020 normals, extremes 1930–present) | — |
 | Tilburg | Netherlands | Climate data for Gilze-Rijen, 1981–2010 normals | — |
 | Timișoara | Romania | Climate data for Timișoara (1991–2020, extremes 1901–present) | — |
 | Tirana | Albania | Climate data for Tirana Airport (WMO #13615) — 1991–2020 normals | — |
 | Tiraspol | Moldova | Climate data for Tiraspol (1991–2020, extremes 1935–present) | — |
-| Tokat | Byzantine Empire | Climate data for Tokat (1991–2020, extremes 1929–2025) | — |
+| Tokat | Turkey | Climate data for Tokat (1991–2020, extremes 1929–2025) | — |
 | Torrejón de Ardoz | Spain | Climate data for Torrejón de Ardoz 607m (1991–2020), extremes (1951-present) | — |
 | Toruń | Poland | Climate data for Toruń (St. Joseph), elevation: 69 m, 1991–2020 normals, extremes 1951–present | — |
 | Toulon | France | Climate data for Toulon, elevation: 3 m (9.8 ft) (1991–2020 normals, extremes 1936–present) | — |
 | Toulouse | France | Climate data for Toulouse–Francazal, elevation: 164 m (538 ft), 1991–2020 normals, extremes 1922–present | — |
 | Tours | France | Climate data for Tours, elevation: 108 m (354 ft) (1991–2020 normals, extremes 1959-present) | — |
+| Trabzon | Turkey | Climate data for Trabzon (1991–2020, extremes 1927–2023) | — |
 | Trento | Italy | Climate data for Trento Laste, elevation: 312 m (1981–2010, extremes 1958–2010) | — |
 | Trier | Germany | Climate data for Trier (1991–2020 normals) (1948–present extremes) | — |
 | Trieste | Italy | Climate data for Trieste (1991-2020 normals and extremes) | — |
@@ -525,13 +639,16 @@ Generated: 2026-09-26T09:27:05.705Z
 | Ufa | Russia | Climate data for Ufa (1991–2020, extremes 1853–present) | — |
 | Ulm | Germany | Climate data for Ulm (1991–2020 normals, extremes 1944–present) | — |
 | Ulyanovsk | Russia | Climate data for Ulyanovsk (1991–2020, extremes 1948–present) | — |
+| Ünye | Turkey | Climate data for Ünye (1991–2020) | — |
 | Uppsala | Sweden | Climate data for Uppsala, 1991–2020 normals and extremes | — |
+| Uşak | Turkey | Climate data for Uşak (1991–2020, extremes 1939–2023) | — |
 | Utrecht | Netherlands | Climate data for De Bilt | — |
 | Uzhhorod | Ukraine | Climate data for Uzhhorod (1991–2020, extremes 1947–present) | — |
 | Vaduz | Liechtenstein | Climate data for Vaduz, elevation 457 m (1,499 ft), (1991–2020 normals, extremes 1973–present) | — |
 | Valencia | Spain | Climate data for Valencia (1991–2020 normals), altitude: 11 m (36 ft) a.s.l. | — |
 | Valladolid | Spain | Climate data for ValladolidWMO ID: 08141; Climate ID: 2422; coordinates 41°38′27″N 04°45′16″W / 41.64083°N 4.75444°W / 41.64083; -4.75444; elevation: 734 m (2,408 ft); 1991–2020 provisional normals, extremes 1973–present | — |
 | Valletta | Malta | Climate data for Malta (Luqa Airport in the suburbs of Valletta, 1991–2020) | — |
+| Van | Turkey | Climate data for Van (1991–2020, extremes 1939–2023) | — |
 | Vantaa | Finland | Climate data for Helsinki Airport (Vantaa) 1991–2020 normals, records 1952–present | — |
 | Varna | Bulgaria | Climate data for Varna (normals for 1991–2020 extremes 1961–2020) | — |
 | Västerås | Sweden | Climate data for Västerås (2003–2018 averages & extremes since 1901) | — |
@@ -561,17 +678,21 @@ Generated: 2026-09-26T09:27:05.705Z
 | Worthing | United Kingdom | Climate data for Brighton City Airport, (1991–2020 normals, extremes 1998–present) | — |
 | Wrocław | Poland | Climate data for Wrocław (Wrocław Airport), elevation: 120 m, 1991–2020 normals, extremes 1951–present | — |
 | Würzburg | Germany | Climate data for Würzburg (1991–2020 normals) | — |
+| Yalova | Turkey | Climate data for Yalova (1991–2020, extremes 1931–2023) | — |
 | Yaroslavl | Russia | Climate data for Yaroslavl, Russia (1961–1990) | — |
 | Yerevan | Armenia | Climate data for Yerevan (1991–2020, extremes 1885–present) | — |
-| Yevpatoriya | Ukraine | Climate data for Yevpatoria (1981–2010) | — |
+| Yevpatoriya | Russia | Climate data for Yevpatoria (1981–2010) | — |
 | York | United Kingdom | Climate data for RAF Linton-on-Ouse, 15 km north-west of York | avgDerived |
 | Yoshkar-Ola | Russia | Climate data for Yoshkar-Ola (1991-2020, extremes 1936-present) | — |
+| Yozgat | Turkey | Climate data for Yozgat (1991–2020, extremes 1929–2023) | — |
+| Yüksekova | Turkey | Climate data for Yüksekova (1991–2020) | — |
 | Zagreb | Croatia | Climate data for Zagreb Maksimir (1991–2020, extremes 1861–present) | — |
 | Zaporizhzhia | Ukraine | Climate data for Zaporizhzhia (1991–2020, extremes 1959–present) | — |
 | Zaragoza | Spain | Climate data for Zaragoza Airport, altitude 263m (1991-2020), extremes (1942-present) | — |
 | Zhytomyr | Ukraine | Climate data for Zhytomyr (1991–2020, extremes 1948-present) | — |
 | Zielona Góra | Poland | Climate data for Zielona Gora (Słowackiego), elevation: 192 m, 1991–2020 normals, extremes 1951–present | — |
 | Zlatoust | Russia | Climate data for Zlatoust (1991-2020, extremes 1834–present) | — |
+| Zonguldak | Turkey | Climate data for Zonguldak (1991–2020, extremes 1939–2023) | — |
 | Zurich | Switzerland | Climate data for Zurich (Fluntern), elevation: 556 m (1,824 ft), 1991–2020 normals, extremes 1901–present | — |
 
 ## Excluded cities
@@ -587,6 +708,7 @@ Generated: 2026-09-26T09:27:05.705Z
 | Heilbronn | Heilbronn | no usable Celsius high/low |
 | Kremenchuk | Kremenchuk | no usable Celsius high/low |
 | Loures | Loures | no climate table |
+| Menderes | Menderes, İzmir | no climate table |
 | Mönchengladbach | Mönchengladbach | no usable Celsius high/low |
 | Radom | Radom | no usable Celsius high/low |
 | Reutlingen | Reutlingen | no usable Celsius high/low |

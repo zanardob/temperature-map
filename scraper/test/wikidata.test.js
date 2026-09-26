@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { articleTitle, buildCandidates, parsePoint, parseTsv } from '../lib/wikidata.js';
+import { articleTitle, buildCandidates, parsePoint, parseTsv, withExtraCities } from '../lib/wikidata.js';
 
 const HEADER = '?city\t?cityLabel\t?country\t?pop\t?coord\t?article';
 
@@ -32,21 +32,32 @@ test('parsePoint and articleTitle handle the exported formats', () => {
   assert.equal(articleTitle('https://en.wikipedia.org/wiki/Vila_Nova_de_Gaia'), 'Vila Nova de Gaia');
 });
 
-test('buildCandidates keeps only qualifying, weather-boxed European cities', () => {
+test('buildCandidates keeps only qualifying, weather-boxed cities in scope', () => {
   const rows = parseTsv([
     HEADER,
     row({ qid: 'Q597', name: 'Lisbon', article: 'Lisbon' }),
     row({ qid: 'Q2', name: 'Smallville', pop: '40000', article: 'Smallville' }),
-    row({ qid: 'Q3', name: 'Istanbul', country: 'Q43', coord: 'POINT(29 41)', article: 'Istanbul' }),
+    row({ qid: 'Q3', name: 'Tbilisi', country: 'Q230', coord: 'POINT(44.8 41.7)', article: 'Tbilisi' }),
     row({ qid: 'Q4', name: 'Novosibirsk', country: 'Q159', coord: 'POINT(82.9 55)', article: 'Novosibirsk' }),
     row({ qid: 'Q5', name: 'Wuppertal', country: 'Q183', coord: 'POINT(7.2 51.3)', article: 'Wuppertal' }),
     row({ qid: 'Q151993', name: 'Ruhr', country: 'Q183', pop: '5152152', coord: 'POINT(7 51)', article: 'Ruhr' }),
+    row({ qid: 'Q6', name: 'Rabat', country: 'Q1028', coord: 'POINT(-6.84 34.02)', article: 'Rabat' }),
+    row({ qid: 'Q7', name: 'Dakhla', country: 'Q1028', coord: 'POINT(-15.93 23.71)', article: 'Dakhla' }),
+    row({ qid: 'Q459495', name: 'Beşiktaş', country: 'Q43', pop: '175190', coord: 'POINT(29.02 41.07)', article: 'Beşiktaş' }),
+    row({ qid: 'Q1', name: 'Erdemli district', country: 'Q43', coord: 'POINT(34.3 36.6)', article: 'Erdemli' }),
   ].join('\n'));
-  const weatherBoxTitles = new Set(['Lisbon', 'Smallville', 'Istanbul', 'Novosibirsk', 'Ruhr']);
+  const weatherBoxTitles = new Set([
+    'Lisbon', 'Smallville', 'Tbilisi', 'Novosibirsk', 'Ruhr', 'Rabat', 'Dakhla', 'Beşiktaş', 'Erdemli',
+  ]);
+  const countryLabels = new Map([['Q45', 'Portugal'], ['Q1028', 'Morocco'], ['Q43', 'Turkey']]);
 
-  const candidates = buildCandidates(rows, new Map([['Q45', 'Portugal']]), weatherBoxTitles);
+  const candidates = buildCandidates(rows, countryLabels, weatherBoxTitles);
 
-  assert.deepEqual(candidates, [{ name: 'Lisbon', article: 'Lisbon', country: 'Portugal' }]);
+  assert.deepEqual(candidates, [
+    { name: 'Erdemli', article: 'Erdemli', country: 'Turkey' }, // "… district" stripped
+    { name: 'Lisbon', article: 'Lisbon', country: 'Portugal' },
+    { name: 'Rabat', article: 'Rabat', country: 'Morocco' },
+  ]);
 });
 
 test('buildCandidates deduplicates by article and keeps the largest population', () => {
@@ -67,4 +78,16 @@ test('buildCandidates falls back to the country QID when no label is cached', ()
   const candidates = buildCandidates(rows, new Map(), new Set(['Lisbon']));
 
   assert.deepEqual(candidates, [{ name: 'Lisbon', article: 'Lisbon', country: 'Q45' }]);
+});
+
+test('withExtraCities adds the hand-picked places that have a weather box', () => {
+  const base = [{ name: 'Lisbon', article: 'Lisbon', country: 'Portugal' }];
+
+  const withBoxes = withExtraCities(base, new Set(['Lisbon', 'Ceuta', 'Melilla']));
+  assert.deepEqual(withBoxes.map((c) => c.name), ['Ceuta', 'Lisbon', 'Melilla']);
+  assert.deepEqual(withBoxes.find((c) => c.name === 'Ceuta'), { name: 'Ceuta', article: 'Ceuta', country: 'Spain' });
+
+  // No weather box -> not added; already present -> not duplicated.
+  assert.deepEqual(withExtraCities(base, new Set(['Lisbon'])), base);
+  assert.deepEqual(withExtraCities([...base, { name: 'Ceuta', article: 'Ceuta', country: 'Spain' }], new Set(['Ceuta'])).length, 2);
 });

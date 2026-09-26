@@ -18,10 +18,24 @@ export const MIN_POPULATION = 100000;
 // that are already in the dataset, narrow enough to drop the Caucasus approach.
 const EUROPE_BBOX = { minLat: 34, maxLat: 72, minLon: -25, maxLon: 60 };
 
-// Vietnam-style edge cases: these countries count as European in Wikidata, but
-// their bulk is in Asia. Their capitals stay in the dataset through the curated
-// capitals list, so nothing that was already mapped disappears.
-const EXCLUDED_COUNTRIES = new Set(['Q43', 'Q230', 'Q399', 'Q227', 'Q232']); // Turkey, Georgia, Armenia, Azerbaijan, Kazakhstan
+// Morocco is not on Wikidata's Europe continent list, so it is queried
+// explicitly and clipped to its own bounds (which keeps the Canaries and
+// Madeira, Spanish/Portuguese islands inside the Europe branch, out of scope).
+export const MOROCCO = 'Q1028';
+const MOROCCO_BBOX = { minLat: 27.5, maxLat: 36.5, minLon: -13.5, maxLon: -0.5 };
+
+// Countries whose Wikidata "continent = Europe" membership would drag in Asian
+// territory far from the map's focus. Their capitals stay in the dataset through
+// the curated capitals list.
+const EXCLUDED_COUNTRIES = new Set(['Q230', 'Q399', 'Q227', 'Q232']); // Georgia, Armenia, Azerbaijan, Kazakhstan
+
+// Small places worth carrying even though they fall below the population
+// threshold: Melilla and Ceuta are the Spanish autonomous cities on the
+// Moroccan coast (~85k inhabitants each).
+const EXTRA_CITIES = [
+  { name: 'Ceuta', article: 'Ceuta', country: 'Spain' },
+  { name: 'Melilla', article: 'Melilla', country: 'Spain' },
+];
 
 // Non-city entities that survive the type filter and carry a weather box.
 const EXCLUDED_ENTITIES = new Map([
@@ -31,6 +45,13 @@ const EXCLUDED_ENTITIES = new Map([
   ['Q4095759', 'Brighton and Hove built-up area'],
   ['Q106997185', 'Metropolitan City of Sassari'],
   ['Q23157', 'Somerset'],
+  // Inner-city districts of Istanbul (Beşiktaş, Kadıköy, Sarıyer) and Ankara
+  // (Çankaya): separate Wikidata entities that would plot a second dot on top
+  // of the metropolis they belong to.
+  ['Q459495', 'Beşiktaş'],
+  ['Q1020646', 'Çankaya'],
+  ['Q932886', 'Kadıköy'],
+  ['Q857107', 'Sarıyer'],
 ]);
 
 const PREFIXES = [
@@ -47,7 +68,7 @@ export function citiesQuery(minPopulation = MIN_POPULATION) {
   return `${PREFIXES}
 SELECT ?city ?cityLabel ?country ?pop ?coord ?article WHERE {
   ?city wdt:P17 ?country .
-  ?country wdt:P30 wd:Q46 .
+  { ?country wdt:P30 wd:Q46 } UNION { VALUES ?country { wd:${MOROCCO} } }
   ?city wdt:P1082 ?pop .
   FILTER(xsd:decimal(?pop) >= ${minPopulation})
   ?city wdt:P625 ?coord .
@@ -126,13 +147,12 @@ export function articleTitle(articleUri) {
   return decodeURIComponent(raw).replace(/_/g, ' ').normalize('NFC');
 }
 
-function inEurope({ lat, lon }) {
-  return (
-    lat >= EUROPE_BBOX.minLat &&
-    lat <= EUROPE_BBOX.maxLat &&
-    lon >= EUROPE_BBOX.minLon &&
-    lon <= EUROPE_BBOX.maxLon
-  );
+function inBox({ lat, lon }, box) {
+  return lat >= box.minLat && lat <= box.maxLat && lon >= box.minLon && lon <= box.maxLon;
+}
+
+function inScope(country, point) {
+  return country === MOROCCO ? inBox(point, MOROCCO_BBOX) : inBox(point, EUROPE_BBOX);
 }
 
 // Rows in the shape mergeCandidates() expects: name, article, country.
@@ -145,14 +165,16 @@ export function buildCandidates(cityRows, countryLabels, weatherBoxTitles) {
     const population = Number(row.pop);
     if (!Number.isFinite(population) || population < MIN_POPULATION) continue;
     const point = parsePoint(row.coord);
-    if (!point || !inEurope(point)) continue;
+    if (!point || !inScope(row.country, point)) continue;
     const article = articleTitle(row.article);
     if (!weatherBoxTitles.has(article)) continue;
 
     const existing = byArticle.get(article);
     if (!existing || population > existing.population) {
       byArticle.set(article, {
-        name: String(row.cityLabel || '').trim() || article,
+        // Wikidata labels Turkish district centres as "Erdemli district"; the
+        // bare town name reads better on a badge.
+        name: String(row.cityLabel || '').trim().replace(/\s+district$/i, '') || article,
         article,
         country: countryLabels.get(row.country) || row.country,
         population,
@@ -179,6 +201,18 @@ export async function fetchWeatherBoxTitles({ offline = false } = {}) {
   return titles;
 }
 
+// Nudges in the hand-picked places that sit below the population threshold;
+// they still have to carry a weather box to be worth fetching.
+export function withExtraCities(candidates, weatherBoxTitles) {
+  const result = [...candidates];
+  for (const extra of EXTRA_CITIES) {
+    if (!weatherBoxTitles.has(extra.article)) continue;
+    if (result.some((candidate) => candidate.article === extra.article)) continue;
+    result.push({ ...extra });
+  }
+  return result.sort((a, b) => a.name.localeCompare(b.name));
+}
+
 export async function fetchWikidataCandidates({ offline = false } = {}) {
   const cityRows = parseTsv(await fetchText(sparqlUrl(citiesQuery()), { offline }));
   const countryQids = [...new Set(cityRows.map((row) => row.country).filter((qid) => QID.test(qid)))].sort();
@@ -187,5 +221,5 @@ export async function fetchWikidataCandidates({ offline = false } = {}) {
     : [];
   const countryLabels = new Map(labelRows.map((row) => [row.country, row.countryLabel]));
   const weatherBoxTitles = await fetchWeatherBoxTitles({ offline });
-  return buildCandidates(cityRows, countryLabels, weatherBoxTitles);
+  return withExtraCities(buildCandidates(cityRows, countryLabels, weatherBoxTitles), weatherBoxTitles);
 }
