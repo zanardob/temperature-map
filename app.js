@@ -59,7 +59,7 @@ const CLUSTER_LABEL_LAYER_ID = 'city-cluster-labels';
 // Overlapping badges merge into clusters up to this zoom level; beyond it every
 // city is drawn individually.
 const CLUSTER_MAX_ZOOM = 7;
-const CLUSTER_RADIUS = 40;
+const CLUSTER_RADIUS = 46;
 
 /* --------------------------------------------------------------------------
  * Pure helpers
@@ -422,8 +422,9 @@ function initApp() {
       filter: ['!', ['has', 'point_count']],
       paint: {
         ...circlePaint(),
-        // Roughly 13 px at zoom 3.4 growing to 19 px at zoom 6.
-        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 13, 6, 19],
+        // Sized for a comfortably padded bold label: roughly 19 px at zoom 3.4
+        // growing to 26 px at zoom 6.
+        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 19, 6, 26],
       },
     });
 
@@ -434,8 +435,8 @@ function initApp() {
       filter: ['has', 'point_count'],
       paint: {
         ...circlePaint(),
-        // Slightly larger than single badges, to fit the two-line label.
-        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 16, 6, 23],
+        // Larger still, to fit the two-line label with the same colour padding.
+        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 22, 6, 29],
       },
     });
 
@@ -472,8 +473,8 @@ function initApp() {
             ['concat', '\n(', ['to-string', ['get', 'point_count']], ')'],
           ], { 'font-scale': 0.75 },
         ],
-        'text-font': ['Noto Sans Regular'],
-        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 10, 6, 13.5],
+        'text-font': ['Noto Sans Bold'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 12, 6, 16],
         'text-line-height': 1.05,
         'text-anchor': 'center',
         'text-allow-overlap': false,
@@ -491,8 +492,8 @@ function initApp() {
       filter: ['!', ['has', 'point_count']],
       layout: {
         'text-field': ['get', 'label'],
-        'text-font': ['Noto Sans Regular'],
-        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 10, 6, 13.5],
+        'text-font': ['Noto Sans Bold'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 12, 6, 16],
         'text-anchor': 'center',
         // MapLibre's default collision handling: numbers that would overlap are
         // dropped adaptively while the circles underneath stay visible.

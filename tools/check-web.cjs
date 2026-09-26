@@ -99,6 +99,7 @@ assert.deepStrictEqual(
   'expected single circle + cluster circle + cluster label + single label layers',
 );
 assert.strictEqual(captured.sources.cities.cluster, true, 'source must cluster');
+assert.strictEqual(captured.sources.cities.clusterRadius, 46, 'cluster radius matches the larger badges');
 assert.deepStrictEqual(captured.sources.cities.clusterProperties, {
   sumCelsius: ['+', ['get', 'sumCelsius']],
   dataCount: ['+', ['get', 'dataCount']],
@@ -122,6 +123,7 @@ const PROPERTY_SPECS = {
   'text-color': spec.latest.paint_symbol['text-color'],
   'text-halo-color': spec.latest.paint_symbol['text-halo-color'],
   'text-field': spec.latest.layout_symbol['text-field'],
+  'text-size': spec.latest.layout_symbol['text-size'],
 };
 
 function evaluate(layer, section, name, key) {
@@ -145,10 +147,17 @@ assert.strictEqual(clusterColors.cluster, 'rgba(255,196,137,1)', 'cluster averag
 assert.strictEqual(clusterColors.blank, 'rgba(201,206,214,1)', 'all-blank cluster is grey');
 
 const radii = evaluate(layers['city-badges'], 'paint', 'circle-radius', 'circle-radius');
-assert.ok(Math.abs(radii.single - 15.54) < 0.01, `single radius at zoom 4.5, got ${radii.single}`);
+assert.ok(Math.abs(radii.single - 21.96) < 0.01, `single radius at zoom 4.5, got ${radii.single}`);
 
 const clusterRadii = evaluate(layers['city-cluster-badges'], 'paint', 'circle-radius', 'cluster circle-radius');
-assert.ok(Math.abs(clusterRadii.cluster - 18.96) < 0.01, `cluster radius at zoom 4.5, got ${clusterRadii.cluster}`);
+assert.ok(Math.abs(clusterRadii.cluster - 24.96) < 0.01, `cluster radius at zoom 4.5, got ${clusterRadii.cluster}`);
+
+// Bold face + bigger text, so the colour ring around it stays visible.
+for (const layerId of ['city-badge-labels', 'city-cluster-labels']) {
+  assert.deepStrictEqual(layers[layerId].layout['text-font'], ['Noto Sans Bold'], `${layerId} uses the bold face`);
+}
+const textSizes = evaluate(layers['city-badge-labels'], 'layout', 'text-size', 'text-size');
+assert.ok(Math.abs(Number(textSizes.single) - 13.69) < 0.01, `label text size at zoom 4.5, got ${textSizes.single}`);
 
 const singleText = evaluate(layers['city-badge-labels'], 'layout', 'text-field', 'single text-field');
 assert.strictEqual(singleText.single, '13°C');
