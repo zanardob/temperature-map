@@ -108,6 +108,7 @@ assert.deepStrictEqual(captured.sources.cities.clusterProperties, {
 const FEATURES = {
   single: { type: 'Feature', properties: { index: 0, label: '13°C', sumCelsius: 13, dataCount: 1 } },
   cluster: { type: 'Feature', properties: { point_count: 3, cluster_id: 1, sumCelsius: 39, dataCount: 3 } },
+  hot: { type: 'Feature', properties: { point_count: 2, cluster_id: 3, sumCelsius: 80, dataCount: 2 } },
   blank: { type: 'Feature', properties: { point_count: 2, cluster_id: 2, sumCelsius: 0, dataCount: 0 } },
 };
 
@@ -116,6 +117,8 @@ const FEATURES = {
 const PROPERTY_SPECS = {
   'circle-color': spec.latest.paint_circle['circle-color'],
   'circle-radius': spec.latest.paint_circle['circle-radius'],
+  'text-color': spec.latest.paint_symbol['text-color'],
+  'text-halo-color': spec.latest.paint_symbol['text-halo-color'],
   'text-field': spec.latest.layout_symbol['text-field'],
 };
 
@@ -143,14 +146,21 @@ const radii = evaluate(layers['city-badges'], 'paint', 'circle-radius', 'circle-
 assert.ok(Math.abs(radii.single - 15.54) < 0.01, `single radius at zoom 4.5, got ${radii.single}`);
 
 const clusterRadii = evaluate(layers['city-cluster-badges'], 'paint', 'circle-radius', 'cluster circle-radius');
-assert.ok(Math.abs(clusterRadii.cluster - 18.54) < 0.01, `cluster radius at zoom 4.5, got ${clusterRadii.cluster}`);
+assert.ok(Math.abs(clusterRadii.cluster - 18.96) < 0.01, `cluster radius at zoom 4.5, got ${clusterRadii.cluster}`);
 
 const singleText = evaluate(layers['city-badge-labels'], 'layout', 'text-field', 'single text-field');
 assert.strictEqual(singleText.single, '13°C');
 
 const clusterText = evaluate(layers['city-cluster-labels'], 'layout', 'text-field', 'cluster text-field');
 assert.strictEqual(clusterText.cluster, '13°C\n(3)', 'cluster shows the average over the member count');
-assert.strictEqual(clusterText.blank, '—', 'all-blank cluster shows a dash');
+assert.strictEqual(clusterText.blank, '—', 'all-blank cluster shows a dash and no count');
+
+// White ink on the saturated red end of the ramp is the least readable
+// combination; only the deep blue end should use white.
+const clusterInk = evaluate(layers['city-cluster-labels'], 'paint', 'text-color', 'cluster text-color');
+assert.strictEqual(clusterInk.hot, 'rgba(16,20,24,1)', 'hot clusters keep near-black ink');
+assert.strictEqual(clusterInk.cluster, 'rgba(16,20,24,1)', 'mild clusters keep near-black ink');
+assert.strictEqual(clusterInk.blank, 'rgba(16,20,24,1)', 'blank clusters keep near-black ink');
 
 /* 3. Interaction wiring ----------------------------------------------------- */
 for (const layerId of ['city-badges', 'city-cluster-badges', 'city-cluster-labels', 'city-badge-labels']) {

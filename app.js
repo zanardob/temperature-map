@@ -39,7 +39,7 @@ const DEFAULT_METRIC_ID = 'average';
 // at +4.5 °C, red at +41.5 °C. See colorForTemperature().
 const NO_DATA_COLOR = '#c9ced6';
 const LIGHT_TEXT_COLOR = '#ffffff';
-const DARK_TEXT_COLOR = '#14213d';
+const DARK_TEXT_COLOR = '#101418';
 
 // Legend ticks, labelled in °C.
 const LEGEND_TICKS = [-25, -10, 0, 10, 20, 30, 40];
@@ -435,20 +435,19 @@ function initApp() {
       paint: {
         ...circlePaint(),
         // Slightly larger than single badges, to fit the two-line label.
-        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 16, 6, 22],
+        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 16, 6, 23],
       },
     });
 
-    // Wikipedia's own text-contrast rule: white ink below -23.3 °C and from
-    // 37.8 °C up, otherwise dark. Applies to singles and clusters alike.
+    // Wikipedia uses white ink for both extremes, but white on the saturated
+    // red end is the least readable combination on the ramp; near-black stays
+    // legible across the whole warm half, so white is kept for deep blue only.
     const badgeTextColor = ['case',
       ['<', averageCelsius, -23.3], LIGHT_TEXT_COLOR,
-      ['>=', averageCelsius, 37.8], LIGHT_TEXT_COLOR,
       DARK_TEXT_COLOR,
     ];
     const badgeHaloColor = ['case',
       ['<', averageCelsius, -23.3], DARK_TEXT_COLOR,
-      ['>=', averageCelsius, 37.8], DARK_TEXT_COLOR,
       '#ffffff',
     ];
 
@@ -463,16 +462,21 @@ function initApp() {
       source: DATA_SOURCE_ID,
       filter: ['has', 'point_count'],
       layout: {
-        // Two lines inside the circle, e.g. "22°C" over "(2)".
-        'text-field': ['case',
-          ['==', ['get', 'dataCount'], 0], EM_DASH,
-          ['concat',
-            ['to-string', roundedAverage], DEGREE_C,
-            '\n(',
-            ['to-string', ['get', 'point_count']], ')'],
+        // Two lines inside the circle, e.g. "22°C" over "(2)", with the count
+        // in a slightly smaller face. 'format' must be the root expression, so
+        // the blank case lives inside each section.
+        'text-field': ['format',
+          ['case',
+            ['==', ['get', 'dataCount'], 0], EM_DASH,
+            ['concat', ['to-string', roundedAverage], DEGREE_C],
+          ], { 'font-scale': 1 },
+          ['case',
+            ['==', ['get', 'dataCount'], 0], '',
+            ['concat', '\n(', ['to-string', ['get', 'point_count']], ')'],
+          ], { 'font-scale': 0.75 },
         ],
         'text-font': ['Noto Sans Regular'],
-        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 9, 6, 12.5],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 10, 6, 13.5],
         'text-line-height': 1.05,
         'text-anchor': 'center',
         'text-allow-overlap': false,
@@ -493,7 +497,7 @@ function initApp() {
       layout: {
         'text-field': ['get', 'label'],
         'text-font': ['Noto Sans Regular'],
-        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 9, 6, 12.5],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 10, 6, 13.5],
         'text-anchor': 'center',
         // MapLibre's default collision handling: numbers that would overlap are
         // dropped adaptively while the circles underneath stay visible.
