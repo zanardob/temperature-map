@@ -166,6 +166,20 @@ const clusterText = evaluate(layers['city-cluster-labels'], 'layout', 'text-fiel
 assert.strictEqual(clusterText.cluster, '13°C\n(3)', 'cluster shows the average over the member count');
 assert.strictEqual(clusterText.blank, '—', 'all-blank cluster shows a dash and no count');
 
+// The average stays bold; the member count must stay regular weight.
+const clusterField = spec.createPropertyExpression(
+  layers['city-cluster-labels'].layout['text-field'],
+  PROPERTY_SPECS['text-field'],
+);
+assert.strictEqual(clusterField.result, 'success', 'cluster text-field parses');
+const formatted = clusterField.value.evaluateWithoutErrorHandling({ zoom: 4.5 }, FEATURES.cluster);
+const fontStacks = formatted.sections.map(section => section.fontStack);
+assert.deepStrictEqual(
+  fontStacks,
+  ['Noto Sans Bold', 'Noto Sans Regular'],
+  `temperature bold, count regular; got ${JSON.stringify(fontStacks)}`,
+);
+
 // Wikipedia's ink rule: white at both extremes, black in between — and no
 // text halo, so the glyph edge meets the fill directly.
 const clusterInk = evaluate(layers['city-cluster-labels'], 'paint', 'text-color', 'cluster text-color');

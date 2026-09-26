@@ -460,18 +460,18 @@ function initApp() {
       source: DATA_SOURCE_ID,
       filter: ['has', 'point_count'],
       layout: {
-        // Two lines inside the circle, e.g. "22°C" over "(2)", with the count
-        // in a slightly smaller face. 'format' must be the root expression, so
-        // the blank case lives inside each section.
+        // Two lines inside the circle, e.g. "22°C" over "(2)": the average in
+        // bold, the count in the regular face at a smaller scale. 'format' must
+        // be the root expression, so the blank case lives inside each section.
         'text-field': ['format',
           ['case',
             ['==', ['get', 'dataCount'], 0], EM_DASH,
             ['concat', ['to-string', roundedAverage], DEGREE_C],
-          ], { 'font-scale': 1 },
+          ], { 'font-scale': 1, 'text-font': ['literal', ['Noto Sans Bold']] },
           ['case',
             ['==', ['get', 'dataCount'], 0], '',
             ['concat', '\n(', ['to-string', ['get', 'point_count']], ')'],
-          ], { 'font-scale': 0.75 },
+          ], { 'font-scale': 0.75, 'text-font': ['literal', ['Noto Sans Regular']] },
         ],
         'text-font': ['Noto Sans Bold'],
         'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 12, 6, 16],
