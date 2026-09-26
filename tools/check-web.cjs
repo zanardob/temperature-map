@@ -109,6 +109,7 @@ const FEATURES = {
   single: { type: 'Feature', properties: { index: 0, label: '13°C', sumCelsius: 13, dataCount: 1 } },
   cluster: { type: 'Feature', properties: { point_count: 3, cluster_id: 1, sumCelsius: 39, dataCount: 3 } },
   hot: { type: 'Feature', properties: { point_count: 2, cluster_id: 3, sumCelsius: 80, dataCount: 2 } },
+  cold: { type: 'Feature', properties: { point_count: 2, cluster_id: 4, sumCelsius: -60, dataCount: 2 } },
   blank: { type: 'Feature', properties: { point_count: 2, cluster_id: 2, sumCelsius: 0, dataCount: 0 } },
 };
 
@@ -117,6 +118,7 @@ const FEATURES = {
 const PROPERTY_SPECS = {
   'circle-color': spec.latest.paint_circle['circle-color'],
   'circle-radius': spec.latest.paint_circle['circle-radius'],
+  'circle-stroke-width': spec.latest.paint_circle['circle-stroke-width'],
   'text-color': spec.latest.paint_symbol['text-color'],
   'text-halo-color': spec.latest.paint_symbol['text-halo-color'],
   'text-field': spec.latest.layout_symbol['text-field'],
@@ -155,12 +157,21 @@ const clusterText = evaluate(layers['city-cluster-labels'], 'layout', 'text-fiel
 assert.strictEqual(clusterText.cluster, '13°C\n(3)', 'cluster shows the average over the member count');
 assert.strictEqual(clusterText.blank, '—', 'all-blank cluster shows a dash and no count');
 
-// White ink on the saturated red end of the ramp is the least readable
-// combination; only the deep blue end should use white.
+// Wikipedia's ink rule: white at both extremes, black in between — and no
+// text halo, so the glyph edge meets the fill directly.
 const clusterInk = evaluate(layers['city-cluster-labels'], 'paint', 'text-color', 'cluster text-color');
-assert.strictEqual(clusterInk.hot, 'rgba(16,20,24,1)', 'hot clusters keep near-black ink');
-assert.strictEqual(clusterInk.cluster, 'rgba(16,20,24,1)', 'mild clusters keep near-black ink');
-assert.strictEqual(clusterInk.blank, 'rgba(16,20,24,1)', 'blank clusters keep near-black ink');
+assert.strictEqual(clusterInk.cold, 'rgba(255,255,255,1)', 'deep blue end uses white ink');
+assert.strictEqual(clusterInk.hot, 'rgba(255,255,255,1)', 'hottest reds use white ink (Wikipedia rule)');
+assert.strictEqual(clusterInk.cluster, 'rgba(0,0,0,1)', 'mild clusters use black ink');
+assert.strictEqual(clusterInk.blank, 'rgba(0,0,0,1)', 'blank clusters use black ink');
+
+for (const layerId of ['city-cluster-labels', 'city-badge-labels']) {
+  assert.ok(!('text-halo-color' in layers[layerId].paint), `${layerId} must not draw a text halo`);
+  assert.ok(!('text-halo-width' in layers[layerId].paint), `${layerId} must not draw a text halo`);
+}
+
+const strokeWidths = evaluate(layers['city-badges'], 'paint', 'circle-stroke-width', 'circle-stroke-width');
+assert.strictEqual(strokeWidths.single, '0.8', 'thin white ball outline');
 
 /* 3. Interaction wiring ----------------------------------------------------- */
 for (const layerId of ['city-badges', 'city-cluster-badges', 'city-cluster-labels', 'city-badge-labels']) {

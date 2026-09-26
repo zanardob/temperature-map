@@ -39,7 +39,7 @@ const DEFAULT_METRIC_ID = 'average';
 // at +4.5 °C, red at +41.5 °C. See colorForTemperature().
 const NO_DATA_COLOR = '#c9ced6';
 const LIGHT_TEXT_COLOR = '#ffffff';
-const DARK_TEXT_COLOR = '#101418';
+const DARK_TEXT_COLOR = '#000000';
 
 // Legend ticks, labelled in °C.
 const LEGEND_TICKS = [-25, -10, 0, 10, 20, 30, 40];
@@ -409,7 +409,7 @@ function initApp() {
         temperatureColorExpression(averageCelsius),
       ],
       'circle-stroke-color': '#ffffff',
-      'circle-stroke-width': 1.5,
+      'circle-stroke-width': 0.8,
       'circle-opacity': 0.95,
     });
 
@@ -439,16 +439,13 @@ function initApp() {
       },
     });
 
-    // Wikipedia uses white ink for both extremes, but white on the saturated
-    // red end is the least readable combination on the ramp; near-black stays
-    // legible across the whole warm half, so white is kept for deep blue only.
+    // Wikipedia's own ink rule: white below -23.3 °C and from 37.8 °C up,
+    // black in between. Deliberately no text halo: the crisp fill/text edge
+    // reads better than a white glow around the glyphs.
     const badgeTextColor = ['case',
       ['<', averageCelsius, -23.3], LIGHT_TEXT_COLOR,
+      ['>=', averageCelsius, 37.8], LIGHT_TEXT_COLOR,
       DARK_TEXT_COLOR,
-    ];
-    const badgeHaloColor = ['case',
-      ['<', averageCelsius, -23.3], DARK_TEXT_COLOR,
-      '#ffffff',
     ];
 
     // Individual cities and clusters get separate symbol layers so each uses the
@@ -484,8 +481,6 @@ function initApp() {
       },
       paint: {
         'text-color': badgeTextColor,
-        'text-halo-color': badgeHaloColor,
-        'text-halo-width': 1.2,
       },
     });
 
@@ -506,8 +501,6 @@ function initApp() {
       },
       paint: {
         'text-color': badgeTextColor,
-        'text-halo-color': badgeHaloColor,
-        'text-halo-width': 1.2,
       },
     });
 
