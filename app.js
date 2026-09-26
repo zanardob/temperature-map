@@ -14,6 +14,12 @@
 // Alternatives: bright (more vivid), positron (muted grey).
 const MAP_STYLE_URL = 'https://tiles.openfreemap.org/styles/liberty';
 
+// The style JSON (and its source metadata) is cached in localStorage for a day,
+// mirroring the server's own max-age, so reloads only re-fetch what the browser
+// has not cached. Versioned: bump to invalidate.
+const STYLE_CACHE_KEY = 'europe-temperature-map.style.v1';
+const STYLE_CACHE_MS = 24 * 60 * 60 * 1000;
+
 const MONTH_NAMES = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December',
@@ -46,7 +52,9 @@ const DEGREE_C = '\u00b0C';
 
 const DATA_SOURCE_ID = 'cities';
 const CIRCLE_LAYER_ID = 'city-badges';
+const CLUSTER_CIRCLE_LAYER_ID = 'city-cluster-badges';
 const LABEL_LAYER_ID = 'city-badge-labels';
+const CLUSTER_LABEL_LAYER_ID = 'city-cluster-labels';
 const COUNT_LAYER_ID = 'city-badge-counts';
 
 // Overlapping badges merge into clusters up to this zoom level; beyond it every
@@ -124,6 +132,46 @@ function legendTickPosition(celsius) {
   const first = LEGEND_TICKS[0];
   const last = LEGEND_TICKS[LEGEND_TICKS.length - 1];
   return ((celsius - first) / (last - first)) * 100;
+}
+
+function readCachedStyle() {
+  try {
+    const entry = JSON.parse(localStorage.getItem(STYLE_CACHE_KEY) || 'null');
+    if (!entry || !entry.style || entry.expires < Date.now()) return null;
+    const { style } = entry;
+    return style.version === 8 && style.sources ? style : null;
+  } catch {
+    return null; // storage blocked or corrupted entry
+  }
+}
+
+function writeCachedStyle(style) {
+  try {
+    localStorage.setItem(STYLE_CACHE_KEY, JSON.stringify({ expires: Date.now() + STYLE_CACHE_MS, style }));
+  } catch {
+    // storage disabled or full: the map still works, just without the shortcut
+  }
+}
+
+// Hands MapLibre a style object from cache, or fetches and caches it first.
+// Falls back to letting MapLibre fetch the URL itself if anything goes wrong.
+async function applyMapStyle(map) {
+  const cached = readCachedStyle();
+  if (cached) {
+    map.setStyle(cached);
+    return;
+  }
+  try {
+    const response = await fetch(MAP_STYLE_URL);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const style = await response.json();
+    if (!style || style.version !== 8 || !style.sources) throw new Error('unexpected style document');
+    writeCachedStyle(style);
+    map.setStyle(style);
+  } catch (error) {
+    console.warn('[temperature-map] style fetch failed, loading by URL instead:', error.message);
+    map.setStyle(MAP_STYLE_URL);
+  }
 }
 
 // Sampled every 5 °C from colorForTemperature, so the gradient matches the
@@ -235,7 +283,6 @@ function initApp() {
 
   const map = new maplibregl.Map({
     container: 'map',
-    style: MAP_STYLE_URL,
     center: [12, 50],
     zoom: 3.5,
     attributionControl: false, // replaced below by an always-expanded one
@@ -244,6 +291,11 @@ function initApp() {
   // MapLibre collapses the credits into a button on maps narrower than 640 px;
   // compact:false keeps the OpenFreeMap / OpenMapTiles / OpenStreetMap line visible.
   map.addControl(new maplibregl.AttributionControl({ compact: false }));
+  // Surface style/tile problems in the console instead of failing silently.
+  map.on('error', event => {
+    console.warn('[temperature-map] map error:', (event && event.error && event.error.message) || 'unknown');
+  });
+  applyMapStyle(map);
 
   let currentMonth = new Date().getMonth(); // the page opens on the current month
   let currentMetric = METRICS.find(metric => metric.id === DEFAULT_METRIC_ID);
@@ -352,25 +404,39 @@ function initApp() {
     ];
     const roundedAverage = ['floor', ['+', averageCelsius, 0.5]]; // = Math.round, without -0
 
+    const circlePaint = () => ({
+      'circle-color': ['case',
+        ['==', ['get', 'dataCount'], 0], NO_DATA_COLOR,
+        temperatureColorExpression(averageCelsius),
+      ],
+      'circle-stroke-color': '#ffffff',
+      'circle-stroke-width': 1.5,
+      'circle-opacity': 0.95,
+    });
+
+    // A zoom interpolation must be the top-level expression of a paint
+    // property, so singles and clusters get one circle layer each.
     map.addLayer({
       id: CIRCLE_LAYER_ID,
       type: 'circle',
       source: DATA_SOURCE_ID,
+      filter: ['!', ['has', 'point_count']],
       paint: {
-        'circle-color': ['case',
-          ['==', ['get', 'dataCount'], 0], NO_DATA_COLOR,
-          temperatureColorExpression(averageCelsius),
-        ],
-        // Roughly 13 px at zoom 3.4 growing to 19 px at zoom 6; clusters are
-        // slightly larger to stand out and fit the count chip.
-        'circle-radius': ['case',
-          ['has', 'point_count'],
-          ['interpolate', ['linear'], ['zoom'], 3.4, 15, 6, 21],
-          ['interpolate', ['linear'], ['zoom'], 3.4, 13, 6, 19],
-        ],
-        'circle-stroke-color': '#ffffff',
-        'circle-stroke-width': 1.5,
-        'circle-opacity': 0.95,
+        ...circlePaint(),
+        // Roughly 13 px at zoom 3.4 growing to 19 px at zoom 6.
+        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 13, 6, 19],
+      },
+    });
+
+    map.addLayer({
+      id: CLUSTER_CIRCLE_LAYER_ID,
+      type: 'circle',
+      source: DATA_SOURCE_ID,
+      filter: ['has', 'point_count'],
+      paint: {
+        ...circlePaint(),
+        // Slightly larger, so clusters stand out and fit the count chip.
+        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 15, 6, 21],
       },
     });
 
@@ -387,17 +453,41 @@ function initApp() {
       '#ffffff',
     ];
 
+    // Individual cities and clusters get separate symbol layers so each uses the
+    // simplest possible expression (and either can be validated on its own).
+    // Cluster labels are added first: MapLibre gives placement priority to
+    // earlier symbol layers, so in dense areas the group average wins over the
+    // individual labels it would otherwise be hidden behind.
+    map.addLayer({
+      id: CLUSTER_LABEL_LAYER_ID,
+      type: 'symbol',
+      source: DATA_SOURCE_ID,
+      filter: ['has', 'point_count'],
+      layout: {
+        'text-field': ['case',
+          ['==', ['get', 'dataCount'], 0], EM_DASH,
+          ['concat', ['to-string', roundedAverage], DEGREE_C],
+        ],
+        'text-font': ['Noto Sans Regular'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 9, 6, 12.5],
+        'text-anchor': 'center',
+        'text-allow-overlap': false,
+        'text-ignore-placement': false,
+      },
+      paint: {
+        'text-color': badgeTextColor,
+        'text-halo-color': badgeHaloColor,
+        'text-halo-width': 1.2,
+      },
+    });
+
     map.addLayer({
       id: LABEL_LAYER_ID,
       type: 'symbol',
       source: DATA_SOURCE_ID,
+      filter: ['!', ['has', 'point_count']],
       layout: {
-        'text-field': ['case',
-          ['has', 'point_count'],
-          ['case', ['==', ['get', 'dataCount'], 0], EM_DASH,
-            ['concat', ['to-string', roundedAverage], DEGREE_C]],
-          ['get', 'label'],
-        ],
+        'text-field': ['get', 'label'],
         'text-font': ['Noto Sans Regular'],
         'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 9, 6, 12.5],
         'text-anchor': 'center',
@@ -448,7 +538,7 @@ function initApp() {
       openCityPopup(Number(feature.properties.index));
     }
 
-    for (const layerId of [CIRCLE_LAYER_ID, LABEL_LAYER_ID, COUNT_LAYER_ID]) {
+    for (const layerId of [CIRCLE_LAYER_ID, CLUSTER_CIRCLE_LAYER_ID, LABEL_LAYER_ID, CLUSTER_LABEL_LAYER_ID, COUNT_LAYER_ID]) {
       map.on('click', layerId, handleBadgeClick);
       map.on('mouseenter', layerId, () => { map.getCanvas().style.cursor = 'pointer'; });
       map.on('mouseleave', layerId, () => { map.getCanvas().style.cursor = ''; });

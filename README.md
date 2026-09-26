@@ -10,6 +10,7 @@ Interactive map of monthly temperatures (high / average / low, °C) for 135 Euro
 ```bash
 npm install
 npm test          # parser/validator tests (22)
+npm run check:web # map style layers + expressions (no browser needed)
 npm run scrape    # fetch + parse + validate → data/cities.js (+ coverage report)
 npm run build     # parse from cache only (offline)
 npm run validate
@@ -20,8 +21,9 @@ open index.html   # works from file://
 
 - One badge per city: fill colour from Wikipedia's own weather-box temperature ramp (ported from `Module:Weather box/colors`), with the rounded value and unit ("23°C") printed inside.
 - Month slider (Jan–Dec) plus a play button; **High / Average / Low** metric toggle (averages shown by default).
-- Overlapping badges merge into one cluster circle showing the **average of the currently selected metric** and the number of member cities; click a cluster to zoom to the level where it splits. Remaining label collisions are still dropped adaptively.
+- Overlapping badges merge into one cluster circle showing the **average of the currently selected metric** and the number of member cities; click a cluster to zoom to the level where it splits. Remaining label collisions are still dropped adaptively, and cluster averages win placement priority over individual labels.
 - Click a city badge for a popup with the month's high, average, low, typical extremes and records.
+- The style JSON is cached in `localStorage` for a day; tiles, glyphs and sprites rely on the browser HTTP cache (OpenFreeMap serves 24 h–10 year cache headers).
 - Colour and value are always Celsius.
 
 ## The data
@@ -46,6 +48,7 @@ Data quality notes: some cities' Wikipedia articles only provide an airport/outl
 ```
 index.html, style.css, app.js   static frontend (MapLibre from CDN)
 mock/mock-cities.js             UI development data (used only when data/cities.js is absent)
+tools/check-web.cjs             headless style/expression check for the frontend (npm run check:web)
 scraper/                        Node pipeline: lists → candidates → fetch → parse → validate → emit
   lib/                          wiki client, parsers, validator, emitters
   test/ fixtures/               22 node:test cases + HTML fixtures

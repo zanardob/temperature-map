@@ -8,9 +8,13 @@
     "scrape": "node scraper/run.js",
     "build": "node scraper/build.js",
     "validate": "node scraper/validate.js",
+    "check:web": "node tools/check-web.cjs",
     "test": "node --test scraper/test/*.test.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0"
+  },
+  "devDependencies": {
+    "@maplibre/maplibre-gl-style-spec": "^24.8.1"
   }
 }
