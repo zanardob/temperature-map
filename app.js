@@ -461,10 +461,10 @@ function initApp() {
       source: DATA_SOURCE_ID,
       filter: ['has', 'point_count'],
       layout: {
-        // Two lines inside the circle, e.g. "22°C" over "(2)": bold average and
-        // a lighter, smaller °C unit; the count matches the unit's face and
-        // scale. 'format' must be the root expression, so the blank case lives
-        // inside each section.
+        // Two lines inside the circle, e.g. "22°C" over "(2)": bold average with
+        // the °C unit in the lighter regular face at full size; the count uses
+        // the same face and size. 'format' must be the root expression, so the
+        // blank case lives inside each section.
         'text-field': ['format',
           ['case',
             ['==', ['get', 'dataCount'], 0], EM_DASH,
@@ -473,11 +473,11 @@ function initApp() {
           ['case',
             ['==', ['get', 'dataCount'], 0], '',
             DEGREE_C,
-          ], { 'font-scale': 0.8, 'text-font': ['literal', ['Noto Sans Regular']] },
+          ], { 'font-scale': 1, 'text-font': ['literal', ['Noto Sans Regular']] },
           ['case',
             ['==', ['get', 'dataCount'], 0], '',
             ['concat', '\n(', ['to-string', ['get', 'point_count']], ')'],
-          ], { 'font-scale': 0.8, 'text-font': ['literal', ['Noto Sans Regular']] },
+          ], { 'font-scale': 1, 'text-font': ['literal', ['Noto Sans Regular']] },
         ],
         'text-font': ['Noto Sans Bold'],
         'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 12, 6, 16],
@@ -497,10 +497,10 @@ function initApp() {
       source: DATA_SOURCE_ID,
       filter: ['!', ['has', 'point_count']],
       layout: {
-        // Bold number with a lighter, smaller °C unit after it.
+        // Bold number with the °C unit in the lighter regular face, full size.
         'text-field': ['format',
           ['get', 'labelNumber'], { 'font-scale': 1, 'text-font': ['literal', ['Noto Sans Bold']] },
-          ['get', 'labelUnit'], { 'font-scale': 0.8, 'text-font': ['literal', ['Noto Sans Regular']] },
+          ['get', 'labelUnit'], { 'font-scale': 1, 'text-font': ['literal', ['Noto Sans Regular']] },
         ],
         'text-font': ['Noto Sans Bold'],
         'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 12, 6, 16],

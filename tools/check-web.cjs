@@ -166,8 +166,8 @@ const clusterText = evaluate(layers['city-cluster-labels'], 'layout', 'text-fiel
 assert.strictEqual(clusterText.cluster, '13°C\n(3)', 'cluster shows the average over the member count');
 assert.strictEqual(clusterText.blank, '—', 'all-blank cluster shows a dash and no count');
 
-// The number/average stays bold; the °C unit and the count share a regular face
-// at the same smaller scale.
+// The number/average stays bold; the °C unit and the count share the regular
+// face at full size.
 function sectionsOf(layer, feature, key) {
   const parsed = spec.createPropertyExpression(layer.layout['text-field'], PROPERTY_SPECS['text-field']);
   assert.strictEqual(parsed.result, 'success', `${key} text-field parses`);
@@ -178,13 +178,13 @@ function sectionsOf(layer, feature, key) {
 
 assert.deepStrictEqual(
   sectionsOf(layers['city-cluster-labels'], FEATURES.cluster, 'cluster'),
-  [['13', 'Noto Sans Bold', 1], ['°C', 'Noto Sans Regular', 0.8], ['\n(3)', 'Noto Sans Regular', 0.8]],
-  'cluster: bold average, smaller regular unit and count',
+  [['13', 'Noto Sans Bold', 1], ['°C', 'Noto Sans Regular', 1], ['\n(3)', 'Noto Sans Regular', 1]],
+  'cluster: bold average, regular full-size unit and count',
 );
 assert.deepStrictEqual(
   sectionsOf(layers['city-badge-labels'], FEATURES.single, 'single'),
-  [['13', 'Noto Sans Bold', 1], ['°C', 'Noto Sans Regular', 0.8]],
-  'single: bold number, smaller regular unit',
+  [['13', 'Noto Sans Bold', 1], ['°C', 'Noto Sans Regular', 1]],
+  'single: bold number, regular full-size unit',
 );
 
 // Wikipedia's ink rule: white at both extremes, black in between — and no
