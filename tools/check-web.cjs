@@ -107,7 +107,7 @@ assert.deepStrictEqual(captured.sources.cities.clusterProperties, {
 
 /* 2. Expression evaluation -------------------------------------------------- */
 const FEATURES = {
-  single: { type: 'Feature', properties: { index: 0, label: '13°C', sumCelsius: 13, dataCount: 1 } },
+  single: { type: 'Feature', properties: { index: 0, labelNumber: '13', labelUnit: '°C', sumCelsius: 13, dataCount: 1 } },
   cluster: { type: 'Feature', properties: { point_count: 3, cluster_id: 1, sumCelsius: 39, dataCount: 3 } },
   hot: { type: 'Feature', properties: { point_count: 2, cluster_id: 3, sumCelsius: 80, dataCount: 2 } },
   cold: { type: 'Feature', properties: { point_count: 2, cluster_id: 4, sumCelsius: -60, dataCount: 2 } },
@@ -166,18 +166,25 @@ const clusterText = evaluate(layers['city-cluster-labels'], 'layout', 'text-fiel
 assert.strictEqual(clusterText.cluster, '13°C\n(3)', 'cluster shows the average over the member count');
 assert.strictEqual(clusterText.blank, '—', 'all-blank cluster shows a dash and no count');
 
-// The average stays bold; the member count must stay regular weight.
-const clusterField = spec.createPropertyExpression(
-  layers['city-cluster-labels'].layout['text-field'],
-  PROPERTY_SPECS['text-field'],
-);
-assert.strictEqual(clusterField.result, 'success', 'cluster text-field parses');
-const formatted = clusterField.value.evaluateWithoutErrorHandling({ zoom: 4.5 }, FEATURES.cluster);
-const fontStacks = formatted.sections.map(section => section.fontStack);
+// The number/average stays bold; the °C unit and the count share a regular face
+// at the same smaller scale.
+function sectionsOf(layer, feature, key) {
+  const parsed = spec.createPropertyExpression(layer.layout['text-field'], PROPERTY_SPECS['text-field']);
+  assert.strictEqual(parsed.result, 'success', `${key} text-field parses`);
+  return parsed.value
+    .evaluateWithoutErrorHandling({ zoom: 4.5 }, feature)
+    .sections.map(section => [section.text, section.fontStack, section.scale]);
+}
+
 assert.deepStrictEqual(
-  fontStacks,
-  ['Noto Sans Bold', 'Noto Sans Regular'],
-  `temperature bold, count regular; got ${JSON.stringify(fontStacks)}`,
+  sectionsOf(layers['city-cluster-labels'], FEATURES.cluster, 'cluster'),
+  [['13', 'Noto Sans Bold', 1], ['°C', 'Noto Sans Regular', 0.8], ['\n(3)', 'Noto Sans Regular', 0.8]],
+  'cluster: bold average, smaller regular unit and count',
+);
+assert.deepStrictEqual(
+  sectionsOf(layers['city-badge-labels'], FEATURES.single, 'single'),
+  [['13', 'Noto Sans Bold', 1], ['°C', 'Noto Sans Regular', 0.8]],
+  'single: bold number, smaller regular unit',
 );
 
 // Wikipedia's ink rule: white at both extremes, black in between — and no

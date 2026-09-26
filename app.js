@@ -185,10 +185,10 @@ function legendGradientCss() {
   return `linear-gradient(90deg, ${stops.join(', ')})`;
 }
 
-// Badge label: rounded integer with the unit, ASCII hyphen-minus for negatives
-// (the enlarged badges fit "23°C" / "-12°C").
+// Badge number: rounded integer, ASCII hyphen-minus for negatives. The °C unit
+// is drawn separately (regular weight, smaller) by the label layer.
 function formatBadgeNumber(celsius) {
-  return `${Math.round(celsius)}${DEGREE_C}`;
+  return String(Math.round(celsius));
 }
 
 // Legend tick: integer with a real minus sign and a degree sign.
@@ -255,7 +255,8 @@ function buildFeatureCollection(cities, monthIndex, metricRow) {
         geometry: { type: 'Point', coordinates: [Number(city.lon), Number(city.lat)] },
         properties: {
           index,
-          label: celsius === null ? EM_DASH : formatBadgeNumber(celsius),
+          labelNumber: celsius === null ? EM_DASH : formatBadgeNumber(celsius),
+          labelUnit: celsius === null ? '' : DEGREE_C,
           // Clusters aggregate these two (see the source's clusterProperties),
           // so the cluster layers can derive an average with one expression and
           // the same expressions also work for individual, unclustered points.
@@ -460,18 +461,23 @@ function initApp() {
       source: DATA_SOURCE_ID,
       filter: ['has', 'point_count'],
       layout: {
-        // Two lines inside the circle, e.g. "22°C" over "(2)": the average in
-        // bold, the count in the regular face at a smaller scale. 'format' must
-        // be the root expression, so the blank case lives inside each section.
+        // Two lines inside the circle, e.g. "22°C" over "(2)": bold average and
+        // a lighter, smaller °C unit; the count matches the unit's face and
+        // scale. 'format' must be the root expression, so the blank case lives
+        // inside each section.
         'text-field': ['format',
           ['case',
             ['==', ['get', 'dataCount'], 0], EM_DASH,
-            ['concat', ['to-string', roundedAverage], DEGREE_C],
+            ['to-string', roundedAverage],
           ], { 'font-scale': 1, 'text-font': ['literal', ['Noto Sans Bold']] },
           ['case',
             ['==', ['get', 'dataCount'], 0], '',
+            DEGREE_C,
+          ], { 'font-scale': 0.8, 'text-font': ['literal', ['Noto Sans Regular']] },
+          ['case',
+            ['==', ['get', 'dataCount'], 0], '',
             ['concat', '\n(', ['to-string', ['get', 'point_count']], ')'],
-          ], { 'font-scale': 0.75, 'text-font': ['literal', ['Noto Sans Regular']] },
+          ], { 'font-scale': 0.8, 'text-font': ['literal', ['Noto Sans Regular']] },
         ],
         'text-font': ['Noto Sans Bold'],
         'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 12, 6, 16],
@@ -491,7 +497,11 @@ function initApp() {
       source: DATA_SOURCE_ID,
       filter: ['!', ['has', 'point_count']],
       layout: {
-        'text-field': ['get', 'label'],
+        // Bold number with a lighter, smaller °C unit after it.
+        'text-field': ['format',
+          ['get', 'labelNumber'], { 'font-scale': 1, 'text-font': ['literal', ['Noto Sans Bold']] },
+          ['get', 'labelUnit'], { 'font-scale': 0.8, 'text-font': ['literal', ['Noto Sans Regular']] },
+        ],
         'text-font': ['Noto Sans Bold'],
         'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 12, 6, 16],
         'text-anchor': 'center',
