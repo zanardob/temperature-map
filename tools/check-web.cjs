@@ -95,8 +95,8 @@ assert.deepStrictEqual(
 
 assert.deepStrictEqual(
   captured.layers.map(layer => layer.id),
-  ['city-badges', 'city-cluster-badges', 'city-cluster-labels', 'city-badge-labels', 'city-badge-counts'],
-  'expected single circle + cluster circle + cluster label + single label + count layers',
+  ['city-badges', 'city-cluster-badges', 'city-cluster-labels', 'city-badge-labels'],
+  'expected single circle + cluster circle + cluster label + single label layers',
 );
 assert.strictEqual(captured.sources.cities.cluster, true, 'source must cluster');
 assert.deepStrictEqual(captured.sources.cities.clusterProperties, {
@@ -143,20 +143,17 @@ const radii = evaluate(layers['city-badges'], 'paint', 'circle-radius', 'circle-
 assert.ok(Math.abs(radii.single - 15.54) < 0.01, `single radius at zoom 4.5, got ${radii.single}`);
 
 const clusterRadii = evaluate(layers['city-cluster-badges'], 'paint', 'circle-radius', 'cluster circle-radius');
-assert.ok(Math.abs(clusterRadii.cluster - 17.54) < 0.01, `cluster radius at zoom 4.5, got ${clusterRadii.cluster}`);
+assert.ok(Math.abs(clusterRadii.cluster - 18.54) < 0.01, `cluster radius at zoom 4.5, got ${clusterRadii.cluster}`);
 
 const singleText = evaluate(layers['city-badge-labels'], 'layout', 'text-field', 'single text-field');
 assert.strictEqual(singleText.single, '13°C');
 
 const clusterText = evaluate(layers['city-cluster-labels'], 'layout', 'text-field', 'cluster text-field');
-assert.strictEqual(clusterText.cluster, '13°C', 'cluster shows the average');
+assert.strictEqual(clusterText.cluster, '13°C\n(3)', 'cluster shows the average over the member count');
 assert.strictEqual(clusterText.blank, '—', 'all-blank cluster shows a dash');
 
-const countText = evaluate(layers['city-badge-counts'], 'layout', 'text-field', 'count text-field');
-assert.strictEqual(countText.cluster, '3');
-
 /* 3. Interaction wiring ----------------------------------------------------- */
-for (const layerId of ['city-badges', 'city-cluster-badges', 'city-badge-labels', 'city-cluster-labels', 'city-badge-counts']) {
+for (const layerId of ['city-badges', 'city-cluster-badges', 'city-cluster-labels', 'city-badge-labels']) {
   assert.ok((captured.handlers[`click:${layerId}`] || []).length > 0, `click handler wired for ${layerId}`);
 }
 

@@ -55,7 +55,6 @@ const CIRCLE_LAYER_ID = 'city-badges';
 const CLUSTER_CIRCLE_LAYER_ID = 'city-cluster-badges';
 const LABEL_LAYER_ID = 'city-badge-labels';
 const CLUSTER_LABEL_LAYER_ID = 'city-cluster-labels';
-const COUNT_LAYER_ID = 'city-badge-counts';
 
 // Overlapping badges merge into clusters up to this zoom level; beyond it every
 // city is drawn individually.
@@ -435,8 +434,8 @@ function initApp() {
       filter: ['has', 'point_count'],
       paint: {
         ...circlePaint(),
-        // Slightly larger, so clusters stand out and fit the count chip.
-        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 15, 6, 21],
+        // Slightly larger than single badges, to fit the two-line label.
+        'circle-radius': ['interpolate', ['linear'], ['zoom'], 3.4, 16, 6, 22],
       },
     });
 
@@ -464,12 +463,17 @@ function initApp() {
       source: DATA_SOURCE_ID,
       filter: ['has', 'point_count'],
       layout: {
+        // Two lines inside the circle, e.g. "22°C" over "(2)".
         'text-field': ['case',
           ['==', ['get', 'dataCount'], 0], EM_DASH,
-          ['concat', ['to-string', roundedAverage], DEGREE_C],
+          ['concat',
+            ['to-string', roundedAverage], DEGREE_C,
+            '\n(',
+            ['to-string', ['get', 'point_count']], ')'],
         ],
         'text-font': ['Noto Sans Regular'],
         'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 9, 6, 12.5],
+        'text-line-height': 1.05,
         'text-anchor': 'center',
         'text-allow-overlap': false,
         'text-ignore-placement': false,
@@ -503,28 +507,6 @@ function initApp() {
       },
     });
 
-    // Member count, tucked against the top-right of a cluster circle.
-    map.addLayer({
-      id: COUNT_LAYER_ID,
-      type: 'symbol',
-      source: DATA_SOURCE_ID,
-      filter: ['has', 'point_count'],
-      layout: {
-        'text-field': ['to-string', ['get', 'point_count']],
-        'text-font': ['Noto Sans Regular'],
-        'text-size': ['interpolate', ['linear'], ['zoom'], 3.4, 9, 6, 11],
-        'text-offset': ['literal', [1.4, -1.4]],
-        'text-anchor': 'center',
-        'text-allow-overlap': false,
-        'text-ignore-placement': false,
-      },
-      paint: {
-        'text-color': DARK_TEXT_COLOR,
-        'text-halo-color': '#ffffff',
-        'text-halo-width': 2,
-      },
-    });
-
     function handleBadgeClick(event) {
       const feature = event.features && event.features[0];
       if (!feature) return;
@@ -538,7 +520,7 @@ function initApp() {
       openCityPopup(Number(feature.properties.index));
     }
 
-    for (const layerId of [CIRCLE_LAYER_ID, CLUSTER_CIRCLE_LAYER_ID, LABEL_LAYER_ID, CLUSTER_LABEL_LAYER_ID, COUNT_LAYER_ID]) {
+    for (const layerId of [CIRCLE_LAYER_ID, CLUSTER_CIRCLE_LAYER_ID, LABEL_LAYER_ID, CLUSTER_LABEL_LAYER_ID]) {
       map.on('click', layerId, handleBadgeClick);
       map.on('mouseenter', layerId, () => { map.getCanvas().style.cursor = 'pointer'; });
       map.on('mouseleave', layerId, () => { map.getCanvas().style.cursor = ''; });
