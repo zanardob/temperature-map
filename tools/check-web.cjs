@@ -101,9 +101,38 @@ assert.deepStrictEqual(
 
 assert.deepStrictEqual(
   captured.layers.map(layer => layer.id),
-  ['city-badges', 'city-cluster-badges', 'city-cluster-labels', 'city-badge-labels'],
-  'expected single circle + cluster circle + cluster label + single label layers',
+  [
+    'reference-parallel-dashes', 'reference-parallel-labels',
+    'city-badges', 'city-cluster-badges', 'city-cluster-labels', 'city-badge-labels',
+  ],
+  'expected reference parallels under single circle + cluster circle + cluster label + single label layers',
 );
+
+/* 1b. Reference parallels --------------------------------------------------- */
+const parallels = captured.sources['reference-parallels'];
+assert.ok(parallels, 'reference parallels source added');
+assert.deepStrictEqual(
+  parallels.data.features.map(feature => [feature.properties.name, feature.properties.latitude]),
+  [['EQUATOR', 0], ['TROPIC OF CANCER', 23.4367], ['TROPIC OF CAPRICORN', -23.4367]],
+  'equator and both tropics at the current obliquity',
+);
+for (const feature of parallels.data.features) {
+  assert.deepStrictEqual(
+    feature.geometry.coordinates,
+    [[-180, feature.properties.latitude], [180, feature.properties.latitude]],
+    'each parallel spans the full wrap so it repeats on every world copy',
+  );
+}
+const referenceLine = captured.layers.find(layer => layer.id === 'reference-parallel-dashes');
+assert.strictEqual(referenceLine.type, 'line');
+assert.deepStrictEqual(referenceLine.paint['line-dasharray'], [1.5, 1.5], 'reference lines are dashed');
+const referenceLabels = captured.layers.find(layer => layer.id === 'reference-parallel-labels');
+assert.strictEqual(referenceLabels.layout['symbol-placement'], 'line');
+assert.strictEqual(
+  referenceLabels.layout['text-ignore-placement'], true,
+  'reference labels never steal placement from the badge labels added after them',
+);
+
 assert.strictEqual(captured.sources.cities.cluster, true, 'source must cluster');
 assert.strictEqual(captured.sources.cities.clusterRadius, 46, 'cluster radius matches the larger badges');
 assert.deepStrictEqual(captured.sources.cities.clusterProperties, {

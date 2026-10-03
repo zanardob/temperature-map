@@ -57,6 +57,18 @@ const CLUSTER_CIRCLE_LAYER_ID = 'city-cluster-badges';
 const LABEL_LAYER_ID = 'city-badge-labels';
 const CLUSTER_LABEL_LAYER_ID = 'city-cluster-labels';
 
+// Reference parallels: the equator and both tropics, at the current mean
+// obliquity (23.4367°, drifting by about 0.000013°/year). Each line spans the
+// full longitude range, so MapLibre repeats it on every world copy.
+const REFERENCE_LINE_SOURCE_ID = 'reference-parallels';
+const REFERENCE_LINE_LAYER_ID = 'reference-parallel-dashes';
+const REFERENCE_LABEL_LAYER_ID = 'reference-parallel-labels';
+const REFERENCE_PARALLELS = [
+  { name: 'EQUATOR', latitude: 0 },
+  { name: 'TROPIC OF CANCER', latitude: 23.4367 },
+  { name: 'TROPIC OF CAPRICORN', latitude: -23.4367 },
+];
+
 // Overlapping badges merge into clusters up to this zoom level; beyond it every
 // city is drawn individually.
 const CLUSTER_MAX_ZOOM = 7;
@@ -399,6 +411,59 @@ function initApp() {
       .addTo(map);
   }
 
+  // Dashed reference lines under the badges, plus labels placed along the
+  // lines. The labels opt out of collision handling so they can never steal
+  // placement from the cluster/city labels added afterwards (earlier symbol
+  // layers win placement, so opting out is what keeps the badges in charge).
+  function addReferenceLines() {
+    map.addSource(REFERENCE_LINE_SOURCE_ID, {
+      type: 'geojson',
+      data: {
+        type: 'FeatureCollection',
+        features: REFERENCE_PARALLELS.map(({ name, latitude }) => ({
+          type: 'Feature',
+          properties: { name, latitude },
+          geometry: { type: 'LineString', coordinates: [[-180, latitude], [180, latitude]] },
+        })),
+      },
+    });
+
+    map.addLayer({
+      id: REFERENCE_LINE_LAYER_ID,
+      type: 'line',
+      source: REFERENCE_LINE_SOURCE_ID,
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: {
+        'line-color': '#6b7280',
+        'line-opacity': 0.7,
+        'line-width': ['interpolate', ['linear'], ['zoom'], 0, 0.8, 4, 1.1, 8, 1.4],
+        'line-dasharray': [1.5, 1.5],
+      },
+    });
+
+    map.addLayer({
+      id: REFERENCE_LABEL_LAYER_ID,
+      type: 'symbol',
+      source: REFERENCE_LINE_SOURCE_ID,
+      layout: {
+        'symbol-placement': 'line',
+        'symbol-spacing': 700,
+        'text-field': ['get', 'name'],
+        'text-font': ['Noto Sans Regular'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 0, 9, 5, 11],
+        'text-letter-spacing': 0.12,
+        'text-allow-overlap': true,
+        'text-ignore-placement': true,
+        'text-padding': 4,
+      },
+      paint: {
+        'text-color': '#5b6478',
+        'text-halo-color': 'rgba(255, 255, 255, 0.85)',
+        'text-halo-width': 1,
+      },
+    });
+  }
+
   function addBadgeLayers() {
     map.addSource(DATA_SOURCE_ID, {
       type: 'geojson',
@@ -609,6 +674,7 @@ function initApp() {
 
   map.on('load', () => {
     styleReady = true;
+    addReferenceLines();
     addBadgeLayers();
     fitToCities();
   });

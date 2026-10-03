@@ -27,6 +27,7 @@ makes re-runs near-instant.
 - Month slider (Jan–Dec) plus a play button; **High / Average / Low** metric toggle (averages shown by default).
 - Overlapping badges merge into one cluster circle showing the **average of the currently selected metric** over the member count as a two-line badge (`22°C` / `(2)`); click a cluster to zoom to the level where it splits. Remaining label collisions are still dropped adaptively, and cluster averages win placement priority over individual labels.
 - Click a city badge for a popup with the month's high, average, low, typical extremes and records, plus a **Source: Wikipedia ↗** link that deep-links the article section holding the chosen weather box.
+- The equator and both tropics are drawn as dashed reference lines with labels (`EQUATOR`, `TROPIC OF CANCER`, `TROPIC OF CAPRICORN`) under the badges; the reference labels opt out of collision handling so they can never steal placement from the city/cluster labels.
 - The style JSON is cached in `localStorage` for a day; tiles, glyphs and sprites rely on the browser HTTP cache (OpenFreeMap serves 24 h–10 year cache headers).
 - Colour and value are always Celsius.
 - The initial view fits every city, so the whole world is visible on load; pan and zoom in for individual badges.
