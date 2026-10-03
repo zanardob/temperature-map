@@ -305,11 +305,15 @@ input[type='range'] {
   padding-top: 8px;
   border-top: 1px solid var(--panel-border);
   font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.popup-source a {
   color: var(--accent);
   text-decoration: none;
 }
 
-.popup-source:hover {
+.popup-source a:hover {
   text-decoration: underline;
 }
 

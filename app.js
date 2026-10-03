@@ -48,7 +48,7 @@ const PLAY_INTERVAL_MS = 1500;
 
 const MINUS_SIGN = '\u2212'; // real minus for popup figures; badges use ASCII '-'
 const EM_DASH = '\u2014';
-const RIGHT_ARROW = '\u2192';
+const NORTH_EAST_ARROW = '\u2197';
 const DEGREE_C = '\u00b0C';
 
 const DATA_SOURCE_ID = 'cities';
@@ -257,7 +257,7 @@ function cityPopupHtml(city, monthIndex) {
     `<dl class="popup-rows">${popupRowsHtml(POPUP_PRIMARY_ROWS, city, monthIndex)}</dl>`,
     `<dl class="popup-rows popup-rows-extras">${popupRowsHtml(POPUP_EXTREME_ROWS, city, monthIndex)}</dl>`,
     sourceUrl
-      ? `<a class="popup-source" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">Source: Wikipedia ${RIGHT_ARROW}</a>`
+      ? `<div class="popup-source">Source: <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">Wikipedia ${NORTH_EAST_ARROW}</a></div>`
       : '',
     '</div>',
   ].join('');

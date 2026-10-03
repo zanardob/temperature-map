@@ -221,17 +221,17 @@ singleClick({ features: [{ properties: { index: 0 } }] });
 const alphaHtml = captured.popups[captured.popups.length - 1].html;
 assert.match(
   alphaHtml,
-  /class="popup-source" href="https:\/\/en\.wikipedia\.org\/wiki\/Alpha#Climate_data"/,
-  'a city with a section anchor deep-links its source',
+  /<div class="popup-source">Source: <a href="https:\/\/en\.wikipedia\.org\/wiki\/Alpha#Climate_data"/,
+  'a city with a section anchor deep-links its source, with "Source:" left unlinked',
 );
-assert.match(alphaHtml, /Source: Wikipedia →/, 'the source link is labelled');
+assert.match(alphaHtml, />Wikipedia ↗<\/a><\/div>/, 'only the Wikipedia label and its arrow are linked');
 assert.match(alphaHtml, /target="_blank" rel="noopener noreferrer"/, 'the source link opens in a new tab');
 
 singleClick({ features: [{ properties: { index: 1 } }] });
 const betaHtml = captured.popups[captured.popups.length - 1].html;
 assert.match(
   betaHtml,
-  /class="popup-source" href="https:\/\/en\.wikipedia\.org\/wiki\/Beta"/,
+  /<a href="https:\/\/en\.wikipedia\.org\/wiki\/Beta" target="_blank" rel="noopener noreferrer">Wikipedia ↗<\/a>/,
   'a city without an anchor links the article itself',
 );
 
