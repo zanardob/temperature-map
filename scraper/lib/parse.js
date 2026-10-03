@@ -113,6 +113,34 @@ function cleanTitleText($, node) {
   return clone.text().replace(/\s+/g, ' ').trim();
 }
 
+const HEADING_SELECTOR = 'h1, h2, h3, h4, h5, h6, div.mw-heading';
+
+// Id of a heading, wherever the renderer put it: <h2 id> directly, a modern
+// <div class="mw-heading"> wrapping the <h2 id>, or a legacy
+// <h2><span class="mw-headline" id>.
+function headingId($, heading) {
+  const $heading = $(heading);
+  if ($heading.is('h1, h2, h3, h4, h5, h6')) {
+    return $heading.attr('id') ?? $heading.find('[id]').first().attr('id') ?? null;
+  }
+  return $heading.find('h1, h2, h3, h4, h5, h6').first().attr('id')
+    ?? $heading.find('[id]').first().attr('id')
+    ?? null;
+}
+
+// Anchor of the section a table sits in: the nearest heading before it in
+// document order. The table's own siblings are checked first, then each ancestor
+// level, because weather boxes are sometimes wrapped in a collapsible div.
+// Returns null for tables that have no preceding heading (e.g. in the lead).
+function sectionAnchorOf($, table) {
+  const levels = [$(table), ...$(table).parents().toArray().map((parent) => $(parent))];
+  for (const level of levels) {
+    const heading = level.prevAll(HEADING_SELECTOR).first();
+    if (heading.length) return headingId($, heading.get(0));
+  }
+  return null;
+}
+
 function provenanceOf($, table) {
   const caption = $(table).children('caption').first();
   if (caption.length) {
@@ -196,6 +224,7 @@ function buildBox(box) {
 
   return {
     source: box.source,
+    anchor: box.anchor,
     avgDerived,
     fromFahrenheit: box.fahrenheitUsed,
     months: {
@@ -226,7 +255,12 @@ export function parseClimateFromHtml(html, cityName) {
   $('table.wikitable').each((_, table) => {
     const { fields, fahrenheitUsed } = extractRows($, table);
     if (Object.keys(fields).length === 0) return;
-    boxes.push({ source: provenanceOf($, table), fields, fahrenheitUsed });
+    boxes.push({
+      source: provenanceOf($, table),
+      anchor: sectionAnchorOf($, table),
+      fields,
+      fahrenheitUsed,
+    });
   });
 
   if (boxes.length === 0) {

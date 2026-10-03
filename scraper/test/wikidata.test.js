@@ -32,7 +32,7 @@ test('parsePoint and articleTitle handle the exported formats', () => {
   assert.equal(articleTitle('https://en.wikipedia.org/wiki/Vila_Nova_de_Gaia'), 'Vila Nova de Gaia');
 });
 
-test('buildCandidates keeps only qualifying, weather-boxed cities in scope', () => {
+test('buildCandidates keeps only qualifying, weather-boxed cities worldwide', () => {
   const rows = parseTsv([
     HEADER,
     row({ qid: 'Q597', name: 'Lisbon', article: 'Lisbon' }),
@@ -53,10 +53,35 @@ test('buildCandidates keeps only qualifying, weather-boxed cities in scope', () 
 
   const candidates = buildCandidates(rows, countryLabels, weatherBoxTitles);
 
+  // Wuppertal has no weather box, Ruhr/Beşiktaş are denylisted, Smallville is
+  // under the population threshold; Tbilisi and Dakhla are now in scope.
   assert.deepEqual(candidates, [
+    { name: 'Dakhla', article: 'Dakhla', country: 'Morocco' },
     { name: 'Erdemli', article: 'Erdemli', country: 'Turkey' }, // "… district" stripped
     { name: 'Lisbon', article: 'Lisbon', country: 'Portugal' },
+    { name: 'Novosibirsk', article: 'Novosibirsk', country: 'Q159' },
     { name: 'Rabat', article: 'Rabat', country: 'Morocco' },
+    { name: 'Tbilisi', article: 'Tbilisi', country: 'Q230' },
+  ]);
+});
+
+test('buildCandidates drops denylisted regions but keeps real municipalities with regional names', () => {
+  const rows = parseTsv([
+    HEADER,
+    row({ qid: 'Q1190137', name: 'Greater Boston', coord: 'POINT(-71 42.3)', article: 'Greater Boston' }),
+    row({ qid: 'Q108143', name: 'San Diego County, California', coord: 'POINT(-116.7 32.7)', article: 'San Diego County, California' }),
+    row({ qid: 'Q383434', name: 'Greater Sudbury', coord: 'POINT(-80.99 46.49)', article: 'Greater Sudbury' }),
+    row({ qid: 'Q1805330', name: 'Langley, British Columbia (district municipality)', coord: 'POINT(-122.6 49.1)', article: 'Langley, British Columbia (district municipality)' }),
+  ].join('\n'));
+  const weatherBoxTitles = new Set([
+    'Greater Boston', 'San Diego County, California', 'Greater Sudbury', 'Langley, British Columbia (district municipality)',
+  ]);
+
+  const candidates = buildCandidates(rows, new Map(), weatherBoxTitles);
+
+  assert.deepEqual(candidates, [
+    { name: 'Greater Sudbury', article: 'Greater Sudbury', country: 'Q45' },
+    { name: 'Langley, British Columbia (district municipality)', article: 'Langley, British Columbia (district municipality)', country: 'Q45' },
   ]);
 });
 

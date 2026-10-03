@@ -1,11 +1,11 @@
 // Candidate source: Wikidata settlements/municipalities with a population of at
-// least MIN_POPULATION, located in geographic Europe, intersected with the
-// English Wikipedia pages that actually transclude Template:Weather box.
+// least MIN_POPULATION anywhere in the world, intersected with the English
+// Wikipedia pages that actually transclude Template:Weather box.
 //
 // The intersection keeps the fetch budget honest (nearly every candidate yields
-// a climate table) and acts as the city filter: districts, regions and metro
-// areas share the settlement/municipality types but do not carry weather boxes.
-// The remaining few non-city entities are listed explicitly below.
+// a climate table) and acts as the city filter: most regions, counties and
+// metropolitan areas do not carry weather boxes. The non-city entities that do
+// survive are listed explicitly below.
 //
 // Wikidata is queried through QLever's public mirror (the official WDQS times
 // out on these joins); responses are cached like every other request.
@@ -13,21 +13,6 @@ import { API_ENDPOINT, fetchJson, fetchText } from './wiki.js';
 
 export const QLEVER_ENDPOINT = 'https://qlever.dev/api/wikidata';
 export const MIN_POPULATION = 100000;
-
-// Geographic Europe, wide enough to keep European Russia and the Urals cities
-// that are already in the dataset, narrow enough to drop the Caucasus approach.
-const EUROPE_BBOX = { minLat: 34, maxLat: 72, minLon: -25, maxLon: 60 };
-
-// Morocco is not on Wikidata's Europe continent list, so it is queried
-// explicitly and clipped to its own bounds (which keeps the Canaries and
-// Madeira, Spanish/Portuguese islands inside the Europe branch, out of scope).
-export const MOROCCO = 'Q1028';
-const MOROCCO_BBOX = { minLat: 27.5, maxLat: 36.5, minLon: -13.5, maxLon: -0.5 };
-
-// Countries whose Wikidata "continent = Europe" membership would drag in Asian
-// territory far from the map's focus. Their capitals stay in the dataset through
-// the curated capitals list.
-const EXCLUDED_COUNTRIES = new Set(['Q230', 'Q399', 'Q227', 'Q232']); // Georgia, Armenia, Azerbaijan, Kazakhstan
 
 // Small places worth carrying even though they fall below the population
 // threshold: Melilla and Ceuta are the Spanish autonomous cities on the
@@ -38,6 +23,11 @@ const EXTRA_CITIES = [
 ];
 
 // Non-city entities that survive the type filter and carry a weather box.
+// Counties, metropolitan areas and conurbations whose articles transclude a
+// weather box for the region rather than for one city; districts and
+// neighborhoods that would plot a second dot on top of the city they belong to.
+// Real municipalities whose names merely contain "county" or "district"
+// (Greater Sudbury, Langley, Yüksekova) are deliberately not listed here.
 const EXCLUDED_ENTITIES = new Map([
   ['Q151993', 'Ruhr'],
   ['Q20552718', 'Athens metropolitan area'],
@@ -45,6 +35,9 @@ const EXCLUDED_ENTITIES = new Map([
   ['Q4095759', 'Brighton and Hove built-up area'],
   ['Q106997185', 'Metropolitan City of Sassari'],
   ['Q23157', 'Somerset'],
+  ['Q205047', 'Kurdistan Region'],
+  ['Q6487717', 'Lanzhou New Area'],
+  ['Q2828677', 'Tampa Bay area'],
   // Inner-city districts of Istanbul (Beşiktaş, Kadıköy, Sarıyer) and Ankara
   // (Çankaya): separate Wikidata entities that would plot a second dot on top
   // of the metropolis they belong to.
@@ -52,6 +45,72 @@ const EXCLUDED_ENTITIES = new Map([
   ['Q1020646', 'Çankaya'],
   ['Q932886', 'Kadıköy'],
   ['Q857107', 'Sarıyer'],
+  ['Q2911280', 'Borough Park, Brooklyn'],
+  ['Q877813', 'Tai Po District'],
+  ['Q570509', 'Tamsui District'],
+  ['Q1239362', 'Don Mueang district'],
+  // US and Canadian counties whose articles carry a weather box.
+  ['Q108143', 'San Diego County, California'],
+  ['Q110739', 'Santa Clara County, California'],
+  ['Q107146', 'Alameda County, California'],
+  ['Q54065', 'Suffolk County, New York'],
+  ['Q54064', 'Nassau County, New York'],
+  ['Q156291', 'Allegheny County, Pennsylvania'],
+  ['Q494556', 'Pinellas County, Florida'],
+  ['Q54231', 'Fairfield County, Connecticut'],
+  ['Q378527', 'Montgomery County, Pennsylvania'],
+  ['Q1338527', 'Taoyuan County'],
+  ['Q494616', 'Lee County, Florida'],
+  ['Q501043', 'Polk County, Florida'],
+  ['Q494192', 'Bucks County, Pennsylvania'],
+  ['Q502564', 'Ocean County, New Jersey'],
+  ['Q27844', 'Delaware County, Pennsylvania'],
+  ['Q156156', 'New Castle County, Delaware'],
+  ['Q142369', 'Lancaster County, Pennsylvania'],
+  ['Q27840', 'Chester County, Pennsylvania'],
+  ['Q498163', 'Morris County, New Jersey'],
+  ['Q512951', 'Lake County, Indiana'],
+  ['Q138141', 'Burlington County, New Jersey'],
+  ['Q490914', 'York County, Pennsylvania'],
+  ['Q501163', 'Sarasota County, Florida'],
+  ['Q953088', 'Essex County, Ontario'],
+  ['Q496886', 'Mercer County, New Jersey'],
+  ['Q494117', 'Lehigh County, Pennsylvania'],
+  ['Q111098', 'Rockland County, New York'],
+  ['Q341639', 'Henrico County, Virginia'],
+  ['Q501292', 'Luzerne County, Pennsylvania'],
+  ['Q488690', 'Dauphin County, Pennsylvania'],
+  ['Q494134', 'Cumberland County, Pennsylvania'],
+  ['Q107126', 'Arlington County, Virginia'],
+  ['Q156213', 'Sussex County, Delaware'],
+  ['Q497200', 'Washington County, Pennsylvania'],
+  ['Q58698', 'Yuma County, Arizona'],
+  ['Q128137', 'Kent County, Delaware'],
+  ['Q501323', 'Carroll County, Maryland'],
+  ['Q495588', 'Monroe County, Pennsylvania'],
+  ['Q495998', 'Sussex County, New Jersey'],
+  ['Q488683', 'Fayette County, Pennsylvania'],
+  ['Q494152', 'Blair County, Pennsylvania'],
+  ['Q500871', 'La Crosse County, Wisconsin'],
+  ['Q496558', 'Missoula County, Montana'],
+  ['Q54251', 'Windham County, Connecticut'],
+  ['Q351865', 'Adams County, Pennsylvania'],
+  ['Q385365', 'Cecil County, Maryland'],
+  ['Q109681', 'Nevada County, California'],
+  // Metropolitan areas and conurbations (San Juan, Metro Manila is a real city
+  // and stays).
+  ['Q683705', 'New York metropolitan area'],
+  ['Q13580', 'Metro Manila'],
+  ['Q1925894', 'Philadelphia metropolitan area'],
+  ['Q2915506', 'Miami metropolitan area'],
+  ['Q3290452', 'Phoenix metropolitan area'],
+  ['Q65061424', 'Malang metropolitan area'],
+  ['Q326891', 'City of Ekurhuleni Metropolitan Municipality'],
+  ['Q5120360', 'Cincinnati metropolitan area'],
+  ['Q5600444', 'Greater Austin'],
+  ['Q1190137', 'Greater Boston'],
+  ['Q426435', 'Greater Houston'],
+  ['Q1968039', 'Greater Orlando'],
 ]);
 
 const PREFIXES = [
@@ -68,7 +127,6 @@ export function citiesQuery(minPopulation = MIN_POPULATION) {
   return `${PREFIXES}
 SELECT ?city ?cityLabel ?country ?pop ?coord ?article WHERE {
   ?city wdt:P17 ?country .
-  { ?country wdt:P30 wd:Q46 } UNION { VALUES ?country { wd:${MOROCCO} } }
   ?city wdt:P1082 ?pop .
   FILTER(xsd:decimal(?pop) >= ${minPopulation})
   ?city wdt:P625 ?coord .
@@ -147,25 +205,16 @@ export function articleTitle(articleUri) {
   return decodeURIComponent(raw).replace(/_/g, ' ').normalize('NFC');
 }
 
-function inBox({ lat, lon }, box) {
-  return lat >= box.minLat && lat <= box.maxLat && lon >= box.minLon && lon <= box.maxLon;
-}
-
-function inScope(country, point) {
-  return country === MOROCCO ? inBox(point, MOROCCO_BBOX) : inBox(point, EUROPE_BBOX);
-}
-
 // Rows in the shape mergeCandidates() expects: name, article, country.
 export function buildCandidates(cityRows, countryLabels, weatherBoxTitles) {
   const byArticle = new Map();
   for (const row of cityRows) {
     if (!QID.test(row.city)) continue;
-    if (EXCLUDED_COUNTRIES.has(row.country)) continue;
     if (EXCLUDED_ENTITIES.has(row.city)) continue;
     const population = Number(row.pop);
     if (!Number.isFinite(population) || population < MIN_POPULATION) continue;
     const point = parsePoint(row.coord);
-    if (!point || !inScope(row.country, point)) continue;
+    if (!point) continue;
     const article = articleTitle(row.article);
     if (!weatherBoxTitles.has(article)) continue;
 

@@ -1,33 +1,23 @@
-// Shared pipeline: candidate lists -> article HTML -> coordinates -> parse ->
+// Shared pipeline: candidate inventory -> article HTML -> coordinates -> parse ->
 // per-city validation. run.js and build.js differ only in whether they may hit
 // the network.
 import { CAPITALS } from '../capitals.js';
 import { fetchArticleHtml, fetchCoordinates } from './articles.js';
 import { mergeCandidates } from './candidates.js';
-import { parseEuList, parsePopulationList } from './lists.js';
 import { parseClimateFromHtml } from './parse.js';
 import { checkCity } from './validate.js';
 import { fetchWikidataCandidates } from './wikidata.js';
-
-export const POPULATION_LIST_PAGE =
-  'List of European cities by population within city limits';
-export const EU_LIST_PAGE =
-  'List of cities in the European Union by population within city limits';
 
 function wikipediaUrl(article) {
   return `https://en.wikipedia.org/wiki/${encodeURIComponent(article.replace(/ /g, '_'))}`;
 }
 
-export async function buildDataset({ offline = false } = {}) {
-  const listHtml = await fetchArticleHtml(POPULATION_LIST_PAGE, { offline });
-  const populationRows = listHtml ? parsePopulationList(listHtml) : [];
-  const euHtml = await fetchArticleHtml(EU_LIST_PAGE, { offline });
-  const euRows = euHtml ? parseEuList(euHtml) : [];
-  // Bulk source: every European settlement >= 100k that has a weather box.
+export async function buildDataset({ offline = false, onProgress = null } = {}) {
+  // Bulk source: every settlement >= 100k worldwide that has a weather box, plus
+  // the curated capitals (which bypass the population threshold but must still
+  // carry a weather box).
   const wikidataRows = await fetchWikidataCandidates({ offline });
   const candidates = mergeCandidates([
-    { rows: populationRows, source: 'population-list' },
-    { rows: euRows, source: 'eu-list' },
     { rows: wikidataRows, source: 'wikidata' },
     { rows: CAPITALS, source: 'capitals' },
   ]);
@@ -39,8 +29,11 @@ export async function buildDataset({ offline = false } = {}) {
 
   const included = [];
   const excluded = [];
+  let processed = 0;
 
   for (const candidate of candidates) {
+    processed += 1;
+    if (onProgress && processed % 250 === 0) onProgress(processed, candidates.length);
     let html;
     try {
       html = await fetchArticleHtml(candidate.article, { offline });
@@ -86,6 +79,9 @@ export async function buildDataset({ offline = false } = {}) {
       lat: coordinate.lat,
       lon: coordinate.lon,
       wikipedia: wikipediaUrl(candidate.article),
+      // Section anchor for a "Source: Wikipedia" link (null when the box sits
+      // before the first heading, e.g. in the lead).
+      climateAnchor: parsed.box.anchor ?? null,
       source: parsed.box.source,
       avgDerived: parsed.box.avgDerived,
       fromFahrenheit: parsed.box.fromFahrenheit,

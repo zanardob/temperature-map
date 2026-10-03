@@ -1,5 +1,5 @@
 /*
- * Europe Monthly Temperatures — map front-end.
+ * World Monthly Temperatures — map front-end.
  *
  * Plain ES2020 in one file, no build step: index.html is meant to be opened
  * straight from disk (file://). MapLibre GL JS v5 is the only external code and
@@ -17,7 +17,7 @@ const MAP_STYLE_URL = 'https://tiles.openfreemap.org/styles/liberty';
 // The style JSON (and its source metadata) is cached in localStorage for a day,
 // mirroring the server's own max-age, so reloads only re-fetch what the browser
 // has not cached. Versioned: bump to invalidate.
-const STYLE_CACHE_KEY = 'europe-temperature-map.style.v1';
+const STYLE_CACHE_KEY = 'world-temperature-map.style.v1';
 const STYLE_CACHE_MS = 24 * 60 * 60 * 1000;
 
 const MONTH_NAMES = [
@@ -283,8 +283,8 @@ function initApp() {
 
   const map = new maplibregl.Map({
     container: 'map',
-    center: [12, 50],
-    zoom: 3.5,
+    center: [0, 20],
+    zoom: 1,
     attributionControl: false, // replaced below by an always-expanded one
   });
   map.addControl(new maplibregl.NavigationControl(), 'top-right');
@@ -537,7 +537,7 @@ function initApp() {
 
   function fitToCities() {
     if (cities.length === 0) {
-      map.jumpTo({ center: [12, 50], zoom: 3.5 });
+      map.jumpTo({ center: [0, 20], zoom: 1 });
       return;
     }
     const first = [Number(cities[0].lon), Number(cities[0].lat)];

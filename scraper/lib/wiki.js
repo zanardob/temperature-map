@@ -12,7 +12,7 @@ const CACHE_DIR = path.join(REPO_ROOT, 'data', 'cache');
 
 export const API_ENDPOINT = 'https://en.wikipedia.org/w/api.php';
 export const USER_AGENT =
-  'EuropeTemperatureMap/0.1 (https://github.com/example/temperature-map; temperature-map@example.org)';
+  'WorldTemperatureMap/0.1 (https://github.com/example/temperature-map; temperature-map@example.org)';
 
 const MIN_REQUEST_INTERVAL_MS = 1000;
 const MAX_RETRIES = 4;

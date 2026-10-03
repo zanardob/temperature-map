@@ -7,7 +7,10 @@ import { buildDataset } from './lib/pipeline.js';
 const offline = process.argv.includes('--no-fetch');
 
 try {
-  const { candidates, included, excluded } = await buildDataset({ offline });
+  const { candidates, included, excluded } = await buildDataset({
+    offline,
+    onProgress: (done, total) => console.log(`  ${done}/${total} candidates processed...`),
+  });
   console.log(`Candidates: ${candidates.length}${offline ? ' (offline, cache only)' : ''}`);
   await finalize({ candidates, included, excluded });
 } catch (error) {

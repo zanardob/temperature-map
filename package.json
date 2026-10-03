@@ -1,8 +1,8 @@
 {
-  "name": "europe-temperature-map",
+  "name": "world-temperature-map",
   "version": "0.1.0",
   "private": true,
-  "description": "Interactive map of monthly temperatures for European cities, built from English Wikipedia climate tables.",
+  "description": "Interactive map of monthly temperatures for cities worldwide, built from English Wikipedia climate tables.",
   "type": "module",
   "scripts": {
     "scrape": "node scraper/run.js",

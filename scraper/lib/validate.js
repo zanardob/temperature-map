@@ -2,7 +2,9 @@
 // (to decide exclusions) and by scraper/validate.js (whole-dataset check).
 import { CITY_MONTH_FIELDS } from './parse.js';
 
-const VALUE_MIN = -60;
+// -70 °C keeps the coldest real settlement records (Yakutsk −63 °C,
+// Oymyakon −67.7 °C) while still catching parser mistakes.
+const VALUE_MIN = -70;
 const VALUE_MAX = 60;
 const ORDER_TOLERANCE = 0.1;
 const DERIVED_TOLERANCE = 0.05;

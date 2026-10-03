@@ -87,6 +87,39 @@ test('°F-first bilingual rows ("50.0 (10.0)") are read as Celsius, not converte
   assert.equal(box.months.dailyMean[6], 20);
 });
 
+function minimalTable() {
+  return `<table class="wikitable"><tbody>
+    <tr><th colspan="14">Climate data for Testville</th></tr>
+    <tr><th>Mean daily maximum °C</th>${'<td>10</td>'.repeat(12)}</tr>
+    <tr><th>Mean daily minimum °C</th>${'<td>0</td>'.repeat(12)}</tr>
+  </tbody></table>`;
+}
+
+test('the box records the anchor of its section (modern mw-heading wrapper)', () => {
+  const html = `<h2 id="History">History</h2><p>…</p>`
+    + `<div class="mw-heading mw-heading2"><h2 id="Climate">Climate</h2></div>`
+    + minimalTable();
+
+  const { box } = parseClimateFromHtml(html, 'Testville');
+
+  assert.equal(box.anchor, 'Climate');
+});
+
+test('the box records the anchor of its section (legacy mw-headline span)', () => {
+  const html = `<h2><span class="mw-headline" id="Climate_data">Climate data</span></h2>`
+    + minimalTable();
+
+  const { box } = parseClimateFromHtml(html, 'Testville');
+
+  assert.equal(box.anchor, 'Climate_data');
+});
+
+test('a box in the lead, before any heading, has no anchor', () => {
+  const { box } = parseClimateFromHtml(fixture('lisbon.html'), 'Lisbon');
+
+  assert.equal(box.anchor, null);
+});
+
 test('article without climate data yields no box', () => {
   const result = parseClimateFromHtml(fixture('no-climate.html'), 'Exampleville');
 

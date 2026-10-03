@@ -6,8 +6,20 @@ import { REPO_ROOT } from './wiki.js';
 
 const DATA_DIR = path.join(REPO_ROOT, 'data');
 
+// One city per line: with thousands of cities the pretty-printed JSON is more
+// than twice as large, and whole-file diffs stop being reviewable. The object
+// still parses as plain JavaScript and keeps the same shape as before.
 export function serializeCityData(cityData) {
-  return `const CITY_DATA = ${JSON.stringify(cityData, null, 2)};\n`;
+  const { cities, ...rest } = cityData;
+  const lines = Object.entries(rest).map(
+    ([key, value]) => `  ${JSON.stringify(key)}: ${JSON.stringify(value)},`,
+  );
+  lines.push('  "cities": [');
+  cities.forEach((city, index) => {
+    lines.push(`    ${JSON.stringify(city)}${index < cities.length - 1 ? ',' : ''}`);
+  });
+  lines.push('  ]', '};', '');
+  return `const CITY_DATA = {\n${lines.join('\n')}`;
 }
 
 function escapePipes(text) {
