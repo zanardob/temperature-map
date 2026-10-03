@@ -26,7 +26,7 @@ makes re-runs near-instant.
 - One badge per city: fill colour from Wikipedia's own weather-box temperature ramp (ported from `Module:Weather box/colors`), with the rounded value and unit ("23°C") printed inside.
 - Month slider (Jan–Dec) plus a play button; **High / Average / Low** metric toggle (averages shown by default).
 - Overlapping badges merge into one cluster circle showing the **average of the currently selected metric** over the member count as a two-line badge (`22°C` / `(2)`); click a cluster to zoom to the level where it splits. Remaining label collisions are still dropped adaptively, and cluster averages win placement priority over individual labels.
-- Click a city badge for a popup with the month's high, average, low, typical extremes and records.
+- Click a city badge for a popup with the month's high, average, low, typical extremes and records, plus a **Source: Wikipedia →** link that deep-links the article section holding the chosen weather box.
 - The style JSON is cached in `localStorage` for a day; tiles, glyphs and sprites rely on the browser HTTP cache (OpenFreeMap serves 24 h–10 year cache headers).
 - Colour and value are always Celsius.
 - The initial view fits every city, so the whole world is visible on load; pan and zoom in for individual badges.
@@ -41,7 +41,7 @@ Candidate cities come from two sources, deduplicated by article:
 For each city the scraper picks one climate box: city-proper station preferred, airport/outer stations penalised, newest normals period (1991–2020 > 1981–2010), and boxes carrying the rows that are actually plotted (daily high/low) outweigh boxes with only a daily mean. Only `table.wikitable` boxes are parsed; the CSS `{{Climate chart}}` graphic carries no row labels and is skipped.
 
 - **High** = `Mean daily maximum`, **Average** = `Daily mean`, **Low** = `Mean daily minimum`.
-- Also stored for popups: `Mean maximum`, `Mean minimum`, `Record high`, `Record low`, plus the section anchor of the chosen box (`climateAnchor`) for the upcoming "Source: Wikipedia" link.
+- Also stored for popups: `Mean maximum`, `Mean minimum`, `Record high`, `Record low`, and the section anchor of the chosen box (`climateAnchor`), used to deep-link the popup's "Source: Wikipedia →" link.
 - Celsius only. Missing `Daily mean` is derived as (high + low) / 2 and flagged `avgDerived`; Fahrenheit-only boxes are converted and flagged `fromFahrenheit`.
 - Coverage, sources and exclusions are reported in [`data/coverage.md`](data/coverage.md) (currently 3,614 included, 46 excluded: 34 whose only climate table carries a daily mean but no daily high/low — mostly German cities with short DWD station records — nine without any usable climate table (Singapore included), and three whose published rows fail the ordering check: Hanoi, Narowal and Vologda).
 

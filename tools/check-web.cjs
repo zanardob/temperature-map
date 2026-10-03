@@ -16,7 +16,7 @@ const assert = require('node:assert');
 const fs = require('node:fs');
 const spec = require('@maplibre/maplibre-gl-style-spec');
 
-const captured = { sources: {}, layers: [], handlers: {} };
+const captured = { sources: {}, layers: [], handlers: {}, popups: [] };
 
 class FakeMap {
   constructor(options) { this.options = options; FakeMap.latest = this; }
@@ -40,7 +40,10 @@ const maplibregl = {
   NavigationControl: class {},
   AttributionControl: class {},
   LngLatBounds: class { extend() { return this; } },
-  Popup: class { on() {} remove() {} setLngLat() { return this; } setHTML() { return this; } addTo() { return this; } },
+  Popup: class {
+    constructor() { captured.popups.push(this); }
+    on() {} remove() {} setLngLat() { return this; } setHTML(html) { this.html = html; return this; } addTo() { return this; }
+  },
 };
 
 function fakeElement() {
@@ -59,13 +62,16 @@ const documentStub = {
 };
 class ResizeObserver { observe() {} }
 
-// Minimal city data: Alpha is mild (13 °C in September), Beta is warmer.
+// Minimal city data: Alpha is mild (13 °C in September), Beta is warmer. Alpha
+// carries a section anchor (deep-linked source), Beta does not.
 const twelve = (fn) => Array.from({ length: 12 }, (_, i) => fn(i));
 const MOCK_CITY_DATA = { cities: [
-  { name: 'Alpha', country: 'X', lat: 50, lon: 10, months: {
+  { name: 'Alpha', country: 'X', lat: 50, lon: 10,
+    wikipedia: 'https://en.wikipedia.org/wiki/Alpha', climateAnchor: 'Climate_data', months: {
     meanDailyMax: twelve(i => i + 10), dailyMean: twelve(i => i + 5), meanDailyMin: twelve(i => i),
     meanMax: twelve(() => null), meanMin: twelve(() => null), recordHigh: twelve(() => null), recordLow: twelve(() => null) } },
-  { name: 'Beta', country: 'Y', lat: 51, lon: 12, months: {
+  { name: 'Beta', country: 'Y', lat: 51, lon: 12,
+    wikipedia: 'https://en.wikipedia.org/wiki/Beta', months: {
     meanDailyMax: twelve(() => 20), dailyMean: twelve(() => 10), meanDailyMin: twelve(() => 0),
     meanMax: twelve(() => null), meanMin: twelve(() => null), recordHigh: twelve(() => null), recordLow: twelve(() => null) } },
 ] };
@@ -207,5 +213,26 @@ assert.strictEqual(strokeWidths.single, '0.8', 'thin white ball outline');
 for (const layerId of ['city-badges', 'city-cluster-badges', 'city-cluster-labels', 'city-badge-labels']) {
   assert.ok((captured.handlers[`click:${layerId}`] || []).length > 0, `click handler wired for ${layerId}`);
 }
+
+/* 4. Popup source link ------------------------------------------------------- */
+const singleClick = captured.handlers['click:city-badges'][0];
+
+singleClick({ features: [{ properties: { index: 0 } }] });
+const alphaHtml = captured.popups[captured.popups.length - 1].html;
+assert.match(
+  alphaHtml,
+  /class="popup-source" href="https:\/\/en\.wikipedia\.org\/wiki\/Alpha#Climate_data"/,
+  'a city with a section anchor deep-links its source',
+);
+assert.match(alphaHtml, /Source: Wikipedia →/, 'the source link is labelled');
+assert.match(alphaHtml, /target="_blank" rel="noopener noreferrer"/, 'the source link opens in a new tab');
+
+singleClick({ features: [{ properties: { index: 1 } }] });
+const betaHtml = captured.popups[captured.popups.length - 1].html;
+assert.match(
+  betaHtml,
+  /class="popup-source" href="https:\/\/en\.wikipedia\.org\/wiki\/Beta"/,
+  'a city without an anchor links the article itself',
+);
 
 console.log('check-web OK:', captured.layers.length, 'layers, no validation errors, expressions evaluate as expected');

@@ -1,4 +1,4 @@
-/* Europe Monthly Temperatures — layout and panel styling. */
+/* World Monthly Temperatures — layout and panel styling. */
 
 :root {
   --panel-bg: rgba(255, 255, 255, 0.94);
@@ -297,6 +297,20 @@ input[type='range'] {
 
 .popup-rows-extras .popup-row dd {
   font-weight: 500;
+}
+
+.popup-source {
+  display: block;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--panel-border);
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.popup-source:hover {
+  text-decoration: underline;
 }
 
 /* --- narrow screens ------------------------------------------------------ */

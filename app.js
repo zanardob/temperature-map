@@ -48,6 +48,7 @@ const PLAY_INTERVAL_MS = 1500;
 
 const MINUS_SIGN = '\u2212'; // real minus for popup figures; badges use ASCII '-'
 const EM_DASH = '\u2014';
+const RIGHT_ARROW = '\u2192';
 const DEGREE_C = '\u00b0C';
 
 const DATA_SOURCE_ID = 'cities';
@@ -209,6 +210,21 @@ function escapeHtml(value) {
   }[character]));
 }
 
+// Deep link to the section that holds the chosen weather box. climateAnchor is
+// a MediaWiki section id, so setting it through the URL API keeps any existing
+// percent-escapes intact instead of double-encoding them. Without an anchor the
+// link falls back to the article itself; without an article there is no link.
+function climateSourceUrl(city) {
+  if (!city || typeof city.wikipedia !== 'string' || city.wikipedia === '') return null;
+  try {
+    const url = new URL(city.wikipedia);
+    if (city.climateAnchor) url.hash = city.climateAnchor;
+    return url.href;
+  } catch {
+    return null;
+  }
+}
+
 // Row labels are literals; only data values need escaping.
 const POPUP_PRIMARY_ROWS = [
   ['High', 'meanDailyMax'],
@@ -232,6 +248,7 @@ function popupRowsHtml(rows, city, monthIndex) {
 }
 
 function cityPopupHtml(city, monthIndex) {
+  const sourceUrl = climateSourceUrl(city);
   return [
     '<div class="popup">',
     `<div class="popup-city">${escapeHtml(city.name || '')}</div>`,
@@ -239,6 +256,9 @@ function cityPopupHtml(city, monthIndex) {
     `<div class="popup-month">${MONTH_NAMES[monthIndex]}</div>`,
     `<dl class="popup-rows">${popupRowsHtml(POPUP_PRIMARY_ROWS, city, monthIndex)}</dl>`,
     `<dl class="popup-rows popup-rows-extras">${popupRowsHtml(POPUP_EXTREME_ROWS, city, monthIndex)}</dl>`,
+    sourceUrl
+      ? `<a class="popup-source" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">Source: Wikipedia ${RIGHT_ARROW}</a>`
+      : '',
     '</div>',
   ].join('');
 }
