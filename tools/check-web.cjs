@@ -102,7 +102,7 @@ assert.deepStrictEqual(
 assert.deepStrictEqual(
   captured.layers.map(layer => layer.id),
   [
-    'reference-parallel-dashes', 'reference-parallel-labels',
+    'reference-equator-line', 'reference-tropic-lines', 'reference-parallel-labels',
     'city-badges', 'city-cluster-badges', 'city-cluster-labels', 'city-badge-labels',
   ],
   'expected reference parallels under single circle + cluster circle + cluster label + single label layers',
@@ -112,8 +112,12 @@ assert.deepStrictEqual(
 const parallels = captured.sources['reference-parallels'];
 assert.ok(parallels, 'reference parallels source added');
 assert.deepStrictEqual(
-  parallels.data.features.map(feature => [feature.properties.name, feature.properties.latitude]),
-  [['EQUATOR', 0], ['TROPIC OF CANCER', 23.4367], ['TROPIC OF CAPRICORN', -23.4367]],
+  parallels.data.features.map(feature => [feature.properties.name, feature.properties.latitude, feature.properties.kind]),
+  [
+    ['EQUATOR', 0, 'equator'],
+    ['TROPIC OF CANCER', 23.4367, 'tropic'],
+    ['TROPIC OF CAPRICORN', -23.4367, 'tropic'],
+  ],
   'equator and both tropics at the current obliquity',
 );
 for (const feature of parallels.data.features) {
@@ -123,9 +127,15 @@ for (const feature of parallels.data.features) {
     'each parallel spans the full wrap so it repeats on every world copy',
   );
 }
-const referenceLine = captured.layers.find(layer => layer.id === 'reference-parallel-dashes');
-assert.strictEqual(referenceLine.type, 'line');
-assert.deepStrictEqual(referenceLine.paint['line-dasharray'], [1.5, 1.5], 'reference lines are dashed');
+const equatorLine = captured.layers.find(layer => layer.id === 'reference-equator-line');
+assert.strictEqual(equatorLine.type, 'line');
+assert.deepStrictEqual(equatorLine.filter, ['==', ['get', 'kind'], 'equator']);
+assert.ok(!('line-dasharray' in equatorLine.paint), 'the equator is a continuous line');
+assert.ok(equatorLine.paint['line-opacity'] < 0.6, 'the equator is faded');
+const tropicLines = captured.layers.find(layer => layer.id === 'reference-tropic-lines');
+assert.deepStrictEqual(tropicLines.filter, ['==', ['get', 'kind'], 'tropic']);
+assert.deepStrictEqual(tropicLines.paint['line-dasharray'], [1.5, 1.5], 'the tropics are dashed');
+assert.ok(tropicLines.paint['line-opacity'] < equatorLine.paint['line-opacity'], 'the tropics are fainter than the equator');
 const referenceLabels = captured.layers.find(layer => layer.id === 'reference-parallel-labels');
 assert.strictEqual(referenceLabels.layout['symbol-placement'], 'line');
 assert.strictEqual(

@@ -61,13 +61,19 @@ const CLUSTER_LABEL_LAYER_ID = 'city-cluster-labels';
 // obliquity (23.4367°, drifting by about 0.000013°/year). Each line spans the
 // full longitude range, so MapLibre repeats it on every world copy.
 const REFERENCE_LINE_SOURCE_ID = 'reference-parallels';
-const REFERENCE_LINE_LAYER_ID = 'reference-parallel-dashes';
+const REFERENCE_EQUATOR_LAYER_ID = 'reference-equator-line';
+const REFERENCE_TROPIC_LAYER_ID = 'reference-tropic-lines';
 const REFERENCE_LABEL_LAYER_ID = 'reference-parallel-labels';
 const REFERENCE_PARALLELS = [
-  { name: 'EQUATOR', latitude: 0 },
-  { name: 'TROPIC OF CANCER', latitude: 23.4367 },
-  { name: 'TROPIC OF CAPRICORN', latitude: -23.4367 },
+  { name: 'EQUATOR', latitude: 0, kind: 'equator' },
+  { name: 'TROPIC OF CANCER', latitude: 23.4367, kind: 'tropic' },
+  { name: 'TROPIC OF CAPRICORN', latitude: -23.4367, kind: 'tropic' },
 ];
+
+// Both references stay faint so they read as context, not as data. The equator
+// is a continuous line, the tropics are dashed.
+const REFERENCE_LINE_COLOR = '#6b7280';
+const REFERENCE_LINE_WIDTH = ['interpolate', ['linear'], ['zoom'], 0, 0.8, 4, 1, 8, 1.2];
 
 // Overlapping badges merge into clusters up to this zoom level; beyond it every
 // city is drawn individually.
@@ -420,23 +426,37 @@ function initApp() {
       type: 'geojson',
       data: {
         type: 'FeatureCollection',
-        features: REFERENCE_PARALLELS.map(({ name, latitude }) => ({
+        features: REFERENCE_PARALLELS.map(({ name, latitude, kind }) => ({
           type: 'Feature',
-          properties: { name, latitude },
+          properties: { name, latitude, kind },
           geometry: { type: 'LineString', coordinates: [[-180, latitude], [180, latitude]] },
         })),
       },
     });
 
     map.addLayer({
-      id: REFERENCE_LINE_LAYER_ID,
+      id: REFERENCE_EQUATOR_LAYER_ID,
       type: 'line',
       source: REFERENCE_LINE_SOURCE_ID,
+      filter: ['==', ['get', 'kind'], 'equator'],
       layout: { 'line-cap': 'round', 'line-join': 'round' },
       paint: {
-        'line-color': '#6b7280',
-        'line-opacity': 0.7,
-        'line-width': ['interpolate', ['linear'], ['zoom'], 0, 0.8, 4, 1.1, 8, 1.4],
+        'line-color': REFERENCE_LINE_COLOR,
+        'line-opacity': 0.4,
+        'line-width': REFERENCE_LINE_WIDTH,
+      },
+    });
+
+    map.addLayer({
+      id: REFERENCE_TROPIC_LAYER_ID,
+      type: 'line',
+      source: REFERENCE_LINE_SOURCE_ID,
+      filter: ['==', ['get', 'kind'], 'tropic'],
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: {
+        'line-color': REFERENCE_LINE_COLOR,
+        'line-opacity': 0.3,
+        'line-width': REFERENCE_LINE_WIDTH,
         'line-dasharray': [1.5, 1.5],
       },
     });
@@ -457,8 +477,8 @@ function initApp() {
         'text-padding': 4,
       },
       paint: {
-        'text-color': '#5b6478',
-        'text-halo-color': 'rgba(255, 255, 255, 0.85)',
+        'text-color': '#7a8291',
+        'text-halo-color': 'rgba(255, 255, 255, 0.7)',
         'text-halo-width': 1,
       },
     });
