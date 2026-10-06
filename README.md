@@ -56,6 +56,7 @@ Data quality notes: some cities' Wikipedia articles only provide an airport/outl
 
 ```
 index.html, style.css, app.js   static frontend (MapLibre from CDN)
+assets/                         live-map badge + SVG thermometer favicon
 mock/mock-cities.js             UI development data (used only when data/cities.js is absent)
 tools/check-web.cjs             headless style/expression check for the frontend (npm run check:web)
 scraper/                        Node pipeline: candidates → fetch → parse → validate → emit
