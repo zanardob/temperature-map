@@ -1,5 +1,5 @@
 /*
- * World Monthly Temperatures — map front-end.
+ * How hot is it? — map front-end.
  *
  * Plain ES2020 in one file, no build step: index.html is meant to be opened
  * straight from disk (file://). MapLibre GL JS v5 is the only external code and

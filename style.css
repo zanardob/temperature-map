@@ -1,4 +1,4 @@
-/* World Monthly Temperatures — layout and panel styling. */
+/* How hot is it? — layout and panel styling. */
 
 :root {
   --panel-bg: rgba(255, 255, 255, 0.94);
@@ -49,9 +49,15 @@ body {
 }
 
 .panel h1 {
-  margin: 0 0 10px;
+  margin: 0 0 2px;
   font-size: 1rem;
   line-height: 1.25;
+}
+
+.panel-subtitle {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
 }
 
 .segmented {
