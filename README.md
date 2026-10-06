@@ -56,7 +56,7 @@ Data quality notes: some cities' Wikipedia articles only provide an airport/outl
 
 ```
 index.html, style.css, app.js   static frontend (MapLibre from CDN)
-assets/                         live-map badge + SVG thermometer favicon
+assets/                         live-map badge + SVG sun favicon (Twemoji)
 mock/mock-cities.js             UI development data (used only when data/cities.js is absent)
 tools/check-web.cjs             headless style/expression check for the frontend (npm run check:web)
 scraper/                        Node pipeline: candidates → fetch → parse → validate → emit
@@ -67,3 +67,7 @@ data/candidates.json            candidate inventory with sources
 data/coverage.md                included/excluded report
 data/cache/                     raw API responses (gitignored, powers offline rebuilds)
 ```
+
+## Credits
+
+The sun favicon is from [Twemoji](https://github.com/jdecked/twemoji); its graphics are © Twitter, Inc. and contributors, licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) (the Twemoji code is MIT).
