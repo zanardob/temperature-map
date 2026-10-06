@@ -1,7 +1,7 @@
 # World Monthly Temperatures
 
 <p align="center">
-  <a href="https://howhotis.it"><img src="https://img.shields.io/badge/🌍_OPEN_THE_LIVE_MAP-howhotis.it-2166ac?style=for-the-badge&labelColor=14213d" alt="Open the live map at howhotis.it"></a>
+  <a href="https://howhotis.it"><img src="assets/live-map-badge.svg" alt="Open the live map at howhotis.it"></a>
 </p>
 
 Interactive map of monthly temperatures (high / average / low, °C) for 3,614 cities worldwide, scraped from English Wikipedia climate tables.
