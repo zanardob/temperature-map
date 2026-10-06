@@ -2,6 +2,8 @@
 
 Interactive map of monthly temperatures (high / average / low, °C) for 3,614 cities worldwide, scraped from English Wikipedia climate tables.
 
+**Live at [howhotis.it](https://howhotis.it)** — deployed from this repository via GitHub Pages (`CNAME`).
+
 - **Frontend:** plain HTML/CSS/JS + [MapLibre GL JS](https://maplibre.org/) with [OpenFreeMap](https://openfreemap.org/) Liberty vector tiles — no API keys, no Google.
 - **Data:** Node.js scraper over Wikipedia `Weather box` tables. Output is committed as `data/cities.js`, so the page works straight from a clone.
 
